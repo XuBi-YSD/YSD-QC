@@ -1,0 +1,321 @@
+{
+  "Final2_TKS": {
+    "title": "Minutes of Hand-over for Sampling Material / Biên bản giao nhận vật liệu",
+    "template": "20260729-Final2_TKS_Tagged.docx",
+    "fields": [
+      {
+        "tag": "so_bien_ban",
+        "label": "Số biên bản",
+        "type": "text"
+      },
+      {
+        "tag": "ngay",
+        "label": "Ngày",
+        "type": "day"
+      },
+      {
+        "tag": "thang",
+        "label": "Tháng",
+        "type": "month"
+      },
+      {
+        "tag": "nam",
+        "label": "Năm",
+        "type": "year"
+      },
+      {
+        "tag": "ten_nguoi_1",
+        "label": "Người 1 (Nhà thầu chính) - Tên",
+        "type": "dropdown-personnel",
+        "group": "main_contractor"
+      },
+      {
+        "tag": "chuc_vu_nguoi_1",
+        "label": "Người 1 - Chức vụ",
+        "type": "text-linked",
+        "linkTag": "ten_nguoi_1"
+      },
+      {
+        "tag": "ten_nguoi_2",
+        "label": "Người 2 (Nhà thầu phụ) - Tên",
+        "type": "dropdown-personnel",
+        "group": "sub_contractor"
+      },
+      {
+        "tag": "chuc_vu_nguoi_2",
+        "label": "Người 2 - Chức vụ",
+        "type": "text-linked",
+        "linkTag": "ten_nguoi_2"
+      },
+      {
+        "tag": "ma_phong_thi_nghiem",
+        "label": "Mã phòng thí nghiệm",
+        "type": "text"
+      },
+      {
+        "tag": "ten_nguoi_3",
+        "label": "Người phòng thí nghiệm - Tên",
+        "type": "dropdown-personnel",
+        "group": "laboratory"
+      },
+      {
+        "tag": "chuc_vu_nguoi_3",
+        "label": "Người phòng thí nghiệm - Chức vụ",
+        "type": "text-linked",
+        "linkTag": "ten_nguoi_3"
+      },
+      {
+        "tag": "vl1_ten",
+        "label": "Vật liệu 1 - Tên",
+        "type": "dropdown-material",
+        "field": "name"
+      },
+      {
+        "tag": "vl1_nguon_goc_en",
+        "label": "Vật liệu 1 - Nguồn gốc (EN)",
+        "type": "text-linked-material",
+        "linkTag": "vl1_ten"
+      },
+      {
+        "tag": "vl1_nguon_goc_vi",
+        "label": "Vật liệu 1 - Nguồn gốc (VI)",
+        "type": "text-linked-material",
+        "linkTag": "vl1_ten"
+      },
+      {
+        "tag": "vl1_dvt",
+        "label": "Vật liệu 1 - Đơn vị",
+        "type": "text"
+      },
+      {
+        "tag": "vl1_khoi_luong",
+        "label": "Vật liệu 1 - Khối lượng",
+        "type": "number"
+      },
+      {
+        "tag": "vl2_ten",
+        "label": "Vật liệu 2 - Tên",
+        "type": "dropdown-material",
+        "field": "name"
+      },
+      {
+        "tag": "vl2_nguon_goc_en",
+        "label": "Vật liệu 2 - Nguồn gốc (EN)",
+        "type": "text-linked-material",
+        "linkTag": "vl2_ten"
+      },
+      {
+        "tag": "vl2_nguon_goc_vi",
+        "label": "Vật liệu 2 - Nguồn gốc (VI)",
+        "type": "text-linked-material",
+        "linkTag": "vl2_ten"
+      },
+      {
+        "tag": "vl2_dvt",
+        "label": "Vật liệu 2 - Đơn vị",
+        "type": "text"
+      },
+      {
+        "tag": "vl2_khoi_luong",
+        "label": "Vật liệu 2 - Khối lượng",
+        "type": "number"
+      }
+    ],
+    "note": "Chữ ký cuối trang dùng LẠI đúng 3 tên đã nhập ở trên (ten_nguoi_1/2/3) - không cần nhập lại."
+  },
+  "Final3_TKS": {
+    "title": "Inspection Sheet for Sampling / Biên bản lấy mẫu",
+    "template": "20260729-Final3_TKS_Tagged.docx",
+    "fields": [
+      {
+        "tag": "so_bien_ban",
+        "label": "Số biên bản",
+        "type": "text"
+      },
+      {
+        "tag": "ngay",
+        "label": "Ngày",
+        "type": "day"
+      },
+      {
+        "tag": "thang",
+        "label": "Tháng",
+        "type": "month"
+      },
+      {
+        "tag": "nam",
+        "label": "Năm",
+        "type": "year"
+      },
+      {
+        "tag": "ten_nguoi_1",
+        "label": "Người 1 (Nhà thầu chính) - Tên",
+        "type": "dropdown-personnel",
+        "group": "main_contractor"
+      },
+      {
+        "tag": "chuc_vu_nguoi_1",
+        "label": "Người 1 - Chức vụ",
+        "type": "text-linked",
+        "linkTag": "ten_nguoi_1"
+      },
+      {
+        "tag": "ten_nguoi_2",
+        "label": "Người 2 (Nhà thầu phụ) - Tên",
+        "type": "dropdown-personnel",
+        "group": "sub_contractor"
+      },
+      {
+        "tag": "chuc_vu_nguoi_2",
+        "label": "Người 2 - Chức vụ",
+        "type": "text-linked",
+        "linkTag": "ten_nguoi_2"
+      },
+      {
+        "tag": "dia_diem",
+        "label": "Vị trí lấy mẫu (Location)",
+        "type": "dropdown-location"
+      },
+      {
+        "tag": "vl1_ten",
+        "label": "Vật liệu 1 - Tên",
+        "type": "dropdown-material",
+        "field": "name"
+      },
+      {
+        "tag": "vl1_nguon_goc_en",
+        "label": "Vật liệu 1 - Nguồn gốc (EN)",
+        "type": "text-linked-material",
+        "linkTag": "vl1_ten"
+      },
+      {
+        "tag": "vl1_nguon_goc_vi",
+        "label": "Vật liệu 1 - Nguồn gốc (VI)",
+        "type": "text-linked-material",
+        "linkTag": "vl1_ten"
+      },
+      {
+        "tag": "vl1_dvt",
+        "label": "Vật liệu 1 - Đơn vị",
+        "type": "text"
+      },
+      {
+        "tag": "vl1_khoi_luong",
+        "label": "Vật liệu 1 - Khối lượng",
+        "type": "number"
+      },
+      {
+        "tag": "vl2_ten",
+        "label": "Vật liệu 2 - Tên",
+        "type": "dropdown-material",
+        "field": "name"
+      },
+      {
+        "tag": "vl2_nguon_goc_en",
+        "label": "Vật liệu 2 - Nguồn gốc (EN)",
+        "type": "text-linked-material",
+        "linkTag": "vl2_ten"
+      },
+      {
+        "tag": "vl2_nguon_goc_vi",
+        "label": "Vật liệu 2 - Nguồn gốc (VI)",
+        "type": "text-linked-material",
+        "linkTag": "vl2_ten"
+      },
+      {
+        "tag": "vl2_dvt",
+        "label": "Vật liệu 2 - Đơn vị",
+        "type": "text"
+      },
+      {
+        "tag": "vl2_khoi_luong",
+        "label": "Vật liệu 2 - Khối lượng",
+        "type": "number"
+      }
+    ],
+    "note": "Chữ ký cuối trang dùng LẠI ten_nguoi_1/2. Cột Engineer/Tư vấn giám sát để trống, ký tay sau."
+  },
+  "Final4_RFI": {
+    "title": "Request for Inspection (RFI) / Phiếu yêu cầu nghiệm thu",
+    "template": "20260729-Final4_RFI_Tagged.docx",
+    "fields": [
+      {
+        "tag": "so_rfi",
+        "label": "Số RFI",
+        "type": "text"
+      },
+      {
+        "tag": "noi_dung_nghiem_thu_en",
+        "label": "Nội dung công việc nghiệm thu (English)",
+        "type": "textarea"
+      },
+      {
+        "tag": "noi_dung_nghiem_thu_vi",
+        "label": "Nội dung công việc nghiệm thu (Tiếng Việt)",
+        "type": "textarea"
+      },
+      {
+        "tag": "gio_bat_dau",
+        "label": "Giờ bắt đầu",
+        "type": "text"
+      },
+      {
+        "tag": "gio_ket_thuc",
+        "label": "Giờ kết thúc",
+        "type": "text"
+      },
+      {
+        "tag": "ngay",
+        "label": "Ngày (nghiệm thu)",
+        "type": "day"
+      },
+      {
+        "tag": "thang",
+        "label": "Tháng (nghiệm thu)",
+        "type": "month"
+      },
+      {
+        "tag": "nam",
+        "label": "Năm (nghiệm thu)",
+        "type": "year"
+      },
+      {
+        "tag": "dia_diem",
+        "label": "Địa điểm nghiệm thu (Location)",
+        "type": "dropdown-location"
+      },
+      {
+        "tag": "ten_nguoi_ky_yeu_cau",
+        "label": "Người ký (Đơn vị yêu cầu)",
+        "type": "dropdown-personnel",
+        "group": "sub_contractor"
+      },
+      {
+        "tag": "gio_ky_ycnt",
+        "label": "Giờ ký (Đơn vị yêu cầu)",
+        "type": "text"
+      },
+      {
+        "tag": "ngay_tvgs",
+        "label": "Ngày ký (Tư vấn giám sát)",
+        "type": "day"
+      },
+      {
+        "tag": "thang_tvgs",
+        "label": "Tháng ký (Tư vấn giám sát)",
+        "type": "month"
+      },
+      {
+        "tag": "nam_tvgs",
+        "label": "Năm ký (Tư vấn giám sát)",
+        "type": "year"
+      },
+      {
+        "tag": "gio_tvgs",
+        "label": "Giờ ký (Tư vấn giám sát)",
+        "type": "text"
+      }
+    ],
+    "note": "Ngày/giờ ký của Tư vấn giám sát và PMU thường để trống, chỉ điền khi đã có xác nhận thật."
+  }
+}

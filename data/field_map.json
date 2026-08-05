@@ -1,0 +1,5526 @@
+{
+  "Final1_ACC": {
+    "lần 2": [
+      {
+        "cell": "D9",
+        "template_value": null,
+        "sample_value": "2026-06-08 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "D11",
+        "template_value": null,
+        "sample_value": "Shaft 42.15 / Giếng 42.15",
+        "type": "text"
+      },
+      {
+        "cell": "D13",
+        "template_value": null,
+        "sample_value": "Inspection for frequency materials for Fine aggregate  / Nghiệm thu tần suất cho vật liệu Cốt liệu mịn",
+        "type": "text"
+      },
+      {
+        "cell": "D14",
+        "template_value": null,
+        "sample_value": "Lo river, An Khang & Vinh Loi commune, Son Duong district, Tuyen Quang Province / Sông Lô, xã An Khang, Vĩnh Lợi huyện Sơn Dương, tỉnh Tuyên Quang\nThuong Phu Company Limited/ Công ty TNHH Thượng Phú",
+        "type": "text"
+      },
+      {
+        "cell": "D15",
+        "template_value": null,
+        "sample_value": "Thanh Long Construction and Trading Production Co Ltd/ \nCông ty TNHH SXTM và XD Thành Long",
+        "type": "text"
+      },
+      {
+        "cell": "B19",
+        "template_value": null,
+        "sample_value": "Fine aggregate \nCốt liệu mịn",
+        "type": "text"
+      },
+      {
+        "cell": "D19",
+        "template_value": null,
+        "sample_value": "2026-06-02 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "E19",
+        "template_value": null,
+        "sample_value": "m3",
+        "type": "text"
+      },
+      {
+        "cell": "F19",
+        "template_value": null,
+        "sample_value": "4",
+        "type": "number"
+      },
+      {
+        "cell": "B20",
+        "template_value": null,
+        "sample_value": "Cement\nXi măng",
+        "type": "text"
+      },
+      {
+        "cell": "D20",
+        "template_value": null,
+        "sample_value": "2026-06-02 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "E20",
+        "template_value": null,
+        "sample_value": "kg",
+        "type": "text"
+      },
+      {
+        "cell": "F20",
+        "template_value": null,
+        "sample_value": "4000",
+        "type": "number"
+      },
+      {
+        "cell": "B21",
+        "template_value": null,
+        "sample_value": "Fine aggregate \nCốt liệu mịn",
+        "type": "text"
+      },
+      {
+        "cell": "D21",
+        "template_value": null,
+        "sample_value": "2026-06-02 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "E21",
+        "template_value": null,
+        "sample_value": "m3",
+        "type": "text"
+      },
+      {
+        "cell": "F21",
+        "template_value": null,
+        "sample_value": "4",
+        "type": "number"
+      },
+      {
+        "cell": "B22",
+        "template_value": null,
+        "sample_value": "Cement\nXi măng",
+        "type": "text"
+      },
+      {
+        "cell": "D22",
+        "template_value": null,
+        "sample_value": "2026-06-02 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "E22",
+        "template_value": null,
+        "sample_value": "kg",
+        "type": "text"
+      },
+      {
+        "cell": "F22",
+        "template_value": null,
+        "sample_value": "4000",
+        "type": "number"
+      },
+      {
+        "cell": "B23",
+        "template_value": null,
+        "sample_value": "Cement\nXi măng",
+        "type": "text"
+      },
+      {
+        "cell": "D23",
+        "template_value": null,
+        "sample_value": "2026-06-02 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "E23",
+        "template_value": null,
+        "sample_value": "kg",
+        "type": "text"
+      },
+      {
+        "cell": "F23",
+        "template_value": null,
+        "sample_value": "4000",
+        "type": "number"
+      },
+      {
+        "cell": "B27",
+        "template_value": "Minutes of goods delivery and reception on the date …............   / Biên bản giao nhận hàng hóa ngày. …................",
+        "sample_value": "Minutes of goods delivery and reception on the date 02/06/2026/ Biên bản giao nhận hàng hóa ngày 02/06/2026",
+        "type": "text"
+      },
+      {
+        "cell": "A32",
+        "template_value": null,
+        "sample_value": "Nguyễn Văn Phước",
+        "type": "text"
+      },
+      {
+        "cell": "D32",
+        "template_value": null,
+        "sample_value": "Trần Đăng Thuần",
+        "type": "text"
+      },
+      {
+        "cell": "G32",
+        "template_value": null,
+        "sample_value": "..........................................",
+        "type": "text"
+      }
+    ]
+  },
+  "Final11_Rec": {
+    "PJ-03": [
+      {
+        "cell": "F14",
+        "template_value": null,
+        "sample_value": "AS-RFI-2B-291",
+        "type": "text"
+      },
+      {
+        "cell": "AA14",
+        "template_value": null,
+        "sample_value": "2026-05-11 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "K15",
+        "template_value": null,
+        "sample_value": "2B-01-02 Pipe Jacking Works of Main Sewer of Dia.800mm\n2B-01-02 Công tác khoan kích tuyến cống chính đường kính D800mm",
+        "type": "text"
+      },
+      {
+        "cell": "K16",
+        "template_value": null,
+        "sample_value": "Inspection for construction of pipe jacking work (Segment: No…. - No…..)",
+        "type": "text"
+      },
+      {
+        "cell": "K17",
+        "template_value": null,
+        "sample_value": "Nghiệm thu giám sát thi công khoan kích ống ngầm (Đốt cống: Từ đốt số ….. đến đốt số …..)",
+        "type": "text"
+      },
+      {
+        "cell": "F20",
+        "template_value": null,
+        "sample_value": "Shaft 42.15 (Span: 42.15-42.18)/ Giếng 42.15 (Nhịp: 42.15-42.18)",
+        "type": "text"
+      },
+      {
+        "cell": "M24",
+        "template_value": null,
+        "sample_value": "S1",
+        "type": "text"
+      },
+      {
+        "cell": "AE24",
+        "template_value": null,
+        "sample_value": "01:00:00",
+        "type": "time"
+      },
+      {
+        "cell": "M25",
+        "template_value": null,
+        "sample_value": "D800123",
+        "type": "text"
+      },
+      {
+        "cell": "AE25",
+        "template_value": null,
+        "sample_value": "03:00:00",
+        "type": "time"
+      },
+      {
+        "cell": "M26",
+        "template_value": null,
+        "sample_value": "456",
+        "type": "number"
+      },
+      {
+        "cell": "AE26",
+        "template_value": null,
+        "sample_value": "2.5",
+        "type": "text"
+      },
+      {
+        "cell": "M27",
+        "template_value": null,
+        "sample_value": "789",
+        "type": "number"
+      },
+      {
+        "cell": "AE27",
+        "template_value": null,
+        "sample_value": "0.01",
+        "type": "text"
+      },
+      {
+        "cell": "M28",
+        "template_value": null,
+        "sample_value": "123",
+        "type": "number"
+      },
+      {
+        "cell": "AE28",
+        "template_value": null,
+        "sample_value": "27.5",
+        "type": "text"
+      },
+      {
+        "cell": "AE29",
+        "template_value": null,
+        "sample_value": "5",
+        "type": "number"
+      },
+      {
+        "cell": "M32",
+        "template_value": null,
+        "sample_value": "S2",
+        "type": "text"
+      },
+      {
+        "cell": "AE32",
+        "template_value": null,
+        "sample_value": "01:00:00",
+        "type": "time"
+      },
+      {
+        "cell": "M33",
+        "template_value": null,
+        "sample_value": "D800123",
+        "type": "text"
+      },
+      {
+        "cell": "AE33",
+        "template_value": null,
+        "sample_value": "03:00:00",
+        "type": "time"
+      },
+      {
+        "cell": "M34",
+        "template_value": null,
+        "sample_value": "456",
+        "type": "number"
+      },
+      {
+        "cell": "AE34",
+        "template_value": null,
+        "sample_value": "2.5",
+        "type": "text"
+      },
+      {
+        "cell": "M35",
+        "template_value": null,
+        "sample_value": "789",
+        "type": "number"
+      },
+      {
+        "cell": "AE35",
+        "template_value": null,
+        "sample_value": "0.01",
+        "type": "text"
+      },
+      {
+        "cell": "M36",
+        "template_value": null,
+        "sample_value": "123",
+        "type": "number"
+      },
+      {
+        "cell": "AE36",
+        "template_value": null,
+        "sample_value": "27.5",
+        "type": "text"
+      },
+      {
+        "cell": "AE37",
+        "template_value": null,
+        "sample_value": "5",
+        "type": "number"
+      },
+      {
+        "cell": "M40",
+        "template_value": null,
+        "sample_value": "S3",
+        "type": "text"
+      },
+      {
+        "cell": "AE40",
+        "template_value": null,
+        "sample_value": "01:00:00",
+        "type": "time"
+      },
+      {
+        "cell": "M41",
+        "template_value": null,
+        "sample_value": "D800123",
+        "type": "text"
+      },
+      {
+        "cell": "AE41",
+        "template_value": null,
+        "sample_value": "03:00:00",
+        "type": "time"
+      },
+      {
+        "cell": "M42",
+        "template_value": null,
+        "sample_value": "456",
+        "type": "number"
+      },
+      {
+        "cell": "AE42",
+        "template_value": null,
+        "sample_value": "2.5",
+        "type": "text"
+      },
+      {
+        "cell": "M43",
+        "template_value": null,
+        "sample_value": "789",
+        "type": "number"
+      },
+      {
+        "cell": "AE43",
+        "template_value": null,
+        "sample_value": "0.01",
+        "type": "text"
+      },
+      {
+        "cell": "M44",
+        "template_value": null,
+        "sample_value": "123",
+        "type": "number"
+      },
+      {
+        "cell": "AE44",
+        "template_value": null,
+        "sample_value": "27.5",
+        "type": "text"
+      },
+      {
+        "cell": "AE45",
+        "template_value": null,
+        "sample_value": "5",
+        "type": "number"
+      },
+      {
+        "cell": "F58",
+        "template_value": null,
+        "sample_value": "VŨ KIÊN CHUNG",
+        "type": "text"
+      },
+      {
+        "cell": "P58",
+        "template_value": null,
+        "sample_value": "TRẦN ĐĂNG THUẦN",
+        "type": "text"
+      },
+      {
+        "cell": "F59",
+        "template_value": null,
+        "sample_value": "Project Manager/ QLDA",
+        "type": "text"
+      },
+      {
+        "cell": "P59",
+        "template_value": null,
+        "sample_value": "QC Engineer/ KS QLCL",
+        "type": "text"
+      },
+      {
+        "cell": "AB59",
+        "template_value": null,
+        "sample_value": "Inspector/TVGS",
+        "type": "text"
+      }
+    ]
+  },
+  "Final12-13_Ins": {
+    "Internal Ins": [
+      {
+        "cell": "A10",
+        "template_value": "No. / Số: ",
+        "sample_value": "No. / Số: IIM-AS-RFI-2B-288",
+        "type": "text"
+      },
+      {
+        "cell": "G14",
+        "template_value": null,
+        "sample_value": "2B-01-03 Temprorary Facilities Works of Main Sewer of Dia.800mm",
+        "type": "text"
+      },
+      {
+        "cell": "G15",
+        "template_value": null,
+        "sample_value": "2B-01-03 Công tác tạm tuyến cống chính đường kính D800mm",
+        "type": "text"
+      },
+      {
+        "cell": "A17",
+        "template_value": null,
+        "sample_value": "Inspection the equipments, PJ machines mobilization to Site",
+        "type": "text"
+      },
+      {
+        "cell": "A18",
+        "template_value": null,
+        "sample_value": "Nghiệm thu máy móc, thiết bị huy động đến công trường",
+        "type": "text"
+      },
+      {
+        "cell": "E21",
+        "template_value": null,
+        "sample_value": "Trần Đăng Thuần",
+        "type": "text"
+      },
+      {
+        "cell": "Q21",
+        "template_value": null,
+        "sample_value": "QC Engineer/KS QLCL",
+        "type": "text"
+      },
+      {
+        "cell": "E22",
+        "template_value": null,
+        "sample_value": "Michinori Kono",
+        "type": "text"
+      },
+      {
+        "cell": "Q22",
+        "template_value": null,
+        "sample_value": "Civil Engineer (PJ works)/KSXD (KKN)",
+        "type": "text"
+      },
+      {
+        "cell": "E24",
+        "template_value": null,
+        "sample_value": "Vũ Kiên Chung",
+        "type": "text"
+      },
+      {
+        "cell": "Q24",
+        "template_value": null,
+        "sample_value": "Project Manager/QLDA",
+        "type": "text"
+      },
+      {
+        "cell": "E25",
+        "template_value": null,
+        "sample_value": "Nguyễn Trung Thành",
+        "type": "text"
+      },
+      {
+        "cell": "Q25",
+        "template_value": null,
+        "sample_value": "PM Assistant/Trợ lý QLDA",
+        "type": "text"
+      },
+      {
+        "cell": "G27",
+        "template_value": null,
+        "sample_value": "08:00:00",
+        "type": "time"
+      },
+      {
+        "cell": "J27",
+        "template_value": null,
+        "sample_value": "2026-05-09 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "G28",
+        "template_value": null,
+        "sample_value": "09:00:00",
+        "type": "time"
+      },
+      {
+        "cell": "J28",
+        "template_value": null,
+        "sample_value": "2026-05-09 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "F29",
+        "template_value": null,
+        "sample_value": "At site of Package, Shaft 42.15 (Span: 42.15 to 42.18)/ Công trường gói thầu, Giếng 42.15 (Nhịp: 42.15 đến 42.18)",
+        "type": "text"
+      },
+      {
+        "cell": "C35",
+        "template_value": null,
+        "sample_value": "• Construction drawing design document of Pipe Jacking, Section from ID 42.0 to ID 43.4 (Vu Trong Khanh - Phung Hung section) has been approved by the Employer with Decision No.134/QĐ-BQL dated 27 May 2021/ Hồ sơ thiết kế Bản vẽ thi công tuyến cống khoan kích ngầm, phân đoạn từ cọc ID 42.0 đến cọc 43.4 (Đường Vũ Trọng Khánh - Phùng Hưng) đã được Chủ đầu tư phê duyệt theo quyết định số 134/QĐ-BQL ngày 27/05/2021",
+        "type": "text"
+      },
+      {
+        "cell": "B72",
+        "template_value": null,
+        "sample_value": "Vũ Kiên Chung",
+        "type": "text"
+      },
+      {
+        "cell": "R72",
+        "template_value": null,
+        "sample_value": "Trần Đăng Thuần",
+        "type": "text"
+      }
+    ],
+    "Inspection": [
+      {
+        "cell": "P5",
+        "template_value": null,
+        "sample_value": "2026-05-09 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "F10",
+        "template_value": "No. / Số:",
+        "sample_value": "No. / Số: MOA-AS-RFI-2B-288",
+        "type": "text"
+      },
+      {
+        "cell": "G14",
+        "template_value": null,
+        "sample_value": "2B-01-03 Temprorary Facilities Works of Main Sewer of Dia.800mm",
+        "type": "text"
+      },
+      {
+        "cell": "G15",
+        "template_value": null,
+        "sample_value": "2B-01-03 Công tác tạm tuyến cống chính đường kính D800mm",
+        "type": "text"
+      },
+      {
+        "cell": "A17",
+        "template_value": null,
+        "sample_value": "Inspection the equipments, PJ machines mobilization to Site",
+        "type": "text"
+      },
+      {
+        "cell": "A18",
+        "template_value": null,
+        "sample_value": "Nghiệm thu máy móc, thiết bị huy động đến công trường",
+        "type": "text"
+      },
+      {
+        "cell": "E21",
+        "template_value": null,
+        "sample_value": "abcd 1234",
+        "type": "text"
+      },
+      {
+        "cell": "Q21",
+        "template_value": null,
+        "sample_value": "Inspector/TVGS",
+        "type": "text"
+      },
+      {
+        "cell": "E22",
+        "template_value": null,
+        "sample_value": "ACBE",
+        "type": "text"
+      },
+      {
+        "cell": "Q22",
+        "template_value": null,
+        "sample_value": "RE",
+        "type": "text"
+      },
+      {
+        "cell": "E24",
+        "template_value": null,
+        "sample_value": "Trần Đăng Thuần",
+        "type": "text"
+      },
+      {
+        "cell": "Q24",
+        "template_value": null,
+        "sample_value": "QC Engineer/KS QLCL",
+        "type": "text"
+      },
+      {
+        "cell": "E25",
+        "template_value": null,
+        "sample_value": "Michinori Kono",
+        "type": "text"
+      },
+      {
+        "cell": "Q25",
+        "template_value": null,
+        "sample_value": "Civil Engineer (PJ works)/KSXD (KKN)",
+        "type": "text"
+      },
+      {
+        "cell": "E27",
+        "template_value": null,
+        "sample_value": "Vũ Kiên Chung",
+        "type": "text"
+      },
+      {
+        "cell": "Q27",
+        "template_value": null,
+        "sample_value": "Project Manager/QLDA",
+        "type": "text"
+      },
+      {
+        "cell": "E28",
+        "template_value": null,
+        "sample_value": "Nguyễn Trung Thành",
+        "type": "text"
+      },
+      {
+        "cell": "Q28",
+        "template_value": null,
+        "sample_value": "PM Assistant/Trợ lý QLDA",
+        "type": "text"
+      },
+      {
+        "cell": "G30",
+        "template_value": null,
+        "sample_value": "09:30:00",
+        "type": "time"
+      },
+      {
+        "cell": "J30",
+        "template_value": null,
+        "sample_value": "2026-05-09 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "G31",
+        "template_value": null,
+        "sample_value": "10:00:00",
+        "type": "time"
+      },
+      {
+        "cell": "J31",
+        "template_value": null,
+        "sample_value": "2026-05-09 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "F32",
+        "template_value": null,
+        "sample_value": "At site of Package, Shaft 42.15 (Span: 42.15 to 42.18)/ Công trường gói thầu, Giếng 42.15 (Nhịp: 42.15 đến 42.18)",
+        "type": "text"
+      },
+      {
+        "cell": "C38",
+        "template_value": null,
+        "sample_value": "•  No / Số: AS-RFI-2B-288",
+        "type": "text"
+      },
+      {
+        "cell": "C40",
+        "template_value": null,
+        "sample_value": "• Construction drawing design document of Pipe Jacking, Section from ID 42.0 to ID 43.4 (Vu Trong Khanh - Phung Hung section) has been approved by the Employer with Decision No.134/QĐ-BQL dated 27 May 2021/ Hồ sơ thiết kế Bản vẽ thi công tuyến cống khoan kích ngầm, phân đoạn từ cọc ID 42.0 đến cọc 43.4 (Đường Vũ Trọng Khánh - Phùng Hưng) đã được Chủ đầu tư phê duyệt theo quyết định số 134/QĐ-BQL ngày 27/05/2021",
+        "type": "text"
+      },
+      {
+        "cell": "C49",
+        "template_value": null,
+        "sample_value": "• No. / Số: IIM-AS-RFI-2B-288",
+        "type": "text"
+      },
+      {
+        "cell": "A58",
+        "template_value": null,
+        "sample_value": " Check sheet for Inspection the equipments, PJ machines mobilization to Site/ Biên bản kiểm tra Nghiệm thu máy móc, thiết bị huy động đến công trường",
+        "type": "text"
+      },
+      {
+        "cell": "A70",
+        "template_value": null,
+        "sample_value": "Vũ Kiên Chung",
+        "type": "text"
+      },
+      {
+        "cell": "I70",
+        "template_value": null,
+        "sample_value": "Trần Đăng Thuần",
+        "type": "text"
+      },
+      {
+        "cell": "R70",
+        "template_value": null,
+        "sample_value": ".....................................",
+        "type": "text"
+      }
+    ]
+  },
+  "Final5-10_ITP": {
+    "PJ-01": [
+      {
+        "cell": "F14",
+        "template_value": null,
+        "sample_value": "AS-RFI-2B-288",
+        "type": "text"
+      },
+      {
+        "cell": "R14",
+        "template_value": null,
+        "sample_value": "2026-05-09 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "I15",
+        "template_value": null,
+        "sample_value": "2B-01-03 Temprorary Facilities Works of Main Sewer of Dia.800mm",
+        "type": "text"
+      },
+      {
+        "cell": "I16",
+        "template_value": null,
+        "sample_value": "2B-01-03 Công tác tạm tuyến cống chính đường kính D800mm",
+        "type": "text"
+      },
+      {
+        "cell": "I17",
+        "template_value": null,
+        "sample_value": "Inspection the equipments, PJ machines mobilization to Site",
+        "type": "text"
+      },
+      {
+        "cell": "I18",
+        "template_value": null,
+        "sample_value": "Nghiệm thu máy móc, thiết bị huy động đến công trường",
+        "type": "text"
+      },
+      {
+        "cell": "F21",
+        "template_value": null,
+        "sample_value": "Shaft 42.15 (Span: 42.15-42.18)/ Giếng 42.15 (Nhịp: 42.15-42.18)",
+        "type": "text"
+      },
+      {
+        "cell": "H27",
+        "template_value": null,
+        "sample_value": "D800\nModel: 805Y",
+        "type": "text"
+      },
+      {
+        "cell": "L27",
+        "template_value": null,
+        "sample_value": "Kokudo Kaihatsu Industry",
+        "type": "text"
+      },
+      {
+        "cell": "P27",
+        "template_value": null,
+        "sample_value": "21A02GHN01470-01",
+        "type": "text"
+      },
+      {
+        "cell": "T27",
+        "template_value": null,
+        "sample_value": "2026-06-02 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "H28",
+        "template_value": null,
+        "sample_value": "D800\nModel: 805Y",
+        "type": "text"
+      },
+      {
+        "cell": "L28",
+        "template_value": null,
+        "sample_value": "Kokudo Kaihatsu Industry",
+        "type": "text"
+      },
+      {
+        "cell": "P28",
+        "template_value": null,
+        "sample_value": "21A02GHN01470-01",
+        "type": "text"
+      },
+      {
+        "cell": "T28",
+        "template_value": null,
+        "sample_value": "2026-06-02 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "X28",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z28",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "H29",
+        "template_value": null,
+        "sample_value": "D800\nModel: 805Y",
+        "type": "text"
+      },
+      {
+        "cell": "L29",
+        "template_value": null,
+        "sample_value": "Kokudo Kaihatsu Industry",
+        "type": "text"
+      },
+      {
+        "cell": "P29",
+        "template_value": null,
+        "sample_value": "21A02GHN01470-01",
+        "type": "text"
+      },
+      {
+        "cell": "T29",
+        "template_value": null,
+        "sample_value": "2026-06-02 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "X29",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z29",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "H30",
+        "template_value": null,
+        "sample_value": "D800\nModel: 805Y",
+        "type": "text"
+      },
+      {
+        "cell": "L30",
+        "template_value": null,
+        "sample_value": "Kokudo Kaihatsu Industry",
+        "type": "text"
+      },
+      {
+        "cell": "P30",
+        "template_value": null,
+        "sample_value": "21A02GHN01470-01",
+        "type": "text"
+      },
+      {
+        "cell": "T30",
+        "template_value": null,
+        "sample_value": "2026-06-02 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "X30",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z30",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "H31",
+        "template_value": null,
+        "sample_value": "D800\nModel: 805Y",
+        "type": "text"
+      },
+      {
+        "cell": "L31",
+        "template_value": null,
+        "sample_value": "Kokudo Kaihatsu Industry",
+        "type": "text"
+      },
+      {
+        "cell": "P31",
+        "template_value": null,
+        "sample_value": "21A02GHN01470-01",
+        "type": "text"
+      },
+      {
+        "cell": "T31",
+        "template_value": null,
+        "sample_value": "2026-06-02 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "H32",
+        "template_value": null,
+        "sample_value": "D800\nModel: 805Y",
+        "type": "text"
+      },
+      {
+        "cell": "L32",
+        "template_value": null,
+        "sample_value": "Kokudo Kaihatsu Industry",
+        "type": "text"
+      },
+      {
+        "cell": "P32",
+        "template_value": null,
+        "sample_value": "21A02GHN01470-01",
+        "type": "text"
+      },
+      {
+        "cell": "T32",
+        "template_value": null,
+        "sample_value": "2026-06-02 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "X32",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z32",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "H33",
+        "template_value": null,
+        "sample_value": "D800\nModel: 805Y",
+        "type": "text"
+      },
+      {
+        "cell": "L33",
+        "template_value": null,
+        "sample_value": "Kokudo Kaihatsu Industry",
+        "type": "text"
+      },
+      {
+        "cell": "P33",
+        "template_value": null,
+        "sample_value": "21A02GHN01470-01",
+        "type": "text"
+      },
+      {
+        "cell": "T33",
+        "template_value": null,
+        "sample_value": "2026-06-02 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "X33",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z33",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "H34",
+        "template_value": null,
+        "sample_value": "D800\nModel: 805Y",
+        "type": "text"
+      },
+      {
+        "cell": "L34",
+        "template_value": null,
+        "sample_value": "Kokudo Kaihatsu Industry",
+        "type": "text"
+      },
+      {
+        "cell": "P34",
+        "template_value": null,
+        "sample_value": "21A02GHN01470-01",
+        "type": "text"
+      },
+      {
+        "cell": "T34",
+        "template_value": null,
+        "sample_value": "2026-06-02 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "X34",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z34",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "H35",
+        "template_value": null,
+        "sample_value": "D800\nModel: 805Y",
+        "type": "text"
+      },
+      {
+        "cell": "L35",
+        "template_value": null,
+        "sample_value": "Kokudo Kaihatsu Industry",
+        "type": "text"
+      },
+      {
+        "cell": "P35",
+        "template_value": null,
+        "sample_value": "21A02GHN01470-01",
+        "type": "text"
+      },
+      {
+        "cell": "T35",
+        "template_value": null,
+        "sample_value": "2026-06-02 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "X35",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z35",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "H36",
+        "template_value": null,
+        "sample_value": "D800\nModel: 805Y",
+        "type": "text"
+      },
+      {
+        "cell": "L36",
+        "template_value": null,
+        "sample_value": "Kokudo Kaihatsu Industry",
+        "type": "text"
+      },
+      {
+        "cell": "P36",
+        "template_value": null,
+        "sample_value": "21A02GHN01470-01",
+        "type": "text"
+      },
+      {
+        "cell": "T36",
+        "template_value": null,
+        "sample_value": "2026-06-02 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "X36",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z36",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "H37",
+        "template_value": null,
+        "sample_value": "D800\nModel: 805Y",
+        "type": "text"
+      },
+      {
+        "cell": "L37",
+        "template_value": null,
+        "sample_value": "Kokudo Kaihatsu Industry",
+        "type": "text"
+      },
+      {
+        "cell": "P37",
+        "template_value": null,
+        "sample_value": "21A02GHN01470-01",
+        "type": "text"
+      },
+      {
+        "cell": "T37",
+        "template_value": null,
+        "sample_value": "2026-06-02 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "X37",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z37",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "H38",
+        "template_value": null,
+        "sample_value": "D800\nModel: 805Y",
+        "type": "text"
+      },
+      {
+        "cell": "L38",
+        "template_value": null,
+        "sample_value": "Kokudo Kaihatsu Industry",
+        "type": "text"
+      },
+      {
+        "cell": "P38",
+        "template_value": null,
+        "sample_value": "21A02GHN01470-01",
+        "type": "text"
+      },
+      {
+        "cell": "T38",
+        "template_value": null,
+        "sample_value": "2026-06-02 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "X38",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z38",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "H39",
+        "template_value": null,
+        "sample_value": "D800\nModel: 805Y",
+        "type": "text"
+      },
+      {
+        "cell": "L39",
+        "template_value": null,
+        "sample_value": "Kokudo Kaihatsu Industry",
+        "type": "text"
+      },
+      {
+        "cell": "P39",
+        "template_value": null,
+        "sample_value": "21A02GHN01470-01",
+        "type": "text"
+      },
+      {
+        "cell": "T39",
+        "template_value": null,
+        "sample_value": "2026-06-02 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "X39",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z39",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "H40",
+        "template_value": null,
+        "sample_value": "D800\nModel: 805Y",
+        "type": "text"
+      },
+      {
+        "cell": "L40",
+        "template_value": null,
+        "sample_value": "Kokudo Kaihatsu Industry",
+        "type": "text"
+      },
+      {
+        "cell": "P40",
+        "template_value": null,
+        "sample_value": "21A02GHN01470-01",
+        "type": "text"
+      },
+      {
+        "cell": "T40",
+        "template_value": null,
+        "sample_value": "2026-06-02 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "X40",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z40",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "H41",
+        "template_value": null,
+        "sample_value": "PDS185S-6C2\nSerial: B4-6C26958",
+        "type": "text"
+      },
+      {
+        "cell": "L41",
+        "template_value": null,
+        "sample_value": "AIRMAN",
+        "type": "text"
+      },
+      {
+        "cell": "P41",
+        "template_value": null,
+        "sample_value": "5306/TSI-KĐAT-MCD",
+        "type": "text"
+      },
+      {
+        "cell": "T41",
+        "template_value": null,
+        "sample_value": "2026-06-02 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "X41",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z41",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "H43",
+        "template_value": null,
+        "sample_value": "PDS185S-6C2\nSerial: B4-6C26958",
+        "type": "text"
+      },
+      {
+        "cell": "L43",
+        "template_value": null,
+        "sample_value": "AIRMAN",
+        "type": "text"
+      },
+      {
+        "cell": "P43",
+        "template_value": null,
+        "sample_value": "5306/TSI-KĐAT-MCD",
+        "type": "text"
+      },
+      {
+        "cell": "T43",
+        "template_value": null,
+        "sample_value": "2026-06-02 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "X43",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z43",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "H44",
+        "template_value": null,
+        "sample_value": "PDS185S-6C2\nSerial: B4-6C26958",
+        "type": "text"
+      },
+      {
+        "cell": "L44",
+        "template_value": null,
+        "sample_value": "AIRMAN",
+        "type": "text"
+      },
+      {
+        "cell": "P44",
+        "template_value": null,
+        "sample_value": "5306/TSI-KĐAT-MCD",
+        "type": "text"
+      },
+      {
+        "cell": "T44",
+        "template_value": null,
+        "sample_value": "2026-06-02 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "X44",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z44",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "H45",
+        "template_value": null,
+        "sample_value": "PDS185S-6C2\nSerial: B4-6C26958",
+        "type": "text"
+      },
+      {
+        "cell": "L45",
+        "template_value": null,
+        "sample_value": "AIRMAN",
+        "type": "text"
+      },
+      {
+        "cell": "P45",
+        "template_value": null,
+        "sample_value": "5306/TSI-KĐAT-MCD",
+        "type": "text"
+      },
+      {
+        "cell": "T45",
+        "template_value": null,
+        "sample_value": "2026-06-02 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "X45",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z45",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "H46",
+        "template_value": null,
+        "sample_value": "PDS185S-6C2\nSerial: B4-6C26958",
+        "type": "text"
+      },
+      {
+        "cell": "L46",
+        "template_value": null,
+        "sample_value": "AIRMAN",
+        "type": "text"
+      },
+      {
+        "cell": "P46",
+        "template_value": null,
+        "sample_value": "5306/TSI-KĐAT-MCD",
+        "type": "text"
+      },
+      {
+        "cell": "T46",
+        "template_value": null,
+        "sample_value": "2026-06-02 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "X46",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z46",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "H47",
+        "template_value": null,
+        "sample_value": "PDS185S-6C2\nSerial: B4-6C26958",
+        "type": "text"
+      },
+      {
+        "cell": "L47",
+        "template_value": null,
+        "sample_value": "AIRMAN",
+        "type": "text"
+      },
+      {
+        "cell": "P47",
+        "template_value": null,
+        "sample_value": "5306/TSI-KĐAT-MCD",
+        "type": "text"
+      },
+      {
+        "cell": "T47",
+        "template_value": null,
+        "sample_value": "2026-06-02 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "X47",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z47",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "H48",
+        "template_value": null,
+        "sample_value": "PDS185S-6C2\nSerial: B4-6C26958",
+        "type": "text"
+      },
+      {
+        "cell": "L48",
+        "template_value": null,
+        "sample_value": "AIRMAN",
+        "type": "text"
+      },
+      {
+        "cell": "P48",
+        "template_value": null,
+        "sample_value": "5306/TSI-KĐAT-MCD",
+        "type": "text"
+      },
+      {
+        "cell": "T48",
+        "template_value": null,
+        "sample_value": "2026-06-02 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "X48",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z48",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "H49",
+        "template_value": null,
+        "sample_value": "PDS185S-6C2\nSerial: B4-6C26958",
+        "type": "text"
+      },
+      {
+        "cell": "L49",
+        "template_value": null,
+        "sample_value": "AIRMAN",
+        "type": "text"
+      },
+      {
+        "cell": "P49",
+        "template_value": null,
+        "sample_value": "5306/TSI-KĐAT-MCD",
+        "type": "text"
+      },
+      {
+        "cell": "T49",
+        "template_value": null,
+        "sample_value": "2026-06-02 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "X49",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z49",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "H51",
+        "template_value": null,
+        "sample_value": "PDS185S-6C2\nSerial: B4-6C26958",
+        "type": "text"
+      },
+      {
+        "cell": "L51",
+        "template_value": null,
+        "sample_value": "AIRMAN",
+        "type": "text"
+      },
+      {
+        "cell": "P51",
+        "template_value": null,
+        "sample_value": "5306/TSI-KĐAT-MCD",
+        "type": "text"
+      },
+      {
+        "cell": "T51",
+        "template_value": null,
+        "sample_value": "2026-06-02 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "X51",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z51",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "H52",
+        "template_value": null,
+        "sample_value": "PDS185S-6C2\nSerial: B4-6C26958",
+        "type": "text"
+      },
+      {
+        "cell": "L52",
+        "template_value": null,
+        "sample_value": "AIRMAN",
+        "type": "text"
+      },
+      {
+        "cell": "P52",
+        "template_value": null,
+        "sample_value": "5306/TSI-KĐAT-MCD",
+        "type": "text"
+      },
+      {
+        "cell": "T52",
+        "template_value": null,
+        "sample_value": "2026-06-02 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "X52",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z52",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "H53",
+        "template_value": null,
+        "sample_value": "PDS185S-6C2\nSerial: B4-6C26958",
+        "type": "text"
+      },
+      {
+        "cell": "L53",
+        "template_value": null,
+        "sample_value": "AIRMAN",
+        "type": "text"
+      },
+      {
+        "cell": "P53",
+        "template_value": null,
+        "sample_value": "5306/TSI-KĐAT-MCD",
+        "type": "text"
+      },
+      {
+        "cell": "T53",
+        "template_value": null,
+        "sample_value": "2026-06-02 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "X53",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z53",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "H54",
+        "template_value": null,
+        "sample_value": "PDS185S-6C2\nSerial: B4-6C26958",
+        "type": "text"
+      },
+      {
+        "cell": "L54",
+        "template_value": null,
+        "sample_value": "AIRMAN",
+        "type": "text"
+      },
+      {
+        "cell": "P54",
+        "template_value": null,
+        "sample_value": "5306/TSI-KĐAT-MCD",
+        "type": "text"
+      },
+      {
+        "cell": "T54",
+        "template_value": null,
+        "sample_value": "2026-06-02 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "X54",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z54",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "H56",
+        "template_value": null,
+        "sample_value": "PDS185S-6C2\nSerial: B4-6C26958",
+        "type": "text"
+      },
+      {
+        "cell": "L56",
+        "template_value": null,
+        "sample_value": "AIRMAN",
+        "type": "text"
+      },
+      {
+        "cell": "P56",
+        "template_value": null,
+        "sample_value": "5306/TSI-KĐAT-MCD",
+        "type": "text"
+      },
+      {
+        "cell": "T56",
+        "template_value": null,
+        "sample_value": "2026-06-02 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "X56",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z56",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "H57",
+        "template_value": null,
+        "sample_value": "PDS185S-6C2\nSerial: B4-6C26958",
+        "type": "text"
+      },
+      {
+        "cell": "L57",
+        "template_value": null,
+        "sample_value": "AIRMAN",
+        "type": "text"
+      },
+      {
+        "cell": "P57",
+        "template_value": null,
+        "sample_value": "5306/TSI-KĐAT-MCD",
+        "type": "text"
+      },
+      {
+        "cell": "T57",
+        "template_value": null,
+        "sample_value": "2026-06-02 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "X57",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z57",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "H58",
+        "template_value": null,
+        "sample_value": "PDS185S-6C2\nSerial: B4-6C26958",
+        "type": "text"
+      },
+      {
+        "cell": "L58",
+        "template_value": null,
+        "sample_value": "AIRMAN",
+        "type": "text"
+      },
+      {
+        "cell": "P58",
+        "template_value": null,
+        "sample_value": "5306/TSI-KĐAT-MCD",
+        "type": "text"
+      },
+      {
+        "cell": "T58",
+        "template_value": null,
+        "sample_value": "2026-06-02 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "X58",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z58",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "H59",
+        "template_value": null,
+        "sample_value": "PDS185S-6C2\nSerial: B4-6C26958",
+        "type": "text"
+      },
+      {
+        "cell": "L59",
+        "template_value": null,
+        "sample_value": "AIRMAN",
+        "type": "text"
+      },
+      {
+        "cell": "P59",
+        "template_value": null,
+        "sample_value": "5306/TSI-KĐAT-MCD",
+        "type": "text"
+      },
+      {
+        "cell": "T59",
+        "template_value": null,
+        "sample_value": "2026-06-02 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "X59",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z59",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "H60",
+        "template_value": null,
+        "sample_value": "PDS185S-6C2\nSerial: B4-6C26958",
+        "type": "text"
+      },
+      {
+        "cell": "L60",
+        "template_value": null,
+        "sample_value": "AIRMAN",
+        "type": "text"
+      },
+      {
+        "cell": "P60",
+        "template_value": null,
+        "sample_value": "5306/TSI-KĐAT-MCD",
+        "type": "text"
+      },
+      {
+        "cell": "T60",
+        "template_value": null,
+        "sample_value": "2026-06-02 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "X60",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z60",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "H61",
+        "template_value": null,
+        "sample_value": "PDS185S-6C2\nSerial: B4-6C26958",
+        "type": "text"
+      },
+      {
+        "cell": "L61",
+        "template_value": null,
+        "sample_value": "AIRMAN",
+        "type": "text"
+      },
+      {
+        "cell": "P61",
+        "template_value": null,
+        "sample_value": "5306/TSI-KĐAT-MCD",
+        "type": "text"
+      },
+      {
+        "cell": "T61",
+        "template_value": null,
+        "sample_value": "2026-06-02 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "X61",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z61",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "H62",
+        "template_value": null,
+        "sample_value": "PDS185S-6C2\nSerial: B4-6C26958",
+        "type": "text"
+      },
+      {
+        "cell": "L62",
+        "template_value": null,
+        "sample_value": "AIRMAN",
+        "type": "text"
+      },
+      {
+        "cell": "P62",
+        "template_value": null,
+        "sample_value": "5306/TSI-KĐAT-MCD",
+        "type": "text"
+      },
+      {
+        "cell": "T62",
+        "template_value": null,
+        "sample_value": "2026-06-02 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "X62",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z62",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "H63",
+        "template_value": null,
+        "sample_value": "PDS185S-6C2\nSerial: B4-6C26958",
+        "type": "text"
+      },
+      {
+        "cell": "L63",
+        "template_value": null,
+        "sample_value": "AIRMAN",
+        "type": "text"
+      },
+      {
+        "cell": "P63",
+        "template_value": null,
+        "sample_value": "5306/TSI-KĐAT-MCD",
+        "type": "text"
+      },
+      {
+        "cell": "T63",
+        "template_value": null,
+        "sample_value": "2026-06-02 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "X63",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z63",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "H64",
+        "template_value": null,
+        "sample_value": "PDS185S-6C2\nSerial: B4-6C26958",
+        "type": "text"
+      },
+      {
+        "cell": "L64",
+        "template_value": null,
+        "sample_value": "AIRMAN",
+        "type": "text"
+      },
+      {
+        "cell": "P64",
+        "template_value": null,
+        "sample_value": "5306/TSI-KĐAT-MCD",
+        "type": "text"
+      },
+      {
+        "cell": "T64",
+        "template_value": null,
+        "sample_value": "2026-06-02 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "X64",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z64",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "H65",
+        "template_value": null,
+        "sample_value": "PDS185S-6C2\nSerial: B4-6C26958",
+        "type": "text"
+      },
+      {
+        "cell": "L65",
+        "template_value": null,
+        "sample_value": "AIRMAN",
+        "type": "text"
+      },
+      {
+        "cell": "P65",
+        "template_value": null,
+        "sample_value": "5306/TSI-KĐAT-MCD",
+        "type": "text"
+      },
+      {
+        "cell": "T65",
+        "template_value": null,
+        "sample_value": "2026-06-02 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "X65",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z65",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "H66",
+        "template_value": null,
+        "sample_value": "PDS185S-6C2\nSerial: B4-6C26958",
+        "type": "text"
+      },
+      {
+        "cell": "L66",
+        "template_value": null,
+        "sample_value": "AIRMAN",
+        "type": "text"
+      },
+      {
+        "cell": "P66",
+        "template_value": null,
+        "sample_value": "5306/TSI-KĐAT-MCD",
+        "type": "text"
+      },
+      {
+        "cell": "T66",
+        "template_value": null,
+        "sample_value": "2026-06-02 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "X66",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z66",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "H67",
+        "template_value": null,
+        "sample_value": "PDS185S-6C2\nSerial: B4-6C26958",
+        "type": "text"
+      },
+      {
+        "cell": "L67",
+        "template_value": null,
+        "sample_value": "AIRMAN",
+        "type": "text"
+      },
+      {
+        "cell": "P67",
+        "template_value": null,
+        "sample_value": "5306/TSI-KĐAT-MCD",
+        "type": "text"
+      },
+      {
+        "cell": "T67",
+        "template_value": null,
+        "sample_value": "2026-06-02 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "X67",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z67",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "H68",
+        "template_value": null,
+        "sample_value": "PDS185S-6C2\nSerial: B4-6C26958",
+        "type": "text"
+      },
+      {
+        "cell": "L68",
+        "template_value": null,
+        "sample_value": "AIRMAN",
+        "type": "text"
+      },
+      {
+        "cell": "P68",
+        "template_value": null,
+        "sample_value": "5306/TSI-KĐAT-MCD",
+        "type": "text"
+      },
+      {
+        "cell": "T68",
+        "template_value": null,
+        "sample_value": "2026-06-02 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "X68",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z68",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "H69",
+        "template_value": null,
+        "sample_value": "PDS185S-6C2\nSerial: B4-6C26958",
+        "type": "text"
+      },
+      {
+        "cell": "L69",
+        "template_value": null,
+        "sample_value": "AIRMAN",
+        "type": "text"
+      },
+      {
+        "cell": "P69",
+        "template_value": null,
+        "sample_value": "5306/TSI-KĐAT-MCD",
+        "type": "text"
+      },
+      {
+        "cell": "T69",
+        "template_value": null,
+        "sample_value": "2026-06-02 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "X69",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z69",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "H70",
+        "template_value": null,
+        "sample_value": "PDS185S-6C2\nSerial: B4-6C26958",
+        "type": "text"
+      },
+      {
+        "cell": "L70",
+        "template_value": null,
+        "sample_value": "AIRMAN",
+        "type": "text"
+      },
+      {
+        "cell": "P70",
+        "template_value": null,
+        "sample_value": "5306/TSI-KĐAT-MCD",
+        "type": "text"
+      },
+      {
+        "cell": "T70",
+        "template_value": null,
+        "sample_value": "2026-06-02 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "X70",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z70",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "H72",
+        "template_value": null,
+        "sample_value": "PDS185S-6C2\nSerial: B4-6C26958",
+        "type": "text"
+      },
+      {
+        "cell": "L72",
+        "template_value": null,
+        "sample_value": "AIRMAN",
+        "type": "text"
+      },
+      {
+        "cell": "P72",
+        "template_value": null,
+        "sample_value": "5306/TSI-KĐAT-MCD",
+        "type": "text"
+      },
+      {
+        "cell": "T72",
+        "template_value": null,
+        "sample_value": "2026-06-02 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "X72",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z72",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "H73",
+        "template_value": null,
+        "sample_value": "PDS185S-6C2\nSerial: B4-6C26958",
+        "type": "text"
+      },
+      {
+        "cell": "L73",
+        "template_value": null,
+        "sample_value": "AIRMAN",
+        "type": "text"
+      },
+      {
+        "cell": "P73",
+        "template_value": null,
+        "sample_value": "5306/TSI-KĐAT-MCD",
+        "type": "text"
+      },
+      {
+        "cell": "T73",
+        "template_value": null,
+        "sample_value": "2026-06-02 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "X73",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z73",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "H74",
+        "template_value": null,
+        "sample_value": "PDS185S-6C2\nSerial: B4-6C26958",
+        "type": "text"
+      },
+      {
+        "cell": "L74",
+        "template_value": null,
+        "sample_value": "AIRMAN",
+        "type": "text"
+      },
+      {
+        "cell": "P74",
+        "template_value": null,
+        "sample_value": "5306/TSI-KĐAT-MCD",
+        "type": "text"
+      },
+      {
+        "cell": "T74",
+        "template_value": null,
+        "sample_value": "2026-06-02 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "X74",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z74",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "H76",
+        "template_value": null,
+        "sample_value": "No.2672Y005\nDim: 11x4x7.4m",
+        "type": "text"
+      },
+      {
+        "cell": "L76",
+        "template_value": null,
+        "sample_value": "Yasuda Co.,Ltd",
+        "type": "text"
+      },
+      {
+        "cell": "P76",
+        "template_value": null,
+        "sample_value": "4.2015072/VIETSAF",
+        "type": "text"
+      },
+      {
+        "cell": "T76",
+        "template_value": null,
+        "sample_value": "2026-12-26 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "X76",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z76",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "H77",
+        "template_value": null,
+        "sample_value": "No.26736001\nDim: 11x4x4.7m",
+        "type": "text"
+      },
+      {
+        "cell": "L77",
+        "template_value": null,
+        "sample_value": "Yasuda Co.,Ltd",
+        "type": "text"
+      },
+      {
+        "cell": "P77",
+        "template_value": null,
+        "sample_value": "4.2015105/VIETSAF",
+        "type": "text"
+      },
+      {
+        "cell": "T77",
+        "template_value": null,
+        "sample_value": "2026-09-12 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "X77",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z77",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "H80",
+        "template_value": null,
+        "sample_value": "FD25-11 (456812)",
+        "type": "text"
+      },
+      {
+        "cell": "L80",
+        "template_value": null,
+        "sample_value": "KOMATSU",
+        "type": "text"
+      },
+      {
+        "cell": "P80",
+        "template_value": null,
+        "sample_value": "05931/KĐXD-TBN",
+        "type": "text"
+      },
+      {
+        "cell": "T80",
+        "template_value": null,
+        "sample_value": "2027-09-05 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "X80",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z80",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "H81",
+        "template_value": null,
+        "sample_value": "FD25-11 (456812)",
+        "type": "text"
+      },
+      {
+        "cell": "L81",
+        "template_value": null,
+        "sample_value": "KOMATSU",
+        "type": "text"
+      },
+      {
+        "cell": "P81",
+        "template_value": null,
+        "sample_value": "05931/KĐXD-TBN",
+        "type": "text"
+      },
+      {
+        "cell": "T81",
+        "template_value": null,
+        "sample_value": "2027-09-05 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "X81",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z81",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "H82",
+        "template_value": null,
+        "sample_value": "FD25-11 (456812)",
+        "type": "text"
+      },
+      {
+        "cell": "L82",
+        "template_value": null,
+        "sample_value": "KOMATSU",
+        "type": "text"
+      },
+      {
+        "cell": "P82",
+        "template_value": null,
+        "sample_value": "05931/KĐXD-TBN",
+        "type": "text"
+      },
+      {
+        "cell": "T82",
+        "template_value": null,
+        "sample_value": "2027-09-05 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "X82",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z82",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "H83",
+        "template_value": null,
+        "sample_value": "FD25-11 (456812)",
+        "type": "text"
+      },
+      {
+        "cell": "L83",
+        "template_value": null,
+        "sample_value": "KOMATSU",
+        "type": "text"
+      },
+      {
+        "cell": "P83",
+        "template_value": null,
+        "sample_value": "05931/KĐXD-TBN",
+        "type": "text"
+      },
+      {
+        "cell": "T83",
+        "template_value": null,
+        "sample_value": "2027-09-05 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "X83",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z83",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "H84",
+        "template_value": null,
+        "sample_value": "FD25-11 (456812)",
+        "type": "text"
+      },
+      {
+        "cell": "L84",
+        "template_value": null,
+        "sample_value": "KOMATSU",
+        "type": "text"
+      },
+      {
+        "cell": "P84",
+        "template_value": null,
+        "sample_value": "05931/KĐXD-TBN",
+        "type": "text"
+      },
+      {
+        "cell": "T84",
+        "template_value": null,
+        "sample_value": "2027-09-05 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "X84",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z84",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "H85",
+        "template_value": null,
+        "sample_value": "FD25-11 (456812)",
+        "type": "text"
+      },
+      {
+        "cell": "L85",
+        "template_value": null,
+        "sample_value": "KOMATSU",
+        "type": "text"
+      },
+      {
+        "cell": "P85",
+        "template_value": null,
+        "sample_value": "05931/KĐXD-TBN",
+        "type": "text"
+      },
+      {
+        "cell": "T85",
+        "template_value": null,
+        "sample_value": "2027-09-05 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "X85",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z85",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "F100",
+        "template_value": null,
+        "sample_value": "VŨ KIÊN CHUNG",
+        "type": "text"
+      },
+      {
+        "cell": "M100",
+        "template_value": null,
+        "sample_value": "TRẦN ĐĂNG THUẦN",
+        "type": "text"
+      },
+      {
+        "cell": "F101",
+        "template_value": null,
+        "sample_value": "Project Manager/QLDA",
+        "type": "text"
+      },
+      {
+        "cell": "M101",
+        "template_value": null,
+        "sample_value": "QC Engineer/KS QLCL",
+        "type": "text"
+      },
+      {
+        "cell": "V101",
+        "template_value": null,
+        "sample_value": "Inspector/TVGS",
+        "type": "text"
+      }
+    ],
+    "PJ-02": [
+      {
+        "cell": "F14",
+        "template_value": null,
+        "sample_value": "AS-RFI-2B-289",
+        "type": "text"
+      },
+      {
+        "cell": "U14",
+        "template_value": null,
+        "sample_value": "2026-05-11 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "I15",
+        "template_value": null,
+        "sample_value": "2B-01-02 Pipe Jacking Works of Main Sewer of Dia.800mm",
+        "type": "text"
+      },
+      {
+        "cell": "I16",
+        "template_value": null,
+        "sample_value": "2B-01-02 Công tác khoan kích tuyến cống chính đường kính D800mm",
+        "type": "text"
+      },
+      {
+        "cell": "I17",
+        "template_value": null,
+        "sample_value": "Inspection for preparation works before jacking",
+        "type": "text"
+      },
+      {
+        "cell": "I18",
+        "template_value": null,
+        "sample_value": "Nghiệm thu công tác chuẩn bị trước khi khoan kích",
+        "type": "text"
+      },
+      {
+        "cell": "F21",
+        "template_value": null,
+        "sample_value": "Shaft 42.15 (Span: 42.15-42.18)/ Giếng 42.15 (Nhịp: 42.15-42.18)",
+        "type": "text"
+      },
+      {
+        "cell": "X43",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z43",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "X44",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z44",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "D45",
+        "template_value": "TBM equipment/Máy TBM: Model/Số hiệu:",
+        "sample_value": "TBM equipment/Máy TBM: Model/Số hiệu: 805Y",
+        "type": "text"
+      },
+      {
+        "cell": "X45",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z45",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "D46",
+        "template_value": "Outside diameter of TBM/Đường kính ngoài máy TBM: Dtbm = ",
+        "sample_value": "Outside diameter of TBM/Đường kính ngoài máy TBM: Dtbm = 980mm",
+        "type": "text"
+      },
+      {
+        "cell": "X46",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z46",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "D47",
+        "template_value": "Hydraulic Jacking/Kích thủy lực: Model/Số hiệu: ",
+        "sample_value": "Hydraulic Jacking/Kích thủy lực: Model/Số hiệu: B-84 & B-86",
+        "type": "text"
+      },
+      {
+        "cell": "X47",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z47",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "D48",
+        "template_value": "Max Jacking Force/Lực kích lớn nhất:",
+        "sample_value": "Max Jacking Force/Lực kích lớn nhất: 200 tons/tấn;",
+        "type": "text"
+      },
+      {
+        "cell": "X48",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z48",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "D49",
+        "template_value": "Quantity/Số lượng:",
+        "sample_value": "Quantity/Số lượng: 02 nos./chiếc.",
+        "type": "text"
+      },
+      {
+        "cell": "X49",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z49",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "X50",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z50",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "X51",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z51",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "D54",
+        "template_value": "X = ",
+        "sample_value": "X = 123",
+        "type": "text"
+      },
+      {
+        "cell": "J54",
+        "template_value": "X = ",
+        "sample_value": "X = 124",
+        "type": "text"
+      },
+      {
+        "cell": "P54",
+        "template_value": "ΔX =",
+        "sample_value": "ΔX = 1",
+        "type": "text"
+      },
+      {
+        "cell": "X54",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z54",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "D55",
+        "template_value": "Y = ",
+        "sample_value": "Y = 456",
+        "type": "text"
+      },
+      {
+        "cell": "J55",
+        "template_value": "Y = ",
+        "sample_value": "Y = 457",
+        "type": "text"
+      },
+      {
+        "cell": "P55",
+        "template_value": "ΔY = ",
+        "sample_value": "ΔY =2",
+        "type": "text"
+      },
+      {
+        "cell": "X55",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z55",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "D58",
+        "template_value": null,
+        "sample_value": "0.350",
+        "type": "text"
+      },
+      {
+        "cell": "J58",
+        "template_value": null,
+        "sample_value": "0.348",
+        "type": "text"
+      },
+      {
+        "cell": "P58",
+        "template_value": null,
+        "sample_value": "0.020",
+        "type": "text"
+      },
+      {
+        "cell": "X58",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z58",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "D59",
+        "template_value": null,
+        "sample_value": "0.13%",
+        "type": "text"
+      },
+      {
+        "cell": "J59",
+        "template_value": null,
+        "sample_value": "0.13",
+        "type": "text"
+      },
+      {
+        "cell": "P59",
+        "template_value": null,
+        "sample_value": "0.00",
+        "type": "text"
+      },
+      {
+        "cell": "X59",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z59",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "E76",
+        "template_value": null,
+        "sample_value": "VŨ KIÊN CHUNG",
+        "type": "text"
+      },
+      {
+        "cell": "N76",
+        "template_value": null,
+        "sample_value": "TRẦN ĐĂNG THUẦN",
+        "type": "text"
+      },
+      {
+        "cell": "W76",
+        "template_value": null,
+        "sample_value": "PHÙNG HUY HIẾN",
+        "type": "text"
+      },
+      {
+        "cell": "E77",
+        "template_value": null,
+        "sample_value": "Project Manager/QLDA",
+        "type": "text"
+      },
+      {
+        "cell": "N77",
+        "template_value": null,
+        "sample_value": "QC Engineer/KS QLCL",
+        "type": "text"
+      },
+      {
+        "cell": "W77",
+        "template_value": null,
+        "sample_value": "Inspector/TVGS",
+        "type": "text"
+      }
+    ],
+    "PJ-02a": [
+      {
+        "cell": "F15",
+        "template_value": null,
+        "sample_value": "AS-RFI-2B-290",
+        "type": "text"
+      },
+      {
+        "cell": "U15",
+        "template_value": null,
+        "sample_value": "2026-05-11 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "I16",
+        "template_value": null,
+        "sample_value": "2B-01-03 Temprorary Facilities Works of Main Sewer of Dia.800mm",
+        "type": "text"
+      },
+      {
+        "cell": "I17",
+        "template_value": null,
+        "sample_value": "2B-01-03 Công tác tạm tuyến cống chính đường kính D800mm",
+        "type": "text"
+      },
+      {
+        "cell": "I18",
+        "template_value": null,
+        "sample_value": "Inspection for temporary facilities works before jacking ",
+        "type": "text"
+      },
+      {
+        "cell": "I19",
+        "template_value": null,
+        "sample_value": "Nghiệm thu các hạng mục tạm chuẩn bị trước khi khoan kích",
+        "type": "text"
+      },
+      {
+        "cell": "F22",
+        "template_value": null,
+        "sample_value": "Shaft 42.15 (Span: 42.15-42.18)/ Giếng 42.15 (Nhịp: 42.15-42.18)",
+        "type": "text"
+      },
+      {
+        "cell": "X47",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z47",
+        "template_value": null,
+        "sample_value": "*",
+        "type": "text"
+      },
+      {
+        "cell": "X48",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z48",
+        "template_value": null,
+        "sample_value": "*",
+        "type": "text"
+      },
+      {
+        "cell": "X49",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z49",
+        "template_value": null,
+        "sample_value": "*",
+        "type": "text"
+      },
+      {
+        "cell": "X50",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z50",
+        "template_value": null,
+        "sample_value": "*",
+        "type": "text"
+      },
+      {
+        "cell": "X51",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z51",
+        "template_value": null,
+        "sample_value": "*",
+        "type": "text"
+      },
+      {
+        "cell": "X52",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z52",
+        "template_value": null,
+        "sample_value": "*",
+        "type": "text"
+      },
+      {
+        "cell": "X53",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z53",
+        "template_value": null,
+        "sample_value": "*",
+        "type": "text"
+      },
+      {
+        "cell": "X54",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z54",
+        "template_value": null,
+        "sample_value": "*",
+        "type": "text"
+      },
+      {
+        "cell": "X55",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z55",
+        "template_value": null,
+        "sample_value": "*",
+        "type": "text"
+      },
+      {
+        "cell": "X56",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z56",
+        "template_value": null,
+        "sample_value": "*",
+        "type": "text"
+      },
+      {
+        "cell": "X57",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z57",
+        "template_value": null,
+        "sample_value": "*",
+        "type": "text"
+      },
+      {
+        "cell": "X58",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z58",
+        "template_value": null,
+        "sample_value": "*",
+        "type": "text"
+      },
+      {
+        "cell": "X59",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z59",
+        "template_value": null,
+        "sample_value": "*",
+        "type": "text"
+      },
+      {
+        "cell": "X60",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z60",
+        "template_value": null,
+        "sample_value": "*",
+        "type": "text"
+      },
+      {
+        "cell": "X61",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z61",
+        "template_value": null,
+        "sample_value": "*",
+        "type": "text"
+      },
+      {
+        "cell": "X62",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z62",
+        "template_value": null,
+        "sample_value": "*",
+        "type": "text"
+      },
+      {
+        "cell": "X63",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z63",
+        "template_value": null,
+        "sample_value": "*",
+        "type": "text"
+      },
+      {
+        "cell": "X64",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z64",
+        "template_value": null,
+        "sample_value": "*",
+        "type": "text"
+      },
+      {
+        "cell": "X65",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z65",
+        "template_value": null,
+        "sample_value": "*",
+        "type": "text"
+      },
+      {
+        "cell": "E81",
+        "template_value": null,
+        "sample_value": "VŨ KIÊN CHUNG",
+        "type": "text"
+      },
+      {
+        "cell": "N81",
+        "template_value": null,
+        "sample_value": "TRẦN ĐĂNG THUẦN",
+        "type": "text"
+      },
+      {
+        "cell": "E82",
+        "template_value": null,
+        "sample_value": "Project Manager/QLDA",
+        "type": "text"
+      },
+      {
+        "cell": "N82",
+        "template_value": null,
+        "sample_value": "QC Engineer/KS QLCL",
+        "type": "text"
+      },
+      {
+        "cell": "W82",
+        "template_value": null,
+        "sample_value": "Inspector/TVGS",
+        "type": "text"
+      }
+    ],
+    "PJ-03a": [
+      {
+        "cell": "F15",
+        "template_value": null,
+        "sample_value": "AS-RFI-2B-315",
+        "type": "text"
+      },
+      {
+        "cell": "W15",
+        "template_value": null,
+        "sample_value": "2026-06-08 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "I16",
+        "template_value": null,
+        "sample_value": "2B-01-02 Pipe Jacking Works of Main Sewer of Dia.800mm",
+        "type": "text"
+      },
+      {
+        "cell": "I17",
+        "template_value": null,
+        "sample_value": "2B-01-02 Công tác khoan kích tuyến cống chính đường kính D800mm",
+        "type": "text"
+      },
+      {
+        "cell": "I18",
+        "template_value": null,
+        "sample_value": "Inspection of cushion ring width in joint portion between installed jacking pipes ",
+        "type": "text"
+      },
+      {
+        "cell": "I19",
+        "template_value": null,
+        "sample_value": "Kiểm tra bề rộng vòng đệm ở mối nối giữa các ống cống kích đã được lắp đặt",
+        "type": "text"
+      },
+      {
+        "cell": "F22",
+        "template_value": null,
+        "sample_value": "Shaft 42.15 (Span: 42.15-42.18)/ Giếng 42.15 (Nhịp: 42.15-42.18)",
+        "type": "text"
+      },
+      {
+        "cell": "C29",
+        "template_value": null,
+        "sample_value": "S85 - S84",
+        "type": "text"
+      },
+      {
+        "cell": "F29",
+        "template_value": null,
+        "sample_value": "0.005",
+        "type": "number"
+      },
+      {
+        "cell": "L29",
+        "template_value": null,
+        "sample_value": "S70 - S69",
+        "type": "text"
+      },
+      {
+        "cell": "O29",
+        "template_value": null,
+        "sample_value": "0.009000000000000001",
+        "type": "number"
+      },
+      {
+        "cell": "U29",
+        "template_value": null,
+        "sample_value": "S55 - S54",
+        "type": "text"
+      },
+      {
+        "cell": "X29",
+        "template_value": null,
+        "sample_value": "0.008",
+        "type": "number"
+      },
+      {
+        "cell": "C30",
+        "template_value": null,
+        "sample_value": "S84 - S83",
+        "type": "text"
+      },
+      {
+        "cell": "F30",
+        "template_value": null,
+        "sample_value": "0.005",
+        "type": "number"
+      },
+      {
+        "cell": "L30",
+        "template_value": null,
+        "sample_value": "S69 - S68",
+        "type": "text"
+      },
+      {
+        "cell": "O30",
+        "template_value": null,
+        "sample_value": "0.006",
+        "type": "number"
+      },
+      {
+        "cell": "U30",
+        "template_value": null,
+        "sample_value": "S54 - S53",
+        "type": "text"
+      },
+      {
+        "cell": "X30",
+        "template_value": null,
+        "sample_value": "0.007",
+        "type": "number"
+      },
+      {
+        "cell": "C31",
+        "template_value": null,
+        "sample_value": "S83 - S82",
+        "type": "text"
+      },
+      {
+        "cell": "F31",
+        "template_value": null,
+        "sample_value": "0.005",
+        "type": "number"
+      },
+      {
+        "cell": "L31",
+        "template_value": null,
+        "sample_value": "S68 - S67",
+        "type": "text"
+      },
+      {
+        "cell": "O31",
+        "template_value": null,
+        "sample_value": "0.006",
+        "type": "number"
+      },
+      {
+        "cell": "U31",
+        "template_value": null,
+        "sample_value": "S53 - S52",
+        "type": "text"
+      },
+      {
+        "cell": "X31",
+        "template_value": null,
+        "sample_value": "0.005",
+        "type": "number"
+      },
+      {
+        "cell": "C32",
+        "template_value": null,
+        "sample_value": "S82 - S81",
+        "type": "text"
+      },
+      {
+        "cell": "F32",
+        "template_value": null,
+        "sample_value": "0.005",
+        "type": "number"
+      },
+      {
+        "cell": "L32",
+        "template_value": null,
+        "sample_value": "S67 - S66",
+        "type": "text"
+      },
+      {
+        "cell": "O32",
+        "template_value": null,
+        "sample_value": "0.005",
+        "type": "number"
+      },
+      {
+        "cell": "U32",
+        "template_value": null,
+        "sample_value": "S52 - S51",
+        "type": "text"
+      },
+      {
+        "cell": "X32",
+        "template_value": null,
+        "sample_value": "0.005",
+        "type": "number"
+      },
+      {
+        "cell": "C33",
+        "template_value": null,
+        "sample_value": "S81 - S80",
+        "type": "text"
+      },
+      {
+        "cell": "F33",
+        "template_value": null,
+        "sample_value": "0.009000000000000001",
+        "type": "number"
+      },
+      {
+        "cell": "L33",
+        "template_value": null,
+        "sample_value": "S66 - S65",
+        "type": "text"
+      },
+      {
+        "cell": "O33",
+        "template_value": null,
+        "sample_value": "0.007",
+        "type": "number"
+      },
+      {
+        "cell": "U33",
+        "template_value": null,
+        "sample_value": "S51 - S50",
+        "type": "text"
+      },
+      {
+        "cell": "X33",
+        "template_value": null,
+        "sample_value": "0.005",
+        "type": "number"
+      },
+      {
+        "cell": "C34",
+        "template_value": null,
+        "sample_value": "S80 - S79",
+        "type": "text"
+      },
+      {
+        "cell": "F34",
+        "template_value": null,
+        "sample_value": "0.009000000000000001",
+        "type": "number"
+      },
+      {
+        "cell": "L34",
+        "template_value": null,
+        "sample_value": "S65 - S64",
+        "type": "text"
+      },
+      {
+        "cell": "O34",
+        "template_value": null,
+        "sample_value": "0.008",
+        "type": "number"
+      },
+      {
+        "cell": "U34",
+        "template_value": null,
+        "sample_value": "S50 - S49",
+        "type": "text"
+      },
+      {
+        "cell": "X34",
+        "template_value": null,
+        "sample_value": "0.005",
+        "type": "number"
+      },
+      {
+        "cell": "C35",
+        "template_value": null,
+        "sample_value": "S79 - S78",
+        "type": "text"
+      },
+      {
+        "cell": "F35",
+        "template_value": null,
+        "sample_value": "0.005",
+        "type": "number"
+      },
+      {
+        "cell": "L35",
+        "template_value": null,
+        "sample_value": "S64 - S63",
+        "type": "text"
+      },
+      {
+        "cell": "O35",
+        "template_value": null,
+        "sample_value": "0.006",
+        "type": "number"
+      },
+      {
+        "cell": "U35",
+        "template_value": null,
+        "sample_value": "S49 - S48",
+        "type": "text"
+      },
+      {
+        "cell": "X35",
+        "template_value": null,
+        "sample_value": "0.007",
+        "type": "number"
+      },
+      {
+        "cell": "C36",
+        "template_value": null,
+        "sample_value": "S78 - S77",
+        "type": "text"
+      },
+      {
+        "cell": "F36",
+        "template_value": null,
+        "sample_value": "0.007",
+        "type": "number"
+      },
+      {
+        "cell": "L36",
+        "template_value": null,
+        "sample_value": "S63 - S62",
+        "type": "text"
+      },
+      {
+        "cell": "O36",
+        "template_value": null,
+        "sample_value": "0.006",
+        "type": "number"
+      },
+      {
+        "cell": "U36",
+        "template_value": null,
+        "sample_value": "S48 - S47",
+        "type": "text"
+      },
+      {
+        "cell": "X36",
+        "template_value": null,
+        "sample_value": "0.006",
+        "type": "number"
+      },
+      {
+        "cell": "C37",
+        "template_value": null,
+        "sample_value": "S77 - S76",
+        "type": "text"
+      },
+      {
+        "cell": "F37",
+        "template_value": null,
+        "sample_value": "0.009000000000000001",
+        "type": "number"
+      },
+      {
+        "cell": "L37",
+        "template_value": null,
+        "sample_value": "S62 - S61",
+        "type": "text"
+      },
+      {
+        "cell": "O37",
+        "template_value": null,
+        "sample_value": "0.005",
+        "type": "number"
+      },
+      {
+        "cell": "U37",
+        "template_value": null,
+        "sample_value": "S47 - S46",
+        "type": "text"
+      },
+      {
+        "cell": "X37",
+        "template_value": null,
+        "sample_value": "0.006",
+        "type": "number"
+      },
+      {
+        "cell": "C38",
+        "template_value": null,
+        "sample_value": "S76 - S75",
+        "type": "text"
+      },
+      {
+        "cell": "F38",
+        "template_value": null,
+        "sample_value": "0.006",
+        "type": "number"
+      },
+      {
+        "cell": "L38",
+        "template_value": null,
+        "sample_value": "S61 - S60",
+        "type": "text"
+      },
+      {
+        "cell": "O38",
+        "template_value": null,
+        "sample_value": "0.005",
+        "type": "number"
+      },
+      {
+        "cell": "U38",
+        "template_value": null,
+        "sample_value": "S46 - S45",
+        "type": "text"
+      },
+      {
+        "cell": "X38",
+        "template_value": null,
+        "sample_value": "0.005",
+        "type": "number"
+      },
+      {
+        "cell": "C39",
+        "template_value": null,
+        "sample_value": "S75 - S74",
+        "type": "text"
+      },
+      {
+        "cell": "F39",
+        "template_value": null,
+        "sample_value": "0.007",
+        "type": "number"
+      },
+      {
+        "cell": "L39",
+        "template_value": null,
+        "sample_value": "S60 - S59",
+        "type": "text"
+      },
+      {
+        "cell": "O39",
+        "template_value": null,
+        "sample_value": "0.006",
+        "type": "number"
+      },
+      {
+        "cell": "U39",
+        "template_value": null,
+        "sample_value": "S45 - S44",
+        "type": "text"
+      },
+      {
+        "cell": "X39",
+        "template_value": null,
+        "sample_value": "0.006",
+        "type": "number"
+      },
+      {
+        "cell": "C40",
+        "template_value": null,
+        "sample_value": "S74 - S73",
+        "type": "text"
+      },
+      {
+        "cell": "F40",
+        "template_value": null,
+        "sample_value": "0.005",
+        "type": "number"
+      },
+      {
+        "cell": "L40",
+        "template_value": null,
+        "sample_value": "S59 - S58",
+        "type": "text"
+      },
+      {
+        "cell": "O40",
+        "template_value": null,
+        "sample_value": "0.008",
+        "type": "number"
+      },
+      {
+        "cell": "U40",
+        "template_value": null,
+        "sample_value": "S44 - S43",
+        "type": "text"
+      },
+      {
+        "cell": "X40",
+        "template_value": null,
+        "sample_value": "0.007",
+        "type": "number"
+      },
+      {
+        "cell": "C41",
+        "template_value": null,
+        "sample_value": "S73 - S72",
+        "type": "text"
+      },
+      {
+        "cell": "F41",
+        "template_value": null,
+        "sample_value": "0.008",
+        "type": "number"
+      },
+      {
+        "cell": "L41",
+        "template_value": null,
+        "sample_value": "S58 - S57",
+        "type": "text"
+      },
+      {
+        "cell": "O41",
+        "template_value": null,
+        "sample_value": "0.005",
+        "type": "number"
+      },
+      {
+        "cell": "U41",
+        "template_value": null,
+        "sample_value": "S43 - S42",
+        "type": "text"
+      },
+      {
+        "cell": "X41",
+        "template_value": null,
+        "sample_value": "0.005",
+        "type": "number"
+      },
+      {
+        "cell": "C42",
+        "template_value": null,
+        "sample_value": "S72 - S71",
+        "type": "text"
+      },
+      {
+        "cell": "F42",
+        "template_value": null,
+        "sample_value": "0.006",
+        "type": "number"
+      },
+      {
+        "cell": "L42",
+        "template_value": null,
+        "sample_value": "S57 - S56",
+        "type": "text"
+      },
+      {
+        "cell": "O42",
+        "template_value": null,
+        "sample_value": "0.006",
+        "type": "number"
+      },
+      {
+        "cell": "U42",
+        "template_value": null,
+        "sample_value": "S42 - S41",
+        "type": "text"
+      },
+      {
+        "cell": "X42",
+        "template_value": null,
+        "sample_value": "0.006",
+        "type": "number"
+      },
+      {
+        "cell": "C43",
+        "template_value": null,
+        "sample_value": "S71 - S70",
+        "type": "text"
+      },
+      {
+        "cell": "F43",
+        "template_value": null,
+        "sample_value": "0.005",
+        "type": "number"
+      },
+      {
+        "cell": "L43",
+        "template_value": null,
+        "sample_value": "S56 - S55",
+        "type": "text"
+      },
+      {
+        "cell": "O43",
+        "template_value": null,
+        "sample_value": "0.006",
+        "type": "number"
+      },
+      {
+        "cell": "U43",
+        "template_value": null,
+        "sample_value": "S41 - S40",
+        "type": "text"
+      },
+      {
+        "cell": "X43",
+        "template_value": null,
+        "sample_value": "0.006",
+        "type": "number"
+      },
+      {
+        "cell": "E58",
+        "template_value": null,
+        "sample_value": "VŨ KIÊN CHUNG",
+        "type": "text"
+      },
+      {
+        "cell": "M58",
+        "template_value": null,
+        "sample_value": "TRẦN ĐĂNG THUẦN",
+        "type": "text"
+      },
+      {
+        "cell": "E59",
+        "template_value": null,
+        "sample_value": "Project Manager/QLDA",
+        "type": "text"
+      },
+      {
+        "cell": "M59",
+        "template_value": null,
+        "sample_value": "QC Engineer/KS QLCL",
+        "type": "text"
+      },
+      {
+        "cell": "V59",
+        "template_value": null,
+        "sample_value": "Inspector/TVGS",
+        "type": "text"
+      }
+    ],
+    "PJ-04": [
+      {
+        "cell": "E14",
+        "template_value": null,
+        "sample_value": "AS-RFI-2B-317",
+        "type": "text"
+      },
+      {
+        "cell": "T14",
+        "template_value": null,
+        "sample_value": "2026-06-13 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "H15",
+        "template_value": null,
+        "sample_value": "2B-01-02 Pipe Jacking Works of Main Sewer of Dia.800mm",
+        "type": "text"
+      },
+      {
+        "cell": "H16",
+        "template_value": null,
+        "sample_value": "2B-01-02 Công tác khoan kích tuyến cống chính đường kính D800mm",
+        "type": "text"
+      },
+      {
+        "cell": "H17",
+        "template_value": null,
+        "sample_value": "Inspection for coordinates and elevation of the installed pipes",
+        "type": "text"
+      },
+      {
+        "cell": "H18",
+        "template_value": null,
+        "sample_value": "Nghiệm thu kiểm tra tọa độ và cao độ cống đã được lắp đặt.",
+        "type": "text"
+      },
+      {
+        "cell": "F21",
+        "template_value": null,
+        "sample_value": "Shaft 42.15 (Span: 42.15-42.18)/ Giếng 42.15 (Nhịp: 42.15-42.18)",
+        "type": "text"
+      },
+      {
+        "cell": "D25",
+        "template_value": null,
+        "sample_value": "Point No.1/ Điểm số 1\n(Start point of Jacking Pipe-Seg.103/ Điểm đầu Cống Kích-Đốt 85)",
+        "type": "text"
+      },
+      {
+        "cell": "L25",
+        "template_value": null,
+        "sample_value": "2320654.739",
+        "type": "number"
+      },
+      {
+        "cell": "P25",
+        "template_value": null,
+        "sample_value": "2320654.737",
+        "type": "number"
+      },
+      {
+        "cell": "T25",
+        "template_value": null,
+        "sample_value": "-1.6999999061226845",
+        "type": "number"
+      },
+      {
+        "cell": "X25",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z25",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "L26",
+        "template_value": null,
+        "sample_value": "581345.228",
+        "type": "number"
+      },
+      {
+        "cell": "P26",
+        "template_value": null,
+        "sample_value": "581345.23",
+        "type": "number"
+      },
+      {
+        "cell": "T26",
+        "template_value": null,
+        "sample_value": "1.500000013038516",
+        "type": "number"
+      },
+      {
+        "cell": "X26",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z26",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "L27",
+        "template_value": null,
+        "sample_value": "0.348",
+        "type": "number"
+      },
+      {
+        "cell": "P27",
+        "template_value": null,
+        "sample_value": "0.335",
+        "type": "number"
+      },
+      {
+        "cell": "T27",
+        "template_value": null,
+        "sample_value": "-12.999999999999956",
+        "type": "number"
+      },
+      {
+        "cell": "X27",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z27",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "D28",
+        "template_value": null,
+        "sample_value": "Point No.2/ Điểm số 2\nIntersection point with sheet pile-Seg.103/ Điểm giao với CVT-Đốt 85",
+        "type": "text"
+      },
+      {
+        "cell": "L28",
+        "template_value": null,
+        "sample_value": "2320654.099",
+        "type": "number"
+      },
+      {
+        "cell": "P28",
+        "template_value": null,
+        "sample_value": "2320654.1",
+        "type": "number"
+      },
+      {
+        "cell": "T28",
+        "template_value": null,
+        "sample_value": "1.0999999940395355",
+        "type": "number"
+      },
+      {
+        "cell": "X28",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z28",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "L29",
+        "template_value": null,
+        "sample_value": "581344.447",
+        "type": "number"
+      },
+      {
+        "cell": "P29",
+        "template_value": null,
+        "sample_value": "581344.442",
+        "type": "number"
+      },
+      {
+        "cell": "T29",
+        "template_value": null,
+        "sample_value": "-4.699999932199717",
+        "type": "number"
+      },
+      {
+        "cell": "X29",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z29",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "L30",
+        "template_value": null,
+        "sample_value": "0.347",
+        "type": "number"
+      },
+      {
+        "cell": "P30",
+        "template_value": null,
+        "sample_value": "0.335",
+        "type": "number"
+      },
+      {
+        "cell": "T30",
+        "template_value": null,
+        "sample_value": "-11.999999999999956",
+        "type": "number"
+      },
+      {
+        "cell": "X30",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z30",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "D31",
+        "template_value": null,
+        "sample_value": "Point No.3/ Điểm số 3\n (Seg 65/ Đốt 65)",
+        "type": "text"
+      },
+      {
+        "cell": "L31",
+        "template_value": null,
+        "sample_value": "2320622.499",
+        "type": "number"
+      },
+      {
+        "cell": "P31",
+        "template_value": null,
+        "sample_value": "2320622.502",
+        "type": "number"
+      },
+      {
+        "cell": "T31",
+        "template_value": null,
+        "sample_value": "2.599999774247408",
+        "type": "number"
+      },
+      {
+        "cell": "X31",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z31",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "L32",
+        "template_value": null,
+        "sample_value": "581305.699",
+        "type": "number"
+      },
+      {
+        "cell": "P32",
+        "template_value": null,
+        "sample_value": "581305.692",
+        "type": "number"
+      },
+      {
+        "cell": "T32",
+        "template_value": null,
+        "sample_value": "-7.400000002235174",
+        "type": "number"
+      },
+      {
+        "cell": "X32",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z32",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "L33",
+        "template_value": null,
+        "sample_value": "0.282",
+        "type": "number"
+      },
+      {
+        "cell": "P33",
+        "template_value": null,
+        "sample_value": "0.264",
+        "type": "number"
+      },
+      {
+        "cell": "T33",
+        "template_value": null,
+        "sample_value": "-17.99999999999996",
+        "type": "number"
+      },
+      {
+        "cell": "X33",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z33",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "D34",
+        "template_value": null,
+        "sample_value": "Point No.4/ Điểm số 4\n (Seg 45/ Đốt 45)",
+        "type": "text"
+      },
+      {
+        "cell": "L34",
+        "template_value": null,
+        "sample_value": "2320590.9",
+        "type": "number"
+      },
+      {
+        "cell": "P34",
+        "template_value": null,
+        "sample_value": "2320590.9",
+        "type": "number"
+      },
+      {
+        "cell": "T34",
+        "template_value": null,
+        "sample_value": "0",
+        "type": "number"
+      },
+      {
+        "cell": "X34",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z34",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "L35",
+        "template_value": null,
+        "sample_value": "581266.952",
+        "type": "number"
+      },
+      {
+        "cell": "P35",
+        "template_value": null,
+        "sample_value": "581266.951",
+        "type": "number"
+      },
+      {
+        "cell": "T35",
+        "template_value": null,
+        "sample_value": "-1.0999999940395355",
+        "type": "number"
+      },
+      {
+        "cell": "X35",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z35",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "L36",
+        "template_value": null,
+        "sample_value": "0.217",
+        "type": "number"
+      },
+      {
+        "cell": "P36",
+        "template_value": null,
+        "sample_value": "0.204",
+        "type": "number"
+      },
+      {
+        "cell": "T36",
+        "template_value": null,
+        "sample_value": "-13.00000000000001",
+        "type": "number"
+      },
+      {
+        "cell": "X36",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z36",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "D37",
+        "template_value": null,
+        "sample_value": "Point No.5/ Điểm số 5\n (Seg 25 / Đốt 25 )",
+        "type": "text"
+      },
+      {
+        "cell": "L37",
+        "template_value": null,
+        "sample_value": "2320559.305",
+        "type": "number"
+      },
+      {
+        "cell": "P37",
+        "template_value": null,
+        "sample_value": "2320559.31",
+        "type": "number"
+      },
+      {
+        "cell": "T37",
+        "template_value": null,
+        "sample_value": "5.2999998442828655",
+        "type": "number"
+      },
+      {
+        "cell": "X37",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z37",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "L38",
+        "template_value": null,
+        "sample_value": "581228.21",
+        "type": "number"
+      },
+      {
+        "cell": "P38",
+        "template_value": null,
+        "sample_value": "581228.214",
+        "type": "number"
+      },
+      {
+        "cell": "T38",
+        "template_value": null,
+        "sample_value": "4.200000083073974",
+        "type": "number"
+      },
+      {
+        "cell": "X38",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z38",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "L39",
+        "template_value": null,
+        "sample_value": "0.152",
+        "type": "number"
+      },
+      {
+        "cell": "P39",
+        "template_value": null,
+        "sample_value": "0.142",
+        "type": "number"
+      },
+      {
+        "cell": "T39",
+        "template_value": null,
+        "sample_value": "-10.000000000000009",
+        "type": "number"
+      },
+      {
+        "cell": "X39",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z39",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "E56",
+        "template_value": null,
+        "sample_value": "VŨ KIÊN CHUNG",
+        "type": "text"
+      },
+      {
+        "cell": "M56",
+        "template_value": null,
+        "sample_value": "TÀO ĐỨC QUANG",
+        "type": "text"
+      },
+      {
+        "cell": "V56",
+        "template_value": null,
+        "sample_value": "PHÙNG HUY HIẾN",
+        "type": "text"
+      },
+      {
+        "cell": "E57",
+        "template_value": null,
+        "sample_value": "Project Manager/QLDA",
+        "type": "text"
+      },
+      {
+        "cell": "M57",
+        "template_value": null,
+        "sample_value": "Surveyor Engineer/KS TĐ",
+        "type": "text"
+      },
+      {
+        "cell": "V57",
+        "template_value": null,
+        "sample_value": "Inspector/TVGS",
+        "type": "text"
+      }
+    ],
+    "PJ-05": [
+      {
+        "cell": "F14",
+        "template_value": null,
+        "sample_value": "AS-RFI-2B-316",
+        "type": "text"
+      },
+      {
+        "cell": "T14",
+        "template_value": null,
+        "sample_value": "2026-06-11 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "I15",
+        "template_value": null,
+        "sample_value": "2B-01-02 Pipe Jacking Works of Main Sewer of Dia.800mm",
+        "type": "text"
+      },
+      {
+        "cell": "I16",
+        "template_value": null,
+        "sample_value": "2B-01-02 Công tác khoan kích tuyến cống chính đường kính D800mm",
+        "type": "text"
+      },
+      {
+        "cell": "I17",
+        "template_value": null,
+        "sample_value": "Inspection for grouting injection under pressure for filling cavities around pipes",
+        "type": "text"
+      },
+      {
+        "cell": "I18",
+        "template_value": null,
+        "sample_value": "Nghiệm thu công tác bơm vữa áp lực chèn phần rỗng bao quanh ống kích",
+        "type": "text"
+      },
+      {
+        "cell": "F21",
+        "template_value": null,
+        "sample_value": "Shaft 42.15 (Span: 42.15-42.18)/ Giếng 42.15 (Nhịp: 42.15-42.18)",
+        "type": "text"
+      },
+      {
+        "cell": "D25",
+        "template_value": null,
+        "sample_value": "S5",
+        "type": "text"
+      },
+      {
+        "cell": "G25",
+        "template_value": null,
+        "sample_value": "S1-S7",
+        "type": "text"
+      },
+      {
+        "cell": "L25",
+        "template_value": null,
+        "sample_value": "08:25:00",
+        "type": "time"
+      },
+      {
+        "cell": "P25",
+        "template_value": null,
+        "sample_value": "09:10:00",
+        "type": "time"
+      },
+      {
+        "cell": "T25",
+        "template_value": null,
+        "sample_value": "0-4",
+        "type": "text"
+      },
+      {
+        "cell": "X25",
+        "template_value": null,
+        "sample_value": "1.2",
+        "type": "number"
+      },
+      {
+        "cell": "D26",
+        "template_value": null,
+        "sample_value": "S12",
+        "type": "text"
+      },
+      {
+        "cell": "G26",
+        "template_value": null,
+        "sample_value": "S8-S15",
+        "type": "text"
+      },
+      {
+        "cell": "L26",
+        "template_value": null,
+        "sample_value": "09:15:00",
+        "type": "time"
+      },
+      {
+        "cell": "P26",
+        "template_value": null,
+        "sample_value": "10:05:00",
+        "type": "time"
+      },
+      {
+        "cell": "T26",
+        "template_value": null,
+        "sample_value": "0-4",
+        "type": "text"
+      },
+      {
+        "cell": "X26",
+        "template_value": null,
+        "sample_value": "1.4",
+        "type": "number"
+      },
+      {
+        "cell": "D27",
+        "template_value": null,
+        "sample_value": "S18",
+        "type": "text"
+      },
+      {
+        "cell": "G27",
+        "template_value": null,
+        "sample_value": "S16-S22",
+        "type": "text"
+      },
+      {
+        "cell": "L27",
+        "template_value": null,
+        "sample_value": "10:15:00",
+        "type": "time"
+      },
+      {
+        "cell": "P27",
+        "template_value": null,
+        "sample_value": "10:55:00",
+        "type": "time"
+      },
+      {
+        "cell": "T27",
+        "template_value": null,
+        "sample_value": "0-4",
+        "type": "text"
+      },
+      {
+        "cell": "X27",
+        "template_value": null,
+        "sample_value": "1.2",
+        "type": "number"
+      },
+      {
+        "cell": "D28",
+        "template_value": null,
+        "sample_value": "S26",
+        "type": "text"
+      },
+      {
+        "cell": "G28",
+        "template_value": null,
+        "sample_value": "S23-S30",
+        "type": "text"
+      },
+      {
+        "cell": "L28",
+        "template_value": null,
+        "sample_value": "11:00:00",
+        "type": "time"
+      },
+      {
+        "cell": "P28",
+        "template_value": null,
+        "sample_value": "11:45:00",
+        "type": "time"
+      },
+      {
+        "cell": "T28",
+        "template_value": null,
+        "sample_value": "0-4",
+        "type": "text"
+      },
+      {
+        "cell": "X28",
+        "template_value": null,
+        "sample_value": "1.2",
+        "type": "number"
+      },
+      {
+        "cell": "D29",
+        "template_value": null,
+        "sample_value": "S33",
+        "type": "text"
+      },
+      {
+        "cell": "G29",
+        "template_value": null,
+        "sample_value": "S31-S37",
+        "type": "text"
+      },
+      {
+        "cell": "L29",
+        "template_value": null,
+        "sample_value": "13:20:00",
+        "type": "time"
+      },
+      {
+        "cell": "P29",
+        "template_value": null,
+        "sample_value": "14:00:00",
+        "type": "time"
+      },
+      {
+        "cell": "T29",
+        "template_value": null,
+        "sample_value": "0-4",
+        "type": "text"
+      },
+      {
+        "cell": "X29",
+        "template_value": null,
+        "sample_value": "1.2",
+        "type": "number"
+      },
+      {
+        "cell": "D30",
+        "template_value": null,
+        "sample_value": "S42",
+        "type": "text"
+      },
+      {
+        "cell": "G30",
+        "template_value": null,
+        "sample_value": "S38-S44",
+        "type": "text"
+      },
+      {
+        "cell": "L30",
+        "template_value": null,
+        "sample_value": "14:05:00",
+        "type": "time"
+      },
+      {
+        "cell": "P30",
+        "template_value": null,
+        "sample_value": "14:45:00",
+        "type": "time"
+      },
+      {
+        "cell": "T30",
+        "template_value": null,
+        "sample_value": "0-4",
+        "type": "text"
+      },
+      {
+        "cell": "X30",
+        "template_value": null,
+        "sample_value": "1.2",
+        "type": "number"
+      },
+      {
+        "cell": "D31",
+        "template_value": null,
+        "sample_value": "S48",
+        "type": "text"
+      },
+      {
+        "cell": "G31",
+        "template_value": null,
+        "sample_value": "S45-S51",
+        "type": "text"
+      },
+      {
+        "cell": "L31",
+        "template_value": null,
+        "sample_value": "14:50:00",
+        "type": "time"
+      },
+      {
+        "cell": "P31",
+        "template_value": null,
+        "sample_value": "15:30:00",
+        "type": "time"
+      },
+      {
+        "cell": "T31",
+        "template_value": null,
+        "sample_value": "0-4",
+        "type": "text"
+      },
+      {
+        "cell": "X31",
+        "template_value": null,
+        "sample_value": "1.2",
+        "type": "number"
+      },
+      {
+        "cell": "X32",
+        "template_value": "0",
+        "sample_value": "8.6",
+        "type": "number"
+      },
+      {
+        "cell": "E53",
+        "template_value": null,
+        "sample_value": "VŨ KIÊN CHUNG",
+        "type": "text"
+      },
+      {
+        "cell": "M53",
+        "template_value": null,
+        "sample_value": "TRẦN ĐĂNG THUẦN",
+        "type": "text"
+      },
+      {
+        "cell": "E54",
+        "template_value": null,
+        "sample_value": "Project Manager/QLDA",
+        "type": "text"
+      },
+      {
+        "cell": "M54",
+        "template_value": null,
+        "sample_value": "QC Engineer/KS QLCL",
+        "type": "text"
+      },
+      {
+        "cell": "V54",
+        "template_value": null,
+        "sample_value": "Inspector/TVGS",
+        "type": "text"
+      }
+    ],
+    "PJ-06": [
+      {
+        "cell": "E14",
+        "template_value": null,
+        "sample_value": "AS-RFI-2B-319",
+        "type": "text"
+      },
+      {
+        "cell": "U14",
+        "template_value": null,
+        "sample_value": "2026-06-17 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "H15",
+        "template_value": null,
+        "sample_value": "2B-01-02 Pipe Jacking Works of Main Sewer of Dia.800mm",
+        "type": "text"
+      },
+      {
+        "cell": "H16",
+        "template_value": null,
+        "sample_value": "2B-01-02 Công tác khoan kích tuyến cống chính đường kính D800mm",
+        "type": "text"
+      },
+      {
+        "cell": "H17",
+        "template_value": null,
+        "sample_value": "Inspection for infiltration test after jacking pipes",
+        "type": "text"
+      },
+      {
+        "cell": "H18",
+        "template_value": null,
+        "sample_value": "Nghiệm thu kiểm tra sự rò rỉ (thấm) nước sau khi kích cống",
+        "type": "text"
+      },
+      {
+        "cell": "F21",
+        "template_value": null,
+        "sample_value": "Shaft 42.15 (Span: 42.15-42.18)/ Giếng 42.15 (Nhịp: 42.15-42.18)",
+        "type": "text"
+      },
+      {
+        "cell": "P24",
+        "template_value": null,
+        "sample_value": "800 mm",
+        "type": "text"
+      },
+      {
+        "cell": "P25",
+        "template_value": null,
+        "sample_value": "213.006 m",
+        "type": "text"
+      },
+      {
+        "cell": "O26",
+        "template_value": "PI = 0.5liters x D x L / 1 hour = …............ (lit/h)",
+        "sample_value": "PI = 0.5liters x D x L / 1 hour = 85.20 (lit/h)",
+        "type": "text"
+      },
+      {
+        "cell": "O28",
+        "template_value": null,
+        "sample_value": "14:00:00",
+        "type": "time"
+      },
+      {
+        "cell": "O29",
+        "template_value": null,
+        "sample_value": "15:00:00",
+        "type": "time"
+      },
+      {
+        "cell": "P30",
+        "template_value": "     liter",
+        "sample_value": "0 liter",
+        "type": "text"
+      },
+      {
+        "cell": "O31",
+        "template_value": "TI = V/T =. …..0 (lit/h)",
+        "sample_value": "TI = V/T = 0 (lit/h)",
+        "type": "text"
+      },
+      {
+        "cell": "E51",
+        "template_value": null,
+        "sample_value": "VŨ KIÊN CHUNG",
+        "type": "text"
+      },
+      {
+        "cell": "M51",
+        "template_value": null,
+        "sample_value": "TRẦN ĐĂNG THUẦN",
+        "type": "text"
+      },
+      {
+        "cell": "E52",
+        "template_value": null,
+        "sample_value": "Project Manager/QLDA",
+        "type": "text"
+      },
+      {
+        "cell": "M52",
+        "template_value": null,
+        "sample_value": "QC Engineer/KS QLCL",
+        "type": "text"
+      },
+      {
+        "cell": "V52",
+        "template_value": null,
+        "sample_value": "Inspector/TVGS",
+        "type": "text"
+      }
+    ],
+    "PJ-07": [
+      {
+        "cell": "E14",
+        "template_value": null,
+        "sample_value": "AS-RFI-2B-320",
+        "type": "text"
+      },
+      {
+        "cell": "R14",
+        "template_value": null,
+        "sample_value": "2026-06-17 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "H15",
+        "template_value": null,
+        "sample_value": "2B-01-02 Pipe Jacking Works of Main Sewer of Dia.800mm",
+        "type": "text"
+      },
+      {
+        "cell": "H16",
+        "template_value": null,
+        "sample_value": "2B-01-02 Công tác khoan kích tuyến cống chính đường kính D800mm",
+        "type": "text"
+      },
+      {
+        "cell": "H17",
+        "template_value": null,
+        "sample_value": "Inspection for completed the jacking sewer pipes (section by section)",
+        "type": "text"
+      },
+      {
+        "cell": "H18",
+        "template_value": null,
+        "sample_value": "Nghiệm thu hoàn thành công tác kích cống (cho từng đoạn cống kích)",
+        "type": "text"
+      },
+      {
+        "cell": "F21",
+        "template_value": null,
+        "sample_value": "Shaft 42.15 (Span: 42.15-42.18)/ Giếng 42.15 (Nhịp: 42.15-42.18)",
+        "type": "text"
+      },
+      {
+        "cell": "D27",
+        "template_value": "Total length of installed sewer pipes/ Tổng chiều dài cống đã lắp đặt:…...........m",
+        "sample_value": "Total length of installed sewer pipes/ Tổng chiều dài cống đã lắp đặt: 213.006 m",
+        "type": "text"
+      },
+      {
+        "cell": "X27",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z27",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "D28",
+        "template_value": "Quantity of the installed pipes/ Số lượng cống đã lắp đặt:\nQuantity of pipe segments/ Số đoạn x Length of 1 pipe segment/ Chiều dài đơn vị :    seg./đốt x 2.5 m",
+        "sample_value": "Quantity of the installed pipes/ Số lượng cống đã lắp đặt:\nQuantity of pipe segments/ Số đoạn x Length of 1 pipe segment/ Chiều dài đơn vị : 85 seg./đốt x 2.5 m",
+        "type": "text"
+      },
+      {
+        "cell": "X28",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z28",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "D29",
+        "template_value": "Total length of pipe jacking works/ Tổng chiều dài của công tác khoan kích: ….......... m",
+        "sample_value": "Total length of pipe jacking works/ Tổng chiều dài của công tác khoan kích: 210.132 m",
+        "type": "text"
+      },
+      {
+        "cell": "X29",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z29",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "D30",
+        "template_value": "Total length of pipes supplied for pipe jacking works/ Tổng chiều dài cống cung cấp cho công tác khoan kích: ….......... m",
+        "sample_value": "Total length of pipes supplied for pipe jacking works/ Tổng chiều dài cống cung cấp cho công tác khoan kích: 209.626 m",
+        "type": "text"
+      },
+      {
+        "cell": "X30",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z30",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "X31",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z31",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "X32",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z32",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "X33",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z33",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "X34",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z34",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "X35",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z35",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "X36",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z36",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "E52",
+        "template_value": null,
+        "sample_value": "VŨ KIÊN CHUNG",
+        "type": "text"
+      },
+      {
+        "cell": "M52",
+        "template_value": null,
+        "sample_value": "TRẦN ĐĂNG THUẦN",
+        "type": "text"
+      },
+      {
+        "cell": "E53",
+        "template_value": null,
+        "sample_value": "Project Manager/QLDA",
+        "type": "text"
+      },
+      {
+        "cell": "M53",
+        "template_value": null,
+        "sample_value": "QC Engineer/KS QLCL",
+        "type": "text"
+      },
+      {
+        "cell": "V53",
+        "template_value": null,
+        "sample_value": "Inspector/TVGS",
+        "type": "text"
+      }
+    ],
+    "PJ-02b": [
+      {
+        "cell": "F15",
+        "template_value": null,
+        "sample_value": "AS-RFI-2B-321",
+        "type": "text"
+      },
+      {
+        "cell": "V15",
+        "template_value": null,
+        "sample_value": "2026-06-20 00:00:00",
+        "type": "date"
+      },
+      {
+        "cell": "I16",
+        "template_value": null,
+        "sample_value": "2B-01-03 Temprorary Facilities Works of Main Sewer of Dia.800mm",
+        "type": "text"
+      },
+      {
+        "cell": "I17",
+        "template_value": null,
+        "sample_value": "2B-01-03 Công tác tạm tuyến cống chính đường kính D800mm",
+        "type": "text"
+      },
+      {
+        "cell": "I18",
+        "template_value": null,
+        "sample_value": "Inspection for completion demolition and removal of temporary works for pipe jacking works",
+        "type": "text"
+      },
+      {
+        "cell": "I19",
+        "template_value": null,
+        "sample_value": "Nghiệm thu hoàn thành tháo dỡ và di dời các hạng mục tạm phục vụ công tác kích cống",
+        "type": "text"
+      },
+      {
+        "cell": "F22",
+        "template_value": null,
+        "sample_value": "Shaft 42.15 (Span: 42.15-42.18)/ Giếng 42.15 (Nhịp: 42.15-42.18)",
+        "type": "text"
+      },
+      {
+        "cell": "X49",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z49",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "X50",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z50",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "X51",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z51",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "X52",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z52",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "X53",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z53",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "X54",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z54",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "X55",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z55",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "X56",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z56",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "X57",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z57",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "X58",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z58",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "X59",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z59",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "X60",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z60",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "X61",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z61",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "X62",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z62",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "X63",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z63",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "X64",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z64",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "X65",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z65",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "X66",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z66",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "X67",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z67",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "X68",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z68",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "X69",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z69",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "X70",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z70",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "X71",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z71",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "X72",
+        "template_value": null,
+        "sample_value": "R",
+        "type": "text"
+      },
+      {
+        "cell": "Z72",
+        "template_value": null,
+        "sample_value": "£",
+        "type": "text"
+      },
+      {
+        "cell": "E87",
+        "template_value": null,
+        "sample_value": "VŨ KIÊN CHUNG",
+        "type": "text"
+      },
+      {
+        "cell": "N87",
+        "template_value": null,
+        "sample_value": "TRẦN ĐĂNG THUẦN",
+        "type": "text"
+      },
+      {
+        "cell": "E88",
+        "template_value": null,
+        "sample_value": "Project Manager/QLDA",
+        "type": "text"
+      },
+      {
+        "cell": "N88",
+        "template_value": null,
+        "sample_value": "QC Engineer/KS QLCL",
+        "type": "text"
+      },
+      {
+        "cell": "W88",
+        "template_value": null,
+        "sample_value": "Inspector/TVGS",
+        "type": "text"
+      }
+    ]
+  }
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ecoism-qc | Lập hồ sơ QC</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Hệ thống lập hồ sơ QC — Yen Xa Package 4</h1>
+  <p class="sub">Điền dữ liệu &rarr; Xuất file Excel/Word đúng chuẩn template. Chạy hoàn toàn trên trình duyệt, không gửi dữ liệu lên server nào.</p>
+</header>
+
+<main>
+  <section id="picker">
+    <h2>1. Chọn biểu mẫu</h2>
+    <div id="formList" class="grid"></div>
+  </section>
+
+  <section id="formArea" class="hidden">
+    <h2 id="formTitle">2. Nhập dữ liệu</h2>
+    <p class="hint">Ô nào không nhập sẽ được để TRỐNG trong file xuất ra (không dùng giá trị mẫu của template).</p>
+    <form id="dataForm"></form>
+    <div class="actions">
+      <button id="exportBtn" type="button">Xuất file</button>
+      <button id="backBtn" type="button" class="secondary">&larr; Chọn biểu mẫu khác</button>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>Chạy tĩnh trên GitHub Pages · Xem <a href="README.md">README</a> để triển khai.</p>
+</footer>
+
+<!-- PizZip: used for BOTH xlsx (raw XML patch) and docx (docxtemplater) -->
+<script src="https://unpkg.com/pizzip@3.2.0/dist/pizzip.js"></script>
+<!-- docxtemplater: must be the /build/ bundle (browser UMD), NOT /js/ (Node.js CommonJS source) -->
+<script src="https://unpkg.com/docxtemplater@3.69.0/build/docxtemplater.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
