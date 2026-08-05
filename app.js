@@ -332,7 +332,22 @@ async function doExport() {
     status.className = "status ok";
   } catch (e) {
     console.error(e);
-    status.textContent = "Lỗi khi xuất file: " + e.message;
+    let detail = e.message;
+    // docxtemplater throws a MultiError whose real information is in
+    // e.properties.errors (an array of individual TemplateError objects).
+    // The top-level e.message alone ("Multi error") is useless - surface
+    // every sub-error's explanation and exact tag location instead.
+    if (e.properties && Array.isArray(e.properties.errors)) {
+      console.error("docxtemplater sub-errors:", e.properties.errors);
+      const lines = e.properties.errors.map((err, i) => {
+        const p = err.properties || {};
+        const loc = p.xtag ? ` (tag: "${p.xtag}")` : "";
+        const explanation = p.explanation || err.message || String(err);
+        return `${i + 1}. ${explanation}${loc}`;
+      });
+      detail = lines.join(" | ");
+    }
+    status.textContent = "Lỗi khi xuất file: " + detail;
     status.className = "status err";
   }
 }
