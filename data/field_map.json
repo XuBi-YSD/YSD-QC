@@ -5242,6 +5242,1686 @@
         "sample_value": "Inspector/TVGS",
         "type": "text",
         "context": "Position/ Vị trí:"
+      },
+      {
+        "cell": "D40",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "L40",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "P40",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "T40",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "X40",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "Z40",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "L41",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "P41",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "T41",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "X41",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "Z41",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "L42",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "P42",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "T42",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "X42",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "Z42",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "D43",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "L43",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "P43",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "T43",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "X43",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "Z43",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "L44",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "P44",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "T44",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "X44",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "Z44",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "L45",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "P45",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "T45",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "X45",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "Z45",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "D46",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "L46",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "P46",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "T46",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "X46",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "Z46",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "L47",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "P47",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "T47",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "X47",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "Z47",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "L48",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "P48",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "T48",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "X48",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "Z48",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "D49",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "L49",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "P49",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "T49",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "X49",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "Z49",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "L50",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "P50",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "T50",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "X50",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "Z50",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "L51",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "P51",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "T51",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "X51",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "Z51",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "D52",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "L52",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "P52",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "T52",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "X52",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "Z52",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "L53",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "P53",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "T53",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "X53",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "Z53",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "L54",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "P54",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "T54",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "X54",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "Z54",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "D55",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "L55",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "P55",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "T55",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "X55",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "Z55",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "L56",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "P56",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "T56",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "X56",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "Z56",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "L57",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "P57",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "T57",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "X57",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "Z57",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "D58",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "L58",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "P58",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "T58",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "X58",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "Z58",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "L59",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "P59",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "T59",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "X59",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "Z59",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "L60",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "P60",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "T60",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "X60",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "Z60",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "D61",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "L61",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "P61",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "T61",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "X61",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "Z61",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "L62",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "P62",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "T62",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "X62",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "Z62",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "L63",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "P63",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "T63",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "X63",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "Z63",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "D64",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "L64",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "P64",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "T64",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "X64",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "Z64",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "L65",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "P65",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "T65",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "X65",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "Z65",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "L66",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "P66",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "T66",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "X66",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "Z66",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "D67",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "L67",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "P67",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "T67",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "X67",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "Z67",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "L68",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "P68",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "T68",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "X68",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "Z68",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "L69",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "P69",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "T69",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "X69",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "Z69",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "D70",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "L70",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "P70",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "T70",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "X70",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "Z70",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "L71",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "P71",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "T71",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "X71",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "Z71",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "L72",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "P72",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "T72",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "X72",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "Z72",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "D73",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "L73",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "P73",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "T73",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "X73",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "Z73",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "L74",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "P74",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "T74",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "X74",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "Z74",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "L75",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "P75",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "T75",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "X75",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "Z75",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "D76",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "L76",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "P76",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "T76",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "X76",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "Z76",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "L77",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "P77",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "T77",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "X77",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "Z77",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "L78",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "P78",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "T78",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "X78",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "Z78",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "D79",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "L79",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "P79",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "T79",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "X79",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "Z79",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "L80",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "P80",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "T80",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "X80",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "Z80",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "L81",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "P81",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "T81",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "X81",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "Z81",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "D82",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "L82",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "P82",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "T82",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "X82",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "Z82",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "L83",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "P83",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "T83",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "X83",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "Z83",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "L84",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "P84",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "T84",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "X84",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "Z84",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
       }
     ],
     "PJ-05": [
@@ -5629,6 +7309,972 @@
         "sample_value": "Inspector/TVGS",
         "type": "text",
         "context": "Position/ Vị trí:"
+      },
+      {
+        "cell": "D32",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "G32",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "L32",
+        "template_value": null,
+        "sample_value": null,
+        "type": "time",
+        "context": null
+      },
+      {
+        "cell": "P32",
+        "template_value": null,
+        "sample_value": null,
+        "type": "time",
+        "context": null
+      },
+      {
+        "cell": "T32",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "X32",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "D33",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "G33",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "L33",
+        "template_value": null,
+        "sample_value": null,
+        "type": "time",
+        "context": null
+      },
+      {
+        "cell": "P33",
+        "template_value": null,
+        "sample_value": null,
+        "type": "time",
+        "context": null
+      },
+      {
+        "cell": "T33",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "X33",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "D34",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "G34",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "L34",
+        "template_value": null,
+        "sample_value": null,
+        "type": "time",
+        "context": null
+      },
+      {
+        "cell": "P34",
+        "template_value": null,
+        "sample_value": null,
+        "type": "time",
+        "context": null
+      },
+      {
+        "cell": "T34",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "X34",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "D35",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "G35",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "L35",
+        "template_value": null,
+        "sample_value": null,
+        "type": "time",
+        "context": null
+      },
+      {
+        "cell": "P35",
+        "template_value": null,
+        "sample_value": null,
+        "type": "time",
+        "context": null
+      },
+      {
+        "cell": "T35",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "X35",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "D36",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "G36",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "L36",
+        "template_value": null,
+        "sample_value": null,
+        "type": "time",
+        "context": null
+      },
+      {
+        "cell": "P36",
+        "template_value": null,
+        "sample_value": null,
+        "type": "time",
+        "context": null
+      },
+      {
+        "cell": "T36",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "X36",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "D37",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "G37",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "L37",
+        "template_value": null,
+        "sample_value": null,
+        "type": "time",
+        "context": null
+      },
+      {
+        "cell": "P37",
+        "template_value": null,
+        "sample_value": null,
+        "type": "time",
+        "context": null
+      },
+      {
+        "cell": "T37",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "X37",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "D38",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "G38",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "L38",
+        "template_value": null,
+        "sample_value": null,
+        "type": "time",
+        "context": null
+      },
+      {
+        "cell": "P38",
+        "template_value": null,
+        "sample_value": null,
+        "type": "time",
+        "context": null
+      },
+      {
+        "cell": "T38",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "X38",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "D39",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "G39",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "L39",
+        "template_value": null,
+        "sample_value": null,
+        "type": "time",
+        "context": null
+      },
+      {
+        "cell": "P39",
+        "template_value": null,
+        "sample_value": null,
+        "type": "time",
+        "context": null
+      },
+      {
+        "cell": "T39",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "X39",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "D40",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "G40",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "L40",
+        "template_value": null,
+        "sample_value": null,
+        "type": "time",
+        "context": null
+      },
+      {
+        "cell": "P40",
+        "template_value": null,
+        "sample_value": null,
+        "type": "time",
+        "context": null
+      },
+      {
+        "cell": "T40",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "X40",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "D41",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "G41",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "L41",
+        "template_value": null,
+        "sample_value": null,
+        "type": "time",
+        "context": null
+      },
+      {
+        "cell": "P41",
+        "template_value": null,
+        "sample_value": null,
+        "type": "time",
+        "context": null
+      },
+      {
+        "cell": "T41",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "X41",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "D42",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "G42",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "L42",
+        "template_value": null,
+        "sample_value": null,
+        "type": "time",
+        "context": null
+      },
+      {
+        "cell": "P42",
+        "template_value": null,
+        "sample_value": null,
+        "type": "time",
+        "context": null
+      },
+      {
+        "cell": "T42",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "X42",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "D43",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "G43",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "L43",
+        "template_value": null,
+        "sample_value": null,
+        "type": "time",
+        "context": null
+      },
+      {
+        "cell": "P43",
+        "template_value": null,
+        "sample_value": null,
+        "type": "time",
+        "context": null
+      },
+      {
+        "cell": "T43",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "X43",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "D44",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "G44",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "L44",
+        "template_value": null,
+        "sample_value": null,
+        "type": "time",
+        "context": null
+      },
+      {
+        "cell": "P44",
+        "template_value": null,
+        "sample_value": null,
+        "type": "time",
+        "context": null
+      },
+      {
+        "cell": "T44",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "X44",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "D45",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "G45",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "L45",
+        "template_value": null,
+        "sample_value": null,
+        "type": "time",
+        "context": null
+      },
+      {
+        "cell": "P45",
+        "template_value": null,
+        "sample_value": null,
+        "type": "time",
+        "context": null
+      },
+      {
+        "cell": "T45",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "X45",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "D46",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "G46",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "L46",
+        "template_value": null,
+        "sample_value": null,
+        "type": "time",
+        "context": null
+      },
+      {
+        "cell": "P46",
+        "template_value": null,
+        "sample_value": null,
+        "type": "time",
+        "context": null
+      },
+      {
+        "cell": "T46",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "X46",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "D47",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "G47",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "L47",
+        "template_value": null,
+        "sample_value": null,
+        "type": "time",
+        "context": null
+      },
+      {
+        "cell": "P47",
+        "template_value": null,
+        "sample_value": null,
+        "type": "time",
+        "context": null
+      },
+      {
+        "cell": "T47",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "X47",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "D48",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "G48",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "L48",
+        "template_value": null,
+        "sample_value": null,
+        "type": "time",
+        "context": null
+      },
+      {
+        "cell": "P48",
+        "template_value": null,
+        "sample_value": null,
+        "type": "time",
+        "context": null
+      },
+      {
+        "cell": "T48",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "X48",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "D49",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "G49",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "L49",
+        "template_value": null,
+        "sample_value": null,
+        "type": "time",
+        "context": null
+      },
+      {
+        "cell": "P49",
+        "template_value": null,
+        "sample_value": null,
+        "type": "time",
+        "context": null
+      },
+      {
+        "cell": "T49",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "X49",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "D50",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "G50",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "L50",
+        "template_value": null,
+        "sample_value": null,
+        "type": "time",
+        "context": null
+      },
+      {
+        "cell": "P50",
+        "template_value": null,
+        "sample_value": null,
+        "type": "time",
+        "context": null
+      },
+      {
+        "cell": "T50",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "X50",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "D51",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "G51",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "L51",
+        "template_value": null,
+        "sample_value": null,
+        "type": "time",
+        "context": null
+      },
+      {
+        "cell": "P51",
+        "template_value": null,
+        "sample_value": null,
+        "type": "time",
+        "context": null
+      },
+      {
+        "cell": "T51",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "X51",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "D52",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "G52",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "L52",
+        "template_value": null,
+        "sample_value": null,
+        "type": "time",
+        "context": null
+      },
+      {
+        "cell": "P52",
+        "template_value": null,
+        "sample_value": null,
+        "type": "time",
+        "context": null
+      },
+      {
+        "cell": "T52",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "X52",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "D53",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "G53",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "L53",
+        "template_value": null,
+        "sample_value": null,
+        "type": "time",
+        "context": null
+      },
+      {
+        "cell": "P53",
+        "template_value": null,
+        "sample_value": null,
+        "type": "time",
+        "context": null
+      },
+      {
+        "cell": "T53",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "X53",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
+      },
+      {
+        "cell": "D54",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "G54",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "L54",
+        "template_value": null,
+        "sample_value": null,
+        "type": "time",
+        "context": null
+      },
+      {
+        "cell": "P54",
+        "template_value": null,
+        "sample_value": null,
+        "type": "time",
+        "context": null
+      },
+      {
+        "cell": "T54",
+        "template_value": null,
+        "sample_value": null,
+        "type": "text",
+        "context": null
+      },
+      {
+        "cell": "X54",
+        "template_value": null,
+        "sample_value": null,
+        "type": "number",
+        "context": null
       }
     ],
     "PJ-06": [
