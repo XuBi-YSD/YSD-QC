@@ -548,7 +548,21 @@ function stripToSingleSheet(zip, targetSheetFile) {
     const dnXml = "<definedNames>" + keptDefinedNames
       .map(d => `<definedName name="${d.name}" localSheetId="0"${d.attrs}>${d.val}</definedName>`)
       .join("") + "</definedNames>";
-    wb2 = wb2.replace("</sheets>", "</sheets>" + dnXml);
+    // CT_Workbook requires strict child-element order per the OOXML schema:
+    // ... sheets, functionGroups?, externalReferences?, definedNames?, calcPr? ...
+    // definedNames must come AFTER externalReferences, never before. Since
+    // externalReferences is deliberately kept intact (see note below),
+    // inserting definedNames right after </sheets> puts it BEFORE
+    // externalReferences whenever the latter is present - a schema-order
+    // violation that real Excel (Win + Mac) rejects outright as corrupt,
+    // even though LibreOffice and openpyxl silently tolerate it. Insert
+    // after </externalReferences> when present; fall back to right after
+    // </sheets> only for templates that have no external references at all.
+    if (wb2.includes("</externalReferences>")) {
+      wb2 = wb2.replace("</externalReferences>", "</externalReferences>" + dnXml);
+    } else {
+      wb2 = wb2.replace("</sheets>", "</sheets>" + dnXml);
+    }
   }
 
   // docProps/app.xml: regenerate HeadingPairs/TitlesOfParts so they describe
