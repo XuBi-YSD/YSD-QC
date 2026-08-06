@@ -49,7 +49,7 @@
       },
       {
         "tag": "ma_phong_thi_nghiem",
-        "label": "Mã phòng thí nghiệm",
+        "label": "Mã phòng thí nghiệm (vd: LAS-XD1489)",
         "type": "text"
       },
       {
@@ -121,7 +121,7 @@
         "type": "number"
       }
     ],
-    "note": "Chữ ký cuối trang dùng LẠI đúng 3 tên đã nhập ở trên (ten_nguoi_1/2/3) - không cần nhập lại."
+    "note": "Mã phòng thí nghiệm ({{ma_phong_thi_nghiem}}) dùng chung cho cả dòng mô tả và tiêu đề cột chữ ký - chỉ cần nhập 1 lần."
   },
   "Final3_TKS": {
     "title": "Inspection Sheet for Sampling / Biên bản lấy mẫu",
@@ -170,6 +170,18 @@
         "label": "Người 2 - Chức vụ",
         "type": "text-linked",
         "linkTag": "ten_nguoi_2"
+      },
+      {
+        "tag": "ten_nguoi_3",
+        "label": "Người 3 (Tư vấn giám sát) - Tên (thường để trống)",
+        "type": "dropdown-personnel",
+        "group": "consultant"
+      },
+      {
+        "tag": "chuc_vu_nguoi_3",
+        "label": "Người 3 - Chức vụ",
+        "type": "text-linked",
+        "linkTag": "ten_nguoi_3"
       },
       {
         "tag": "dia_diem",
@@ -233,7 +245,7 @@
         "type": "number"
       }
     ],
-    "note": "Chữ ký cuối trang dùng LẠI ten_nguoi_1/2. Cột Engineer/Tư vấn giám sát để trống, ký tay sau."
+    "note": "Người 3 (Tư vấn giám sát) thường để trống, ký tay sau - chỉ điền nếu đã biết trước người ký."
   },
   "Final4_RFI": {
     "title": "Request for Inspection (RFI) / Phiếu yêu cầu nghiệm thu",
