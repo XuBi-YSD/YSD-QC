@@ -526,7 +526,8 @@ function stripToSingleSheet(zip, targetSheetFile) {
     }
   }
   wb2 = wb2.replace(/<definedNames>.*?<\/definedNames>/s, "");
-  wb2 = wb2.replace(/<externalReferences>.*?<\/externalReferences>/s, "");
+  // externalReferences intentionally left untouched - see note above at
+  // the workbook.xml.rels step.
   if (keptDefinedNames.length) {
     const dnXml = "<definedNames>" + keptDefinedNames
       .map(d => `<definedName name="${d.name}" localSheetId="0"${d.attrs}>${d.val}</definedName>`)
@@ -535,6 +536,16 @@ function stripToSingleSheet(zip, targetSheetFile) {
   }
 
   // 2. workbook.xml.rels: keep only rels needed (target sheet + shared parts)
+  //    IMPORTANT: externalLink relationships are intentionally LEFT ALONE.
+  //    Some hidden legacy defined names in these templates reference
+  //    external workbooks by numeric index (e.g. "[9]SheetName!#REF!"),
+  //    which corresponds to the Nth <externalReference> entry in
+  //    workbook.xml. If we stripped externalReferences/externalLinkN.xml
+  //    but left those defined names behind, the index becomes dangling -
+  //    real Excel (unlike LibreOffice, which is lenient) flags this as
+  //    corruption and silently deletes records to "repair" it. Since the
+  //    original template already opens fine in Excel with this structure
+  //    intact, the safest fix is to simply never touch it.
   const droppedTargets = [];
   const keptRels = [];
   relEntries.forEach(r => {
@@ -544,12 +555,10 @@ function stripToSingleSheet(zip, targetSheetFile) {
     if (type.endsWith("/worksheet")) {
       if (id === keepRid) keptRels.push(r);
       else droppedTargets.push(target);
-    } else if (type.endsWith("/externalLink")) {
-      droppedTargets.push(target);
     } else if (target.includes("calcChain")) {
       droppedTargets.push(target);
     } else {
-      keptRels.push(r);
+      keptRels.push(r); // includes externalLink rels - kept untouched
     }
   });
   const rels2 = relsXml.replace(/(<Relationships[^>]*>).*(<\/Relationships>)/s, `$1${keptRels.join("")}$2`);
