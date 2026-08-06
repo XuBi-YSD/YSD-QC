@@ -378,46 +378,185 @@ function buildCellXml(cellRef, styleAttr, value, isNumber) {
   return `<c r="${cellRef}"${s} t="inlineStr"><is><t xml:space="preserve">${xmlEscape(value)}</t></is></c>`;
 }
 
+function colLettersToNumber(letters) {
+  let n = 0;
+  for (const ch of letters) n = n * 26 + (ch.charCodeAt(0) - 64);
+  return n;
+}
+
 function patchCellInSheetXml(xml, cellRef, value, isNumber) {
-  // capture existing style id (s="NN") if the cell already exists, so we
-  // never lose the template's formatting/number-format for that cell.
+  // IMPORTANT: check self-closing FIRST. A self-closing cell like
+  // <c r="F14" s="23"/> was previously mis-matched by the "with content"
+  // regex below (its "attrs" group greedily swallowed the trailing "/",
+  // then searched forward for the NEXT "</c>" anywhere in the XML -
+  // silently deleting every cell in between). Self-closing cells must
+  // never reach that regex at all.
   const selfClosing = new RegExp(`<c r="${cellRef}"([^>]*)/>`);
-  const withContent = new RegExp(`<c r="${cellRef}"([^>]*)>.*?</c>`, "s");
+  // Negative lookbehind ensures this only matches a true opening tag
+  // ("...">) and never a self-closing one ("..."/>), even as a fallback.
+  const withContent = new RegExp(`<c r="${cellRef}"([^>]*?)(?<!/)>((?:(?!</c>)[\\s\\S])*?)</c>`);
 
   let styleAttr = null;
   let m = xml.match(selfClosing) || xml.match(withContent);
   if (m) {
-    const attrs = m[1];
-    const sMatch = attrs.match(/s="(\d+)"/);
+    const sMatch = m[1].match(/s="(\d+)"/);
     if (sMatch) styleAttr = sMatch[1];
   }
 
   const newCell = buildCellXml(cellRef, styleAttr, value, isNumber);
 
-  if (xml.match(withContent)) {
-    return xml.replace(withContent, newCell);
-  }
   if (xml.match(selfClosing)) {
     return xml.replace(selfClosing, newCell);
   }
+  if (xml.match(withContent)) {
+    return xml.replace(withContent, newCell);
+  }
 
-  // Cell doesn't exist yet in the XML at all (rare - template had a fully
-  // empty row/cell not materialized). Insert it into the correct <row>,
-  // in column order, or create the row if missing.
+  // Cell doesn't exist yet in the XML (template only materializes non-empty
+  // cells). OOXML REQUIRES <c> children of a <row> to stay in strict column
+  // order, so we must insert the new cell in the correct position relative
+  // to whichever sibling cells already exist - never blindly at the start.
   const rowNum = cellRef.match(/\d+/)[0];
-  const rowRegexOpen = new RegExp(`(<row r="${rowNum}"[^>]*>)`);
-  const rowRegexSelf = new RegExp(`<row r="${rowNum}"([^>]*)/>`);
-  if (xml.match(rowRegexOpen)) {
-    return xml.replace(rowRegexOpen, `$1${newCell}`);
+  const targetCol = colLettersToNumber(cellRef.match(/^[A-Z]+/)[0]);
+
+  const rowOpenMatch = xml.match(new RegExp(`<row r="${rowNum}"[^>]*>`));
+  const rowSelfMatch = xml.match(new RegExp(`<row r="${rowNum}"[^>]*/>`));
+
+  if (rowSelfMatch) {
+    // empty row element (no cells at all yet) - safe to just add the one cell
+    const tag = rowSelfMatch[0];
+    const openTag = tag.slice(0, -2) + ">"; // "/>" -> ">"
+    return xml.replace(tag, `${openTag}${newCell}</row>`);
   }
-  if (xml.match(rowRegexSelf)) {
-    return xml.replace(rowRegexSelf, (full, attrs) => `<row r="${rowNum}"${attrs}>${newCell}</row>`);
+
+  if (rowOpenMatch) {
+    const rowStart = rowOpenMatch.index + rowOpenMatch[0].length;
+    const rowEndIdx = xml.indexOf("</row>", rowStart);
+    if (rowEndIdx === -1) {
+      console.warn("Malformed row (no closing tag) for", cellRef, "- value not written");
+      return xml;
+    }
+    const rowInner = xml.slice(rowStart, rowEndIdx);
+    const existingCells = [...rowInner.matchAll(/<c r="([A-Z]+)\d+"[^>]*(?:\/>|>.*?<\/c>)/gs)];
+
+    let insertAt = rowStart; // default: before everything (row has no cells yet)
+    for (const cellMatch of existingCells) {
+      const cCol = colLettersToNumber(cellMatch[1]);
+      if (cCol < targetCol) {
+        insertAt = rowStart + cellMatch.index + cellMatch[0].length;
+      } else {
+        break;
+      }
+    }
+    return xml.slice(0, insertAt) + newCell + xml.slice(insertAt);
   }
-  // Last resort: cannot safely locate the row - skip silently rather than
-  // risk corrupting the file. (Should not happen for cells listed in
-  // field_map.json, which were themselves read from this same template.)
+
   console.warn("Could not locate row for", cellRef, "- value not written");
   return xml;
+}
+
+/* ---------- Strip workbook down to a single sheet on export ----------
+   Mirrors the same safe technique used earlier in this project with
+   Python/openpyxl (see clean_xlsx_lib.py): remove every other <sheet>
+   entry from workbook.xml, remap the kept sheet's Print_Area/Print_Titles
+   defined names to localSheetId=0, drop the now-unused worksheet parts,
+   their rels, and any drawings/media that are ONLY referenced by removed
+   sheets - all while leaving the target sheet's own XML completely
+   untouched (already patched separately by patchCellInSheetXml). */
+function stripToSingleSheet(zip, targetSheetFile) {
+  const wbXml = zip.file("xl/workbook.xml").asText();
+  const relsXml = zip.file("xl/_rels/workbook.xml.rels").asText();
+  const ctXml = zip.file("[Content_Types].xml").asText();
+
+  const sheetTags = [...wbXml.matchAll(/<sheet [^>]*\/>/g)].map(m => m[0]);
+  const relEntries = [...relsXml.matchAll(/<Relationship [^>]*\/>/g)].map(m => m[0]);
+  const relMap = {}; // rId -> target
+  relEntries.forEach(r => {
+    const id = r.match(/Id="(rId\d+)"/)[1];
+    const target = r.match(/Target="([^"]+)"/)[1];
+    relMap[id] = target;
+  });
+
+  let keepTag = null, keepIndex = -1;
+  sheetTags.forEach((tag, i) => {
+    const rid = tag.match(/r:id="(rId\d+)"/)[1];
+    const target = relMap[rid];
+    if (target && target.endsWith("/" + targetSheetFile)) {
+      keepTag = tag;
+      keepIndex = i;
+    }
+  });
+  if (!keepTag) {
+    console.warn("stripToSingleSheet: could not identify target sheet, skipping strip");
+    return;
+  }
+  const keepRid = keepTag.match(/r:id="(rId\d+)"/)[1];
+
+  // 1. workbook.xml: keep only the target <sheet>, remap defined names
+  let wb2 = wbXml.replace(/<sheets>.*?<\/sheets>/s, `<sheets>${keepTag}</sheets>`);
+
+  const keptDefinedNames = [];
+  const dnRegex = /<definedName name="([^"]+)" localSheetId="(\d+)"([^>]*)>([^<]*)<\/definedName>/g;
+  let dnMatch;
+  while ((dnMatch = dnRegex.exec(wb2)) !== null) {
+    const [, name, idx, attrs, val] = dnMatch;
+    if (parseInt(idx, 10) === keepIndex) {
+      keptDefinedNames.push({ name, attrs, val });
+    }
+  }
+  wb2 = wb2.replace(/<definedNames>.*?<\/definedNames>/s, "");
+  wb2 = wb2.replace(/<externalReferences>.*?<\/externalReferences>/s, "");
+  if (keptDefinedNames.length) {
+    const dnXml = "<definedNames>" + keptDefinedNames
+      .map(d => `<definedName name="${d.name}" localSheetId="0"${d.attrs}>${d.val}</definedName>`)
+      .join("") + "</definedNames>";
+    wb2 = wb2.replace("</sheets>", "</sheets>" + dnXml);
+  }
+
+  // 2. workbook.xml.rels: keep only rels needed (target sheet + shared parts)
+  const droppedTargets = [];
+  const keptRels = [];
+  relEntries.forEach(r => {
+    const id = r.match(/Id="(rId\d+)"/)[1];
+    const type = r.match(/Type="([^"]+)"/)[1];
+    const target = r.match(/Target="([^"]+)"/)[1];
+    if (type.endsWith("/worksheet")) {
+      if (id === keepRid) keptRels.push(r);
+      else droppedTargets.push(target);
+    } else if (type.endsWith("/externalLink")) {
+      droppedTargets.push(target);
+    } else if (target.includes("calcChain")) {
+      droppedTargets.push(target);
+    } else {
+      keptRels.push(r);
+    }
+  });
+  const rels2 = relsXml.replace(/(<Relationships[^>]*>).*(<\/Relationships>)/s, `$1${keptRels.join("")}$2`);
+
+  // 3. Content_Types: drop overrides for removed parts
+  let ct2 = ctXml;
+  droppedTargets.forEach(t => {
+    const partName = "/xl/" + t;
+    ct2 = ct2.replace(new RegExp(`<Override PartName="${partName.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}"[^>]*/>`), "");
+  });
+  ct2 = ct2.replace(/<Override PartName="\/xl\/calcChain\.xml"[^>]*\/>/, "");
+
+  zip.file("xl/workbook.xml", wb2);
+  zip.file("xl/_rels/workbook.xml.rels", rels2);
+  zip.file("[Content_Types].xml", ct2);
+
+  // 4. remove the dropped worksheet files, their _rels, and calcChain.xml
+  //    (drawings/media exclusively owned by removed sheets are left in the
+  //    zip as harmless orphans - safer than risking removal of something
+  //    still shared, and they add negligible size)
+  droppedTargets.forEach(t => {
+    const fname = "xl/" + t;
+    if (zip.file(fname)) zip.remove(fname);
+    const base = t.split("/").pop();
+    const relFname = "xl/worksheets/_rels/" + base + ".rels";
+    if (zip.file(relFname)) zip.remove(relFname);
+  });
+  if (zip.file("xl/calcChain.xml")) zip.remove("xl/calcChain.xml");
 }
 
 async function exportXlsx() {
@@ -445,6 +584,13 @@ async function exportXlsx() {
   });
 
   zip.file(sheetPath, xml);
+
+  // Export ONLY the sheet the user actually filled in, not the whole
+  // multi-sheet workbook - avoids confusion and shrinks the file.
+  const totalSheetsInFile = Object.keys(sheetManifest[fileKey]).length;
+  if (totalSheetsInFile > 1) {
+    stripToSingleSheet(zip, sheetFile);
+  }
 
   const blob = zip.generate({ type: "blob", mimeType: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" });
   const outName = `${todayStr()}-${fileKey}-${sheet}.xlsx`.replace(/[^\w\-.]+/g, "_");
