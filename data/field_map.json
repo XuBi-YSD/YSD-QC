@@ -3203,13 +3203,6 @@
         "context": "Visual checking / Kiểm tra ngoại quan"
       },
       {
-        "cell": "D45",
-        "template_value": "TBM equipment/Máy TBM: Model/Số hiệu:",
-        "sample_value": "TBM equipment/Máy TBM: Model/Số hiệu: 805Y",
-        "type": "text",
-        "context": null
-      },
-      {
         "cell": "X45",
         "template_value": null,
         "sample_value": "R",
@@ -3222,13 +3215,6 @@
         "sample_value": "£",
         "type": "text",
         "context": "TBM equipment/Máy TBM: Model/Số hiệu:"
-      },
-      {
-        "cell": "D46",
-        "template_value": "Outside diameter of TBM/Đường kính ngoài máy TBM: Dtbm = ",
-        "sample_value": "Outside diameter of TBM/Đường kính ngoài máy TBM: Dtbm = 980mm",
-        "type": "text",
-        "context": null
       },
       {
         "cell": "X46",
@@ -3245,13 +3231,6 @@
         "context": "Outside diameter of TBM/Đường kính ngoài máy TBM: Dtbm ="
       },
       {
-        "cell": "D47",
-        "template_value": "Hydraulic Jacking/Kích thủy lực: Model/Số hiệu: ",
-        "sample_value": "Hydraulic Jacking/Kích thủy lực: Model/Số hiệu: B-84 & B-86",
-        "type": "text",
-        "context": null
-      },
-      {
         "cell": "X47",
         "template_value": null,
         "sample_value": "R",
@@ -3266,13 +3245,6 @@
         "context": "Hydraulic Jacking/Kích thủy lực: Model/Số hiệu:"
       },
       {
-        "cell": "D48",
-        "template_value": "Max Jacking Force/Lực kích lớn nhất:",
-        "sample_value": "Max Jacking Force/Lực kích lớn nhất: 200 tons/tấn;",
-        "type": "text",
-        "context": null
-      },
-      {
         "cell": "X48",
         "template_value": null,
         "sample_value": "R",
@@ -3285,13 +3257,6 @@
         "sample_value": "£",
         "type": "text",
         "context": "Max Jacking Force/Lực kích lớn nhất:"
-      },
-      {
-        "cell": "D49",
-        "template_value": "Quantity/Số lượng:",
-        "sample_value": "Quantity/Số lượng: 02 nos./chiếc.",
-        "type": "text",
-        "context": null
       },
       {
         "cell": "X49",
