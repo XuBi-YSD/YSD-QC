@@ -45,6 +45,8 @@ fieldset { border: 1px solid var(--border); border-radius: 6px; margin-bottom: 1
 legend { font-weight: 600; color: var(--primary); padding: 0 6px; font-size: 14px; }
 .field-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; flex-wrap: wrap; }
 .field-row label { flex: 0 0 260px; font-size: 13px; color: #333; }
+.field-row label .cellref { font-weight: 600; color: var(--primary); }
+.field-row label .ctx { font-size: 11px; color: #888; }
 .field-row input, .field-row select {
   flex: 1 1 220px;
   min-width: 160px;

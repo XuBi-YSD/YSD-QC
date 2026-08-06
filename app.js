@@ -170,24 +170,45 @@ function renderXlsxFields(container, fields, fileKey, sheet) {
     note.textContent = "Lưu ý: toàn bộ ô của form này (thông số/model/số kiểm định thiết bị) luôn là ô nhập tay thủ công, không gợi ý dropdown, chiếu thẳng theo từng ô đã xác định.";
     container.appendChild(note);
   }
-  // group into chunks of 25 for readability using <fieldset>
-  const groupSize = 25;
-  for (let i = 0; i < fields.length; i += groupSize) {
-    const chunk = fields.slice(i, i + groupSize);
+
+  // Group consecutive fields that share the same row-context under one
+  // fieldset (e.g. all 4 spec columns of "Jacking Machine" together) -
+  // much easier to scan than fixed chunks of 25 unrelated cells.
+  const groups = [];
+  let current = null;
+  for (const f of fields) {
+    const key = f.context || `__cell_${f.cell}`;
+    if (current && current.key === key) {
+      current.fields.push(f);
+    } else {
+      current = { key, label: f.context, fields: [f] };
+      groups.push(current);
+    }
+  }
+
+  groups.forEach(g => {
     const fs = document.createElement("fieldset");
     const legend = document.createElement("legend");
-    legend.textContent = `Ô ${chunk[0].cell} – ${chunk[chunk.length - 1].cell}`;
+    legend.textContent = g.label
+      ? truncate(g.label.replace(/\n/g, " / "), 70)
+      : `Ô ${g.fields[0].cell}`;
     fs.appendChild(legend);
-    chunk.forEach(f => fs.appendChild(buildXlsxFieldRow(f, sel)));
+    g.fields.forEach(f => fs.appendChild(buildXlsxFieldRow(f, sel)));
     container.appendChild(fs);
-  }
+  });
 }
 
 function buildXlsxFieldRow(f, sel) {
   const row = document.createElement("div");
   row.className = "field-row";
   const label = document.createElement("label");
-  label.textContent = f.sample_value ? `${f.cell} (vd: ${truncate(f.sample_value, 28)})` : f.cell;
+  // Group legend already shows the row context, so here just show the
+  // cell reference plus a short sample-value hint (still useful to
+  // distinguish which of several columns in the same group this is,
+  // e.g. Model vs Manufacturer vs Certificate No.).
+  label.innerHTML = f.sample_value
+    ? `<span class="cellref">${f.cell}</span> <span class="ctx">(vd: ${truncate(f.sample_value, 30)})</span>`
+    : `<span class="cellref">${f.cell}</span>`;
   row.appendChild(label);
 
   const forceManual = sheetIsManualEntryOnly(sel);
