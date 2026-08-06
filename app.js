@@ -238,6 +238,10 @@ function buildXlsxFieldRow(f, sel) {
   }
   input.dataset.cell = f.cell;
   input.dataset.type = forceText ? "text-forced" : f.type;
+  if (f.append) {
+    input.dataset.append = "true";
+    input.placeholder = "Nhập giá trị, sẽ tự nối vào cuối dòng nhãn";
+  }
   row.appendChild(input);
   return row;
 }
@@ -589,6 +593,32 @@ function stripToSingleSheet(zip, targetSheetFile) {
   if (zip.file("xl/calcChain.xml")) zip.remove("xl/calcChain.xml");
 }
 
+function parseSharedStrings(sstXml) {
+  if (!sstXml) return [];
+  // Each <si> can contain a plain <t> or multiple <r><t>...</t></r> runs -
+  // concatenate all <t> text within each <si> to get its full string.
+  const items = [...sstXml.matchAll(/<si[^>]*>([\s\S]*?)<\/si>/g)];
+  return items.map(m => {
+    const texts = [...m[1].matchAll(/<t[^>]*>([^<]*)<\/t>/g)].map(t => t[1]);
+    return texts.join("");
+  });
+}
+
+function getCurrentCellText(xml, sharedStrings, cellRef) {
+  const cellMatch =
+    xml.match(new RegExp(`<c r="${cellRef}"[^>]*t="s"[^>]*>\\s*<v>(\\d+)</v>\\s*</c>`)) ||
+    xml.match(new RegExp(`<c r="${cellRef}"[^>]*t="s"[^>]*/>`));
+  if (cellMatch && cellMatch[1] !== undefined) {
+    const idx = parseInt(cellMatch[1], 10);
+    return sharedStrings[idx] || "";
+  }
+  const inlineMatch = xml.match(new RegExp(`<c r="${cellRef}"[^>]*t="inlineStr"[^>]*>[\\s\\S]*?<t[^>]*>([^<]*)</t>`));
+  if (inlineMatch) return inlineMatch[1];
+  const plainMatch = xml.match(new RegExp(`<c r="${cellRef}"[^>]*>\\s*<v>([^<]*)</v>\\s*</c>`));
+  if (plainMatch) return plainMatch[1];
+  return "";
+}
+
 async function exportXlsx() {
   const { fileKey, sheet } = currentSelection;
   const templateFile = XLSX_TEMPLATE_DIR + XLSX_FILES[fileKey].file;
@@ -601,6 +631,9 @@ async function exportXlsx() {
   const sheetPath = `xl/worksheets/${sheetFile}`;
 
   let xml = zip.file(sheetPath).asText();
+  const sharedStrings = parseSharedStrings(
+    zip.file("xl/sharedStrings.xml") ? zip.file("xl/sharedStrings.xml").asText() : null
+  );
 
   const inputs = document.querySelectorAll("#dataForm [data-cell]");
   let count = 0;
@@ -609,6 +642,20 @@ async function exportXlsx() {
     if (val === "__other__" || val === "") return; // leave template's blank cell untouched
     const cellRef = inp.dataset.cell;
     const isNumber = inp.dataset.type === "number";
+
+    if (inp.dataset.append === "true") {
+      // No dedicated value cell exists (label spans the whole row) - append
+      // the user's value directly onto the existing label text instead of
+      // overwriting a neighbouring cell (which would land on the checkbox
+      // columns and visually "jump" to the wrong place).
+      const currentLabel = getCurrentCellText(xml, sharedStrings, cellRef);
+      const sep = /[:=]\s*$/.test(currentLabel) ? " " : ": ";
+      const combined = currentLabel.replace(/\s+$/, "") + sep + val;
+      xml = patchCellInSheetXml(xml, cellRef, combined, false);
+      count++;
+      return;
+    }
+
     xml = patchCellInSheetXml(xml, cellRef, isNumber ? parseFloat(val) : val, isNumber);
     count++;
   });

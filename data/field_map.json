@@ -3308,6 +3308,46 @@
         "context": "Quantity/Số lượng:"
       },
       {
+        "cell": "D45",
+        "context": "TBM equipment/Máy TBM: Model/Số hiệu:",
+        "append": true,
+        "template_value": "TBM equipment/Máy TBM: Model/Số hiệu:",
+        "sample_value": null,
+        "type": "text"
+      },
+      {
+        "cell": "D46",
+        "context": "Outside diameter of TBM/Đường kính ngoài máy TBM: Dtbm =",
+        "append": true,
+        "template_value": "Outside diameter of TBM/Đường kính ngoài máy TBM: Dtbm = ",
+        "sample_value": null,
+        "type": "text"
+      },
+      {
+        "cell": "D47",
+        "context": "Hydraulic Jacking/Kích thủy lực: Model/Số hiệu:",
+        "append": true,
+        "template_value": "Hydraulic Jacking/Kích thủy lực: Model/Số hiệu: ",
+        "sample_value": null,
+        "type": "text"
+      },
+      {
+        "cell": "D48",
+        "context": "Max Jacking Force/Lực kích lớn nhất:",
+        "append": true,
+        "template_value": "Max Jacking Force/Lực kích lớn nhất:",
+        "sample_value": null,
+        "type": "text"
+      },
+      {
+        "cell": "D49",
+        "context": "Quantity/Số lượng:",
+        "append": true,
+        "template_value": "Quantity/Số lượng:",
+        "sample_value": null,
+        "type": "text"
+      },
+      {
         "cell": "X50",
         "template_value": null,
         "sample_value": "R",
