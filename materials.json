@@ -1,0 +1,18 @@
+{
+  "main_contractor": [
+    {"name": "Trần Đăng Thuần", "role_en": "QC Engineer", "role_vi": "KS QLCL"},
+    {"name": "Michinori Kono", "role_en": "Civil Engineer (PJ works)", "role_vi": "KSXD (KKN)"},
+    {"name": "Nguyễn Như Chiến", "role_en": "CBKT", "role_vi": "CBKT"},
+    {"name": "Nguyễn Văn Phước", "role_en": "QA/QC", "role_vi": "QA/QC"}
+  ],
+  "sub_contractor": [
+    {"name": "Vũ Kiên Chung", "role_en": "Project Manager", "role_vi": "QLDA"},
+    {"name": "Nguyễn Trung Thành", "role_en": "PM Assistant", "role_vi": "Trợ lý QLDA"}
+  ],
+  "laboratory": [
+    {"name": "Tạ Ngọc Linh", "role_en": "CB PTN", "role_vi": "CB PTN", "lab_code": "LAS-XD1489"}
+  ],
+  "consultant": [
+    {"name": "", "role_en": "Engineer", "role_vi": "Tư vấn giám sát"}
+  ]
+}
