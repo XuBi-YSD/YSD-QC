@@ -459,7 +459,12 @@ async function exportDocx() {
   const resp = await fetch(DOCX_TEMPLATE_DIR + info.template);
   const buf = await resp.arrayBuffer();
   const zip = new PizZip(buf);
-  const doc = new window.docxtemplater(zip, { paragraphLoop: true, linebreaks: true, nullGetter: () => "" });
+  const doc = new window.docxtemplater(zip, {
+    paragraphLoop: true,
+    linebreaks: true,
+    nullGetter: () => "",
+    delimiters: { start: "{{", end: "}}" },
+  });
 
   const data = {};
   document.querySelectorAll("#dataForm [data-tag]").forEach(inp => {
