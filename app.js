@@ -492,6 +492,7 @@ function stripToSingleSheet(zip, targetSheetFile) {
   const wbXml = zip.file("xl/workbook.xml").asText();
   const relsXml = zip.file("xl/_rels/workbook.xml.rels").asText();
   const ctXml = zip.file("[Content_Types].xml").asText();
+  const appXml = zip.file("docProps/app.xml") ? zip.file("docProps/app.xml").asText() : null;
 
   const sheetTags = [...wbXml.matchAll(/<sheet [^>]*\/>/g)].map(m => m[0]);
   const relEntries = [...relsXml.matchAll(/<Relationship [^>]*\/>/g)].map(m => m[0]);
@@ -520,6 +521,17 @@ function stripToSingleSheet(zip, targetSheetFile) {
   // 1. workbook.xml: keep only the target <sheet>, remap defined names
   let wb2 = wbXml.replace(/<sheets>.*?<\/sheets>/s, `<sheets>${keepTag}</sheets>`);
 
+  // The template's <workbookView activeTab="N"> points at whichever tab was
+  // last active when the ORIGINAL 9-sheet file was saved (e.g. "8" = the
+  // 9th/last tab). Once every sheet but one is removed, that index almost
+  // always points past the end of the now-1-entry <sheets> list. Windows
+  // Excel and LibreOffice silently tolerate this and re-clamp it, but real
+  // Excel for Mac does not - it's a confirmed cause of "can't open this
+  // file" on Mac (root-caused 2026-08-06 against an exported PJ-02 file).
+  // Simplest safe fix: drop the attribute; it defaults to the first (only)
+  // tab, which is exactly what we want since exactly one sheet remains.
+  wb2 = wb2.replace(/\s*activeTab="\d+"/, "");
+
   const keptDefinedNames = [];
   const dnRegex = /<definedName name="([^"]+)" localSheetId="(\d+)"([^>]*)>([^<]*)<\/definedName>/g;
   let dnMatch;
@@ -537,6 +549,28 @@ function stripToSingleSheet(zip, targetSheetFile) {
       .map(d => `<definedName name="${d.name}" localSheetId="0"${d.attrs}>${d.val}</definedName>`)
       .join("") + "</definedNames>";
     wb2 = wb2.replace("</sheets>", "</sheets>" + dnXml);
+  }
+
+  // docProps/app.xml: regenerate HeadingPairs/TitlesOfParts so they describe
+  // the single kept sheet instead of the original template's full sheet
+  // list. Like the activeTab fix above, this is metadata Excel itself
+  // maintains on save and never validates against the actual <sheets> count
+  // when it's simply reading a file - except real Excel for Mac, which does
+  // check it and refuses to open the file when the two disagree. Excel only
+  // lists NON-hidden defined names here (built-in Print_Area/Print_Titles),
+  // never the hidden legacy helper names, so filter accordingly.
+  if (appXml) {
+    const keepSheetName = keepTag.match(/name="([^"]+)"/)[1];
+    const visibleNames = keptDefinedNames.filter(d => !/hidden="1"/.test(d.attrs));
+    const titleParts = [
+      keepSheetName,
+      ...visibleNames.map(d => `'${keepSheetName}'!${d.name.replace(/^_xlnm\./, "")}`),
+    ];
+    const app2 = appXml.replace(
+      /<HeadingPairs>[\s\S]*?<\/TitlesOfParts>/,
+      `<HeadingPairs><vt:vector size="4" baseType="variant"><vt:variant><vt:lpstr>Worksheets</vt:lpstr></vt:variant><vt:variant><vt:i4>1</vt:i4></vt:variant><vt:variant><vt:lpstr>Named Ranges</vt:lpstr></vt:variant><vt:variant><vt:i4>${visibleNames.length}</vt:i4></vt:variant></vt:vector></HeadingPairs><TitlesOfParts><vt:vector size="${titleParts.length}" baseType="lpstr">${titleParts.map(t => `<vt:lpstr>${xmlEscape(t)}</vt:lpstr>`).join("")}</vt:vector></TitlesOfParts>`
+    );
+    zip.file("docProps/app.xml", app2);
   }
 
   // 2. workbook.xml.rels: keep only rels needed (target sheet + shared parts)
