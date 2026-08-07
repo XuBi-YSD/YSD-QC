@@ -198,6 +198,105 @@ function buildAcceptRejectSelect(sheet) {
   return sel;
 }
 
+/* ---------- PJ-06 Leakage Test: computed PI / TI / Duration ----------
+   Per XuBi's confirmed answer to Q5 (Xac_nhan_Q1-Q9_29072026.xlsx): PI and
+   TI are each a single template cell holding a whole sentence ("PI =
+   0.5liters x D x L / 1 hour = ... (lit/h)", "TI = V/T = ... (lit/h)") -
+   the APP must compute the number from the real D/L/V/duration and splice
+   it in, and must NEVER split them into separate label/value cells or
+   leave them as free-text fields the user retypes by hand. Confirmed
+   against a real export on 2026-08-07: leaving them as plain text fields
+   let the field-map's sample hint ("85.20") get typed in verbatim and
+   shipped as if it were real data for an unrelated pipe/length. Duration
+   (X29) has no field-map entry at all - the raw template hardcodes a
+   stale "1 hour" there - so it's recomputed here from the same start/
+   finish times as TI and patched directly on export (no UI field). */
+const PJ06_CELLS = {
+  diameter: "P24",  // free text, e.g. "800 mm"
+  length: "P25",    // free text, e.g. "213.006 m"
+  pi: "O26",
+  timeStart: "O28", // <input type="time">
+  timeFinish: "O29",
+  duration: "X29",  // not in field_map - patched directly, no UI field
+  volume: "P30",    // free text, e.g. "0 liter"
+  ti: "O31",
+};
+
+function isPJ06ComputedCell(sel, cell) {
+  return sel.fileKey === "Final5-10_ITP" && sel.sheet === "PJ-06" &&
+    (cell === PJ06_CELLS.pi || cell === PJ06_CELLS.ti);
+}
+
+function parseLeadingNumber(s) {
+  if (typeof s !== "string") return NaN;
+  const m = s.match(/-?\d+(\.\d+)?/);
+  return m ? parseFloat(m[0]) : NaN;
+}
+
+function computeDurationHours(startStr, finishStr) {
+  if (!startStr || !finishStr) return null;
+  const [sh, sm] = startStr.split(":").map(Number);
+  const [fh, fm] = finishStr.split(":").map(Number);
+  if ([sh, sm, fh, fm].some(n => !Number.isFinite(n))) return null;
+  let hours = (fh + fm / 60) - (sh + sm / 60);
+  if (hours <= 0) hours += 24; // crosses midnight
+  return hours > 0 ? hours : null;
+}
+
+function formatDuration(hours) {
+  const rounded = Math.round(hours * 100) / 100;
+  return `${rounded} hour${rounded === 1 ? "" : "s"}`;
+}
+
+function buildPIText(diameterRaw, lengthRaw) {
+  const dMm = parseLeadingNumber(diameterRaw);
+  const lM = parseLeadingNumber(lengthRaw);
+  const value = (Number.isFinite(dMm) && Number.isFinite(lM))
+    ? (0.5 * (dMm / 1000) * lM).toFixed(2)
+    : "…............";
+  return `PI = 0.5liters x D x L / 1 hour = ${value} (lit/h)`;
+}
+
+function buildTIText(volumeRaw, hours) {
+  const v = parseLeadingNumber(volumeRaw);
+  const value = (Number.isFinite(v) && hours) ? (v / hours).toFixed(2) : "…..";
+  return `TI = V/T = ${value} (lit/h)`;
+}
+
+/* Wires live recompute so the PI/TI preview shown in the app always
+   matches what will be written to the exported file - the user sees the
+   real sentence with the real number, never a value they have to compute
+   or transcribe themselves. */
+function wirePJ06Computations(container) {
+  const byCell = ref => container.querySelector(`[data-cell="${ref}"]`);
+  const diameterInput = byCell(PJ06_CELLS.diameter);
+  const lengthInput = byCell(PJ06_CELLS.length);
+  const piInput = byCell(PJ06_CELLS.pi);
+  const startInput = byCell(PJ06_CELLS.timeStart);
+  const finishInput = byCell(PJ06_CELLS.timeFinish);
+  const volumeInput = byCell(PJ06_CELLS.volume);
+  const tiInput = byCell(PJ06_CELLS.ti);
+
+  const recomputePI = () => {
+    if (!piInput) return;
+    piInput.value = buildPIText(diameterInput?.value, lengthInput?.value);
+  };
+  const recomputeTI = () => {
+    if (!tiInput) return;
+    const hours = computeDurationHours(startInput?.value, finishInput?.value);
+    tiInput.value = buildTIText(volumeInput?.value, hours);
+  };
+
+  [diameterInput, lengthInput].forEach(inp => inp && inp.addEventListener("input", recomputePI));
+  [volumeInput, startInput, finishInput].forEach(inp => {
+    inp && inp.addEventListener("input", recomputeTI);
+    inp && inp.addEventListener("change", recomputeTI);
+  });
+
+  recomputePI();
+  recomputeTI();
+}
+
 function renderXlsxFields(container, fields, fileKey, sheet) {
   const sel = { fileKey, sheet };
   if (sheetIsManualEntryOnly(sel)) {
@@ -233,17 +332,26 @@ function renderXlsxFields(container, fields, fileKey, sheet) {
     g.fields.forEach(f => fs.appendChild(buildXlsxFieldRow(f, sel)));
     container.appendChild(fs);
   });
+
+  if (fileKey === "Final5-10_ITP" && sheet === "PJ-06") {
+    wirePJ06Computations(container);
+  }
 }
 
 function buildXlsxFieldRow(f, sel) {
   const row = document.createElement("div");
   row.className = "field-row";
   const label = document.createElement("label");
+  const isComputed = isPJ06ComputedCell(sel, f.cell);
   // Group legend already shows the row context, so here just show the
   // cell reference plus a short sample-value hint (still useful to
   // distinguish which of several columns in the same group this is,
-  // e.g. Model vs Manufacturer vs Certificate No.).
-  label.innerHTML = f.sample_value
+  // e.g. Model vs Manufacturer vs Certificate No.). Computed PI/TI cells
+  // get a hint explaining WHY there's no sample value/free typing here,
+  // instead of showing a stale example number as if it were editable.
+  label.innerHTML = isComputed
+    ? `<span class="cellref">${f.cell}</span> <span class="ctx">(tự tính, không nhập tay)</span>`
+    : f.sample_value
     ? `<span class="cellref">${f.cell}</span> <span class="ctx">(vd: ${truncate(f.sample_value, 30)})</span>`
     : `<span class="cellref">${f.cell}</span>`;
   row.appendChild(label);
@@ -254,7 +362,13 @@ function buildXlsxFieldRow(f, sel) {
   let input;
   let otherInput = null;
   const sample = f.sample_value;
-  if (!forceManual && f.type === "accept_reject") {
+  if (isComputed) {
+    input = document.createElement("input");
+    input.type = "text";
+    input.readOnly = true;
+    input.classList.add("computed-field");
+    input.value = f.cell === PJ06_CELLS.pi ? buildPIText("", "") : buildTIText("", null);
+  } else if (!forceManual && f.type === "accept_reject") {
     input = buildAcceptRejectSelect(sel.sheet);
   } else if (!forceManual && isLocationLike(sample)) {
     ({ select: input, otherInput } = buildSelectWithOther(locations));
@@ -762,6 +876,20 @@ async function exportXlsx() {
     zip.file("xl/sharedStrings.xml") ? zip.file("xl/sharedStrings.xml").asText() : null
   );
 
+  // Recompute PJ-06's PI/TI right here from the current D/L/V/time inputs,
+  // rather than trusting whatever the readonly preview field already
+  // holds - guarantees the exported sentence is correct even if some edge
+  // case (e.g. a value pasted in without firing an input event) left the
+  // live preview stale.
+  if (fileKey === "Final5-10_ITP" && sheet === "PJ-06") {
+    const cellVal = ref => document.querySelector(`#dataForm [data-cell="${ref}"]`)?.value || "";
+    const piInput = document.querySelector(`#dataForm [data-cell="${PJ06_CELLS.pi}"]`);
+    if (piInput) piInput.value = buildPIText(cellVal(PJ06_CELLS.diameter), cellVal(PJ06_CELLS.length));
+    const tiInput = document.querySelector(`#dataForm [data-cell="${PJ06_CELLS.ti}"]`);
+    const durationHours = computeDurationHours(cellVal(PJ06_CELLS.timeStart), cellVal(PJ06_CELLS.timeFinish));
+    if (tiInput) tiInput.value = buildTIText(cellVal(PJ06_CELLS.volume), durationHours);
+  }
+
   const inputs = document.querySelectorAll("#dataForm [data-cell]");
   let count = 0;
   inputs.forEach(inp => {
@@ -786,6 +914,18 @@ async function exportXlsx() {
     xml = patchCellInSheetXml(xml, cellRef, isNumber ? parseFloat(val) : val, isNumber);
     count++;
   });
+
+  // Duration (X29) has no field-map entry - the raw template hardcodes a
+  // stale "1 hour" there. Patch it directly from the same start/finish
+  // times used for TI so the two numbers can never disagree.
+  if (fileKey === "Final5-10_ITP" && sheet === "PJ-06") {
+    const cellVal = ref => document.querySelector(`#dataForm [data-cell="${ref}"]`)?.value || "";
+    const durationHours = computeDurationHours(cellVal(PJ06_CELLS.timeStart), cellVal(PJ06_CELLS.timeFinish));
+    if (durationHours) {
+      xml = patchCellInSheetXml(xml, PJ06_CELLS.duration, formatDuration(durationHours), false);
+      count++;
+    }
+  }
 
   zip.file(sheetPath, xml);
 
