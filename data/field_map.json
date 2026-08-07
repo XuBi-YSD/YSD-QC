@@ -992,14 +992,14 @@
         "cell": "X28",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Main body\nMáy chính"
       },
       {
         "cell": "Z28",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Main body\nMáy chính"
       },
       {
@@ -1034,14 +1034,14 @@
         "cell": "X29",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Subsequent pipe\nỐng nối phía sau"
       },
       {
         "cell": "Z29",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Subsequent pipe\nỐng nối phía sau"
       },
       {
@@ -1076,14 +1076,14 @@
         "cell": "X30",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Control Panel\nBảng điều khiển"
       },
       {
         "cell": "Z30",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Control Panel\nBảng điều khiển"
       },
       {
@@ -1146,14 +1146,14 @@
         "cell": "X32",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Hydraulic Power Unit\nMáy bơm dầu"
       },
       {
         "cell": "Z32",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Hydraulic Power Unit\nMáy bơm dầu"
       },
       {
@@ -1188,14 +1188,14 @@
         "cell": "X33",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Oil Transfering Hose\nDây dẫn dầu"
       },
       {
         "cell": "Z33",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Oil Transfering Hose\nDây dẫn dầu"
       },
       {
@@ -1230,14 +1230,14 @@
         "cell": "X34",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Main Jacking\nKích thủy lực"
       },
       {
         "cell": "Z34",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Main Jacking\nKích thủy lực"
       },
       {
@@ -1272,14 +1272,14 @@
         "cell": "X35",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Bearing of jacking\nGiá đỡ máy kích"
       },
       {
         "cell": "Z35",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Bearing of jacking\nGiá đỡ máy kích"
       },
       {
@@ -1314,14 +1314,14 @@
         "cell": "X36",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Launching Stand\nBệ đỡ máy kích"
       },
       {
         "cell": "Z36",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Launching Stand\nBệ đỡ máy kích"
       },
       {
@@ -1356,14 +1356,14 @@
         "cell": "X37",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Strut\nMiếng chèn"
       },
       {
         "cell": "Z37",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Strut\nMiếng chèn"
       },
       {
@@ -1398,14 +1398,14 @@
         "cell": "X38",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Shaft ring\nVòng sắt cửa hầm"
       },
       {
         "cell": "Z38",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Shaft ring\nVòng sắt cửa hầm"
       },
       {
@@ -1440,14 +1440,14 @@
         "cell": "X39",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Shaft rubber ring\nGioăng cao su"
       },
       {
         "cell": "Z39",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Shaft rubber ring\nGioăng cao su"
       },
       {
@@ -1482,14 +1482,14 @@
         "cell": "X40",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Steel for gasket\nThép lắp giữ gioăng"
       },
       {
         "cell": "Z40",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Steel for gasket\nThép lắp giữ gioăng"
       },
       {
@@ -1524,14 +1524,14 @@
         "cell": "X41",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Air compressor\nMáy nén khí"
       },
       {
         "cell": "Z41",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Air compressor\nMáy nén khí"
       },
       {
@@ -1566,14 +1566,14 @@
         "cell": "X43",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Mud Mixer\nMáy trộn bùn"
       },
       {
         "cell": "Z43",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Mud Mixer\nMáy trộn bùn"
       },
       {
@@ -1608,14 +1608,14 @@
         "cell": "X44",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Tail void mixer\nMáy trộn chất phụ gia"
       },
       {
         "cell": "Z44",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Tail void mixer\nMáy trộn chất phụ gia"
       },
       {
@@ -1650,14 +1650,14 @@
         "cell": "X45",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Plasticzer Abox Bbox\nBể A, B chất phụ gia"
       },
       {
         "cell": "Z45",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Plasticzer Abox Bbox\nBể A, B chất phụ gia"
       },
       {
@@ -1692,14 +1692,14 @@
         "cell": "X46",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Mub  Pump\nMáy bơm bùn"
       },
       {
         "cell": "Z46",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Mub  Pump\nMáy bơm bùn"
       },
       {
@@ -1734,14 +1734,14 @@
         "cell": "X47",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Tail void pump\nMáy bơm vữa"
       },
       {
         "cell": "Z47",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Tail void pump\nMáy bơm vữa"
       },
       {
@@ -1776,14 +1776,14 @@
         "cell": "X48",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Plasticzer Pump\nMáy bơm chất phụ gia"
       },
       {
         "cell": "Z48",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Plasticzer Pump\nMáy bơm chất phụ gia"
       },
       {
@@ -1818,14 +1818,14 @@
         "cell": "X49",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Water supplier tank\nBồn cấp nước"
       },
       {
         "cell": "Z49",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Water supplier tank\nBồn cấp nước"
       },
       {
@@ -1860,14 +1860,14 @@
         "cell": "X51",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Removed mud unit\nMáy hút bùn thải"
       },
       {
         "cell": "Z51",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Removed mud unit\nMáy hút bùn thải"
       },
       {
@@ -1902,14 +1902,14 @@
         "cell": "X52",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Mud collecting tank\nBồn chứa bùn"
       },
       {
         "cell": "Z52",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Mud collecting tank\nBồn chứa bùn"
       },
       {
@@ -1944,14 +1944,14 @@
         "cell": "X53",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Removed mud tank\nThùng chứa bùn thải"
       },
       {
         "cell": "Z53",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Removed mud tank\nThùng chứa bùn thải"
       },
       {
@@ -1986,14 +1986,14 @@
         "cell": "X54",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Suction hose\nỐng bơm"
       },
       {
         "cell": "Z54",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Suction hose\nỐng bơm"
       },
       {
@@ -2028,14 +2028,14 @@
         "cell": "X56",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Tunneling machine transmitter line\nDây tín hiệu máy khoan"
       },
       {
         "cell": "Z56",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Tunneling machine transmitter line\nDây tín hiệu máy khoan"
       },
       {
@@ -2070,14 +2070,14 @@
         "cell": "X57",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Tunnerling machine electric line\nDây điện máy khoan"
       },
       {
         "cell": "Z57",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Tunnerling machine electric line\nDây điện máy khoan"
       },
       {
@@ -2112,14 +2112,14 @@
         "cell": "X58",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Tunnerling machine power line\nDây nguồn máy khoan"
       },
       {
         "cell": "Z58",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Tunnerling machine power line\nDây nguồn máy khoan"
       },
       {
@@ -2154,14 +2154,14 @@
         "cell": "X59",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Lighting\nĐèn chiếu sáng"
       },
       {
         "cell": "Z59",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Lighting\nĐèn chiếu sáng"
       },
       {
@@ -2196,14 +2196,14 @@
         "cell": "X60",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Electric line of light\nDây đèn điện"
       },
       {
         "cell": "Z60",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Electric line of light\nDây đèn điện"
       },
       {
@@ -2238,14 +2238,14 @@
         "cell": "X61",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Crane equipment\nPhụ kiện cẩu"
       },
       {
         "cell": "Z61",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Crane equipment\nPhụ kiện cẩu"
       },
       {
@@ -2280,14 +2280,14 @@
         "cell": "X62",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Air hose\nỐng dẫn khí"
       },
       {
         "cell": "Z62",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Air hose\nỐng dẫn khí"
       },
       {
@@ -2322,14 +2322,14 @@
         "cell": "X63",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Muddy water hose\nỐng dẫn bùn"
       },
       {
         "cell": "Z63",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Muddy water hose\nỐng dẫn bùn"
       },
       {
@@ -2364,14 +2364,14 @@
         "cell": "X64",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Tail void hose\nỐng dẫn chất bôi trơn"
       },
       {
         "cell": "Z64",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Tail void hose\nỐng dẫn chất bôi trơn"
       },
       {
@@ -2406,14 +2406,14 @@
         "cell": "X65",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Plasticizer hose A\nỐng dẫn phụ gia A"
       },
       {
         "cell": "Z65",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Plasticizer hose A\nỐng dẫn phụ gia A"
       },
       {
@@ -2448,14 +2448,14 @@
         "cell": "X66",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Plasticizer hose B\nỐng dẫn phụ gia B"
       },
       {
         "cell": "Z66",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Plasticizer hose B\nỐng dẫn phụ gia B"
       },
       {
@@ -2490,14 +2490,14 @@
         "cell": "X67",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Cleaning hose\nỐng bơm nước"
       },
       {
         "cell": "Z67",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Cleaning hose\nỐng bơm nước"
       },
       {
@@ -2532,14 +2532,14 @@
         "cell": "X68",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Mud removal pipe\nỐng hút bùn thải"
       },
       {
         "cell": "Z68",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Mud removal pipe\nỐng hút bùn thải"
       },
       {
@@ -2574,14 +2574,14 @@
         "cell": "X69",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Wind pipe\nỐng thông gió"
       },
       {
         "cell": "Z69",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Wind pipe\nỐng thông gió"
       },
       {
@@ -2616,14 +2616,14 @@
         "cell": "X70",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Wind guide device\nThiết bị thông gió"
       },
       {
         "cell": "Z70",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Wind guide device\nThiết bị thông gió"
       },
       {
@@ -2658,14 +2658,14 @@
         "cell": "X72",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Grout mixer\nMáy trộn vữa"
       },
       {
         "cell": "Z72",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Grout mixer\nMáy trộn vữa"
       },
       {
@@ -2700,14 +2700,14 @@
         "cell": "X73",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Grout pump\nMáy bơm vữa"
       },
       {
         "cell": "Z73",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Grout pump\nMáy bơm vữa"
       },
       {
@@ -2742,14 +2742,14 @@
         "cell": "X74",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Backfill injection hose\nỐng bơm vữa"
       },
       {
         "cell": "Z74",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Backfill injection hose\nỐng bơm vữa"
       },
       {
@@ -2784,14 +2784,14 @@
         "cell": "X76",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Palang System\nHệ pa lăng nâng hạ"
       },
       {
         "cell": "Z76",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Palang System\nHệ pa lăng nâng hạ"
       },
       {
@@ -2826,14 +2826,14 @@
         "cell": "X77",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Mud Palang System\nHệ pa lăng chuyển bùn"
       },
       {
         "cell": "Z77",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Mud Palang System\nHệ pa lăng chuyển bùn"
       },
       {
@@ -2868,14 +2868,14 @@
         "cell": "X80",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Gas cuttting machine\nMáy cắt khí gas"
       },
       {
         "cell": "Z80",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Gas cuttting machine\nMáy cắt khí gas"
       },
       {
@@ -2910,14 +2910,14 @@
         "cell": "X81",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Welding machine\nMáy hàn"
       },
       {
         "cell": "Z81",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Welding machine\nMáy hàn"
       },
       {
@@ -2952,14 +2952,14 @@
         "cell": "X82",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Distribution board\nHộp phân điện"
       },
       {
         "cell": "Z82",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Distribution board\nHộp phân điện"
       },
       {
@@ -2994,14 +2994,14 @@
         "cell": "X83",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Measure device\nMáy đo đạc"
       },
       {
         "cell": "Z83",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Measure device\nMáy đo đạc"
       },
       {
@@ -3036,14 +3036,14 @@
         "cell": "X84",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Forklift 2 ton\nXe nâng 2 tấn"
       },
       {
         "cell": "Z84",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Forklift 2 ton\nXe nâng 2 tấn"
       },
       {
@@ -3078,14 +3078,14 @@
         "cell": "X85",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Others\nCác thiết bị khác"
       },
       {
         "cell": "Z85",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Others\nCác thiết bị khác"
       },
       {
@@ -3122,6 +3122,20 @@
         "sample_value": "Inspector/TVGS",
         "type": "text",
         "context": "Position/ Vị trí:"
+      },
+      {
+        "cell": "X78",
+        "template_value": null,
+        "sample_value": null,
+        "type": "accept_reject",
+        "context": null
+      },
+      {
+        "cell": "Z78",
+        "template_value": null,
+        "sample_value": null,
+        "type": "accept_reject",
+        "context": null
       }
     ],
     "PJ-02": [
@@ -3178,98 +3192,98 @@
         "cell": "X43",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "I. Inspection of Equipment/ Kiểm tra thiết bị"
       },
       {
         "cell": "Z43",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "I. Inspection of Equipment/ Kiểm tra thiết bị"
       },
       {
         "cell": "X44",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Visual checking / Kiểm tra ngoại quan"
       },
       {
         "cell": "Z44",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Visual checking / Kiểm tra ngoại quan"
       },
       {
         "cell": "X45",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "TBM equipment/Máy TBM: Model/Số hiệu:"
       },
       {
         "cell": "Z45",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "TBM equipment/Máy TBM: Model/Số hiệu:"
       },
       {
         "cell": "X46",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Outside diameter of TBM/Đường kính ngoài máy TBM: Dtbm ="
       },
       {
         "cell": "Z46",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Outside diameter of TBM/Đường kính ngoài máy TBM: Dtbm ="
       },
       {
         "cell": "X47",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Hydraulic Jacking/Kích thủy lực: Model/Số hiệu:"
       },
       {
         "cell": "Z47",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Hydraulic Jacking/Kích thủy lực: Model/Số hiệu:"
       },
       {
         "cell": "X48",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Max Jacking Force/Lực kích lớn nhất:"
       },
       {
         "cell": "Z48",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Max Jacking Force/Lực kích lớn nhất:"
       },
       {
         "cell": "X49",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Quantity/Số lượng:"
       },
       {
         "cell": "Z49",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Quantity/Số lượng:"
       },
       {
@@ -3316,28 +3330,28 @@
         "cell": "X50",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Trial Operation of TBM/Vận hành thử máy TBM"
       },
       {
         "cell": "Z50",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Trial Operation of TBM/Vận hành thử máy TBM"
       },
       {
         "cell": "X51",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Trial Operation of Hydraulic Jack/Vận hành thử máy Kích thủy lực"
       },
       {
         "cell": "Z51",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Trial Operation of Hydraulic Jack/Vận hành thử máy Kích thủy lực"
       },
       {
@@ -3365,14 +3379,14 @@
         "cell": "X54",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "X ="
       },
       {
         "cell": "Z54",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "X ="
       },
       {
@@ -3400,14 +3414,14 @@
         "cell": "X55",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Y ="
       },
       {
         "cell": "Z55",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Y ="
       },
       {
@@ -3435,14 +3449,14 @@
         "cell": "X58",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "H1"
       },
       {
         "cell": "Z58",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "H1"
       },
       {
@@ -3470,14 +3484,14 @@
         "cell": "X59",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Slope"
       },
       {
         "cell": "Z59",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Slope"
       },
       {
@@ -3577,266 +3591,266 @@
         "cell": "X47",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Thrust wall Works (Back anchor)/ Công tác tường chắn (Neo sau)"
       },
       {
         "cell": "Z47",
         "template_value": null,
         "sample_value": "*",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Thrust wall Works (Back anchor)/ Công tác tường chắn (Neo sau)"
       },
       {
         "cell": "X48",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Drive Shaft Works (Entrance packing for Start)/ Công tác giếng kích (Chèn vị trí đầu ống đi)"
       },
       {
         "cell": "Z48",
         "template_value": null,
         "sample_value": "*",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Drive Shaft Works (Entrance packing for Start)/ Công tác giếng kích (Chèn vị trí đầu ống đi)"
       },
       {
         "cell": "X49",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Crane Equipment Works (Installation Works of Crane)/ Công tác thiết bị cẩu (Công tác lắp đặt cẩu)"
       },
       {
         "cell": "Z49",
         "template_value": null,
         "sample_value": "*",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Crane Equipment Works (Installation Works of Crane)/ Công tác thiết bị cẩu (Công tác lắp đặt cẩu)"
       },
       {
         "cell": "X50",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Machine Accessary Installation/ Công tác lắp đặt thiết bị máy"
       },
       {
         "cell": "Z50",
         "template_value": null,
         "sample_value": "*",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Machine Accessary Installation/ Công tác lắp đặt thiết bị máy"
       },
       {
         "cell": "X51",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Jacking frame installation of launcher/ Lắp đặt giá kích"
       },
       {
         "cell": "Z51",
         "template_value": null,
         "sample_value": "*",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Jacking frame installation of launcher/ Lắp đặt giá kích"
       },
       {
         "cell": "X52",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Boring Machine Installation Works (Installation of Pipe Jacking Machine)/ Công tác lắp đặt máy khoan (Lắp đặt Máy kích ngầm)"
       },
       {
         "cell": "Z52",
         "template_value": null,
         "sample_value": "*",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Boring Machine Installation Works (Installation of Pipe Jacking Machine)/ Công tác lắp đặt máy khoan (Lắp đặt Máy kích ngầm)"
       },
       {
         "cell": "X53",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Boring Machine Assembly and Mechanic Works/ Công tác lắp ráp máy khoan và công tác cơ khí"
       },
       {
         "cell": "Z53",
         "template_value": null,
         "sample_value": "*",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Boring Machine Assembly and Mechanic Works/ Công tác lắp ráp máy khoan và công tác cơ khí"
       },
       {
         "cell": "X54",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Ground breaking Works（Start)/ Công tác đào phá đất (Bắt đầu)"
       },
       {
         "cell": "Z54",
         "template_value": null,
         "sample_value": "*",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Ground breaking Works（Start)/ Công tác đào phá đất (Bắt đầu)"
       },
       {
         "cell": "X55",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Communication Line Equipment Works/ Công tác thiết bị đường dây viễn thông"
       },
       {
         "cell": "Z55",
         "template_value": null,
         "sample_value": "*",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Communication Line Equipment Works/ Công tác thiết bị đường dây viễn thông"
       },
       {
         "cell": "X56",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Ventilation Equipment Works/ Công tác thiết bị thông gió"
       },
       {
         "cell": "Z56",
         "template_value": null,
         "sample_value": "*",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Ventilation Equipment Works/ Công tác thiết bị thông gió"
       },
       {
         "cell": "X57",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Injection Equipment Works/ Công tác thiết bị phun"
       },
       {
         "cell": "Z57",
         "template_value": null,
         "sample_value": "*",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Injection Equipment Works/ Công tác thiết bị phun"
       },
       {
         "cell": "X58",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- High Density Slurry and Lubricant Injection Equipment Works/ Công tác bùn tỷ trọng cao và Thiết bị phun dầu"
       },
       {
         "cell": "Z58",
         "template_value": null,
         "sample_value": "*",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- High Density Slurry and Lubricant Injection Equipment Works/ Công tác bùn tỷ trọng cao và Thiết bị phun dầu"
       },
       {
         "cell": "X59",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Muck Transportation Equipment Works/ Công tác thiết bị vận chuyển bùn tạp"
       },
       {
         "cell": "Z59",
         "template_value": null,
         "sample_value": "*",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Muck Transportation Equipment Works/ Công tác thiết bị vận chuyển bùn tạp"
       },
       {
         "cell": "X60",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Muck Storage Works/ Công tác lưu trữ bùn tạp"
       },
       {
         "cell": "Z60",
         "template_value": null,
         "sample_value": "*",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Muck Storage Works/ Công tác lưu trữ bùn tạp"
       },
       {
         "cell": "X61",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Dewatering Works (Operation of Submersible Pump (Shaft))/ Công tác tách nước (Vận hành bơm chìm (Giếng))"
       },
       {
         "cell": "Z61",
         "template_value": null,
         "sample_value": "*",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Dewatering Works (Operation of Submersible Pump (Shaft))/ Công tác tách nước (Vận hành bơm chìm (Giếng))"
       },
       {
         "cell": "X62",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Installation of Temporary Step inside Shaft/ Lắp đặt  Thang tạm bên trong Giếng"
       },
       {
         "cell": "Z62",
         "template_value": null,
         "sample_value": "*",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Installation of Temporary Step inside Shaft/ Lắp đặt  Thang tạm bên trong Giếng"
       },
       {
         "cell": "X63",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Installation of Temporary Working inside Shaft/ Lắp đặt các công tác tạm bên trong Giếng"
       },
       {
         "cell": "Z63",
         "template_value": null,
         "sample_value": "*",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Installation of Temporary Working inside Shaft/ Lắp đặt các công tác tạm bên trong Giếng"
       },
       {
         "cell": "X64",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Eye cutting works at steel sheet piles of driving shaft, intermediate shafts and arrival shaft/ Công tác cắt mắt cọc ván thép tại giếng kích, giếng nhận và giếng trung gian"
       },
       {
         "cell": "Z64",
         "template_value": null,
         "sample_value": "*",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Eye cutting works at steel sheet piles of driving shaft, intermediate shafts and arrival shaft/ Công tác cắt mắt cọc ván thép tại giếng kích, giếng nhận và giếng trung gian"
       },
       {
         "cell": "X65",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Other auxiliary works for prepration prior pipe jacking/ Các công tác chuẩn bị khác có liên quan trước khi khoan kích"
       },
       {
         "cell": "Z65",
         "template_value": null,
         "sample_value": "*",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Other auxiliary works for prepration prior pipe jacking/ Các công tác chuẩn bị khác có liên quan trước khi khoan kích"
       },
       {
@@ -3873,6 +3887,34 @@
         "sample_value": "Inspector/TVGS",
         "type": "text",
         "context": "Position/ Vị trí:"
+      },
+      {
+        "cell": "X46",
+        "template_value": null,
+        "sample_value": null,
+        "type": "accept_reject",
+        "context": null
+      },
+      {
+        "cell": "Z46",
+        "template_value": null,
+        "sample_value": null,
+        "type": "accept_reject",
+        "context": null
+      },
+      {
+        "cell": "X66",
+        "template_value": null,
+        "sample_value": null,
+        "type": "accept_reject",
+        "context": null
+      },
+      {
+        "cell": "Z66",
+        "template_value": null,
+        "sample_value": null,
+        "type": "accept_reject",
+        "context": null
       }
     ],
     "PJ-03a": [
@@ -4589,6 +4631,13 @@
         "sample_value": "Inspector/TVGS",
         "type": "text",
         "context": "Position/ Vị trí:"
+      },
+      {
+        "cell": "X44",
+        "template_value": null,
+        "sample_value": "12.5",
+        "type": "number",
+        "context": null
       }
     ],
     "PJ-04": [
@@ -4673,14 +4722,14 @@
         "cell": "X25",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
         "cell": "Z25",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
@@ -4708,14 +4757,14 @@
         "cell": "X26",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
         "cell": "Z26",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
@@ -4743,14 +4792,14 @@
         "cell": "X27",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
         "cell": "Z27",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
@@ -4785,14 +4834,14 @@
         "cell": "X28",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
         "cell": "Z28",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
@@ -4820,14 +4869,14 @@
         "cell": "X29",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
         "cell": "Z29",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
@@ -4855,14 +4904,14 @@
         "cell": "X30",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
         "cell": "Z30",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
@@ -4897,14 +4946,14 @@
         "cell": "X31",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
         "cell": "Z31",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
@@ -4932,14 +4981,14 @@
         "cell": "X32",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
         "cell": "Z32",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
@@ -4967,14 +5016,14 @@
         "cell": "X33",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
         "cell": "Z33",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
@@ -5009,14 +5058,14 @@
         "cell": "X34",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
         "cell": "Z34",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
@@ -5044,14 +5093,14 @@
         "cell": "X35",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
         "cell": "Z35",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
@@ -5079,14 +5128,14 @@
         "cell": "X36",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
         "cell": "Z36",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
@@ -5121,14 +5170,14 @@
         "cell": "X37",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
         "cell": "Z37",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
@@ -5156,14 +5205,14 @@
         "cell": "X38",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
         "cell": "Z38",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
@@ -5191,14 +5240,14 @@
         "cell": "X39",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
         "cell": "Z39",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
@@ -5275,14 +5324,14 @@
         "cell": "X40",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
         "cell": "Z40",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
@@ -5310,14 +5359,14 @@
         "cell": "X41",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
         "cell": "Z41",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
@@ -5345,14 +5394,14 @@
         "cell": "X42",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
         "cell": "Z42",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
@@ -5387,14 +5436,14 @@
         "cell": "X43",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
         "cell": "Z43",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
@@ -5422,14 +5471,14 @@
         "cell": "X44",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
         "cell": "Z44",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
@@ -5457,14 +5506,14 @@
         "cell": "X45",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
         "cell": "Z45",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
@@ -5499,14 +5548,14 @@
         "cell": "X46",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
         "cell": "Z46",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
@@ -5534,14 +5583,14 @@
         "cell": "X47",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
         "cell": "Z47",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
@@ -5569,14 +5618,14 @@
         "cell": "X48",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
         "cell": "Z48",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
@@ -5611,14 +5660,14 @@
         "cell": "X49",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
         "cell": "Z49",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
@@ -5646,14 +5695,14 @@
         "cell": "X50",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
         "cell": "Z50",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
@@ -5681,14 +5730,14 @@
         "cell": "X51",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
         "cell": "Z51",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
@@ -5723,14 +5772,14 @@
         "cell": "X52",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
         "cell": "Z52",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
@@ -5758,14 +5807,14 @@
         "cell": "X53",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
         "cell": "Z53",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
@@ -5793,14 +5842,14 @@
         "cell": "X54",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
         "cell": "Z54",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
@@ -5835,14 +5884,14 @@
         "cell": "X55",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
         "cell": "Z55",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
@@ -5870,14 +5919,14 @@
         "cell": "X56",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
         "cell": "Z56",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
@@ -5905,14 +5954,14 @@
         "cell": "X57",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
         "cell": "Z57",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
@@ -5947,14 +5996,14 @@
         "cell": "X58",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
         "cell": "Z58",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
@@ -5982,14 +6031,14 @@
         "cell": "X59",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
         "cell": "Z59",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
@@ -6017,14 +6066,14 @@
         "cell": "X60",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
         "cell": "Z60",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
@@ -6059,14 +6108,14 @@
         "cell": "X61",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
         "cell": "Z61",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
@@ -6094,14 +6143,14 @@
         "cell": "X62",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
         "cell": "Z62",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
@@ -6129,14 +6178,14 @@
         "cell": "X63",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
         "cell": "Z63",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
@@ -6171,14 +6220,14 @@
         "cell": "X64",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
         "cell": "Z64",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
@@ -6206,14 +6255,14 @@
         "cell": "X65",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
         "cell": "Z65",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
@@ -6241,14 +6290,14 @@
         "cell": "X66",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
         "cell": "Z66",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
@@ -6283,14 +6332,14 @@
         "cell": "X67",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
         "cell": "Z67",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
@@ -6318,14 +6367,14 @@
         "cell": "X68",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
         "cell": "Z68",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
@@ -6353,14 +6402,14 @@
         "cell": "X69",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
         "cell": "Z69",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
@@ -6395,14 +6444,14 @@
         "cell": "X70",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
         "cell": "Z70",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
@@ -6430,14 +6479,14 @@
         "cell": "X71",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
         "cell": "Z71",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
@@ -6465,14 +6514,14 @@
         "cell": "X72",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
         "cell": "Z72",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
@@ -6507,14 +6556,14 @@
         "cell": "X73",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
         "cell": "Z73",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
@@ -6542,14 +6591,14 @@
         "cell": "X74",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
         "cell": "Z74",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
@@ -6577,14 +6626,14 @@
         "cell": "X75",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
         "cell": "Z75",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
@@ -6619,14 +6668,14 @@
         "cell": "X76",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
         "cell": "Z76",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
@@ -6654,14 +6703,14 @@
         "cell": "X77",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
         "cell": "Z77",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
@@ -6689,14 +6738,14 @@
         "cell": "X78",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
         "cell": "Z78",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
@@ -6731,14 +6780,14 @@
         "cell": "X79",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
         "cell": "Z79",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
@@ -6766,14 +6815,14 @@
         "cell": "X80",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
         "cell": "Z80",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
@@ -6801,14 +6850,14 @@
         "cell": "X81",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
         "cell": "Z81",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
@@ -6843,14 +6892,14 @@
         "cell": "X82",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
         "cell": "Z82",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
@@ -6878,14 +6927,14 @@
         "cell": "X83",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
         "cell": "Z83",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
@@ -6913,14 +6962,14 @@
         "cell": "X84",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       },
       {
         "cell": "Z84",
         "template_value": null,
         "sample_value": null,
-        "type": "text",
+        "type": "accept_reject",
         "context": null
       }
     ],
@@ -8473,14 +8522,14 @@
         "cell": "X27",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Total length of installed sewer pipes/ Tổng chiều dài cống đã lắp đặt:…...........m"
       },
       {
         "cell": "Z27",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Total length of installed sewer pipes/ Tổng chiều dài cống đã lắp đặt:…...........m"
       },
       {
@@ -8494,14 +8543,14 @@
         "cell": "X28",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Quantity of the installed pipes/ Số lượng cống đã lắp đặt:\nQuantity of pipe segments/ Số đoạn x Length of 1 pipe segment/ Chiều dài đơn vị :    seg./đốt x 2.5 m"
       },
       {
         "cell": "Z28",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Quantity of the installed pipes/ Số lượng cống đã lắp đặt:\nQuantity of pipe segments/ Số đoạn x Length of 1 pipe segment/ Chiều dài đơn vị :    seg./đốt x 2.5 m"
       },
       {
@@ -8515,14 +8564,14 @@
         "cell": "X29",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Total length of pipe jacking works/ Tổng chiều dài của công tác khoan kích: ….......... m"
       },
       {
         "cell": "Z29",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Total length of pipe jacking works/ Tổng chiều dài của công tác khoan kích: ….......... m"
       },
       {
@@ -8536,98 +8585,98 @@
         "cell": "X30",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Total length of pipes supplied for pipe jacking works/ Tổng chiều dài cống cung cấp cho công tác khoan kích: ….......... m"
       },
       {
         "cell": "Z30",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Total length of pipes supplied for pipe jacking works/ Tổng chiều dài cống cung cấp cho công tác khoan kích: ….......... m"
       },
       {
         "cell": "X31",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Alignment, coordinates of sewer line/ Định vị, tọa độ tuyến"
       },
       {
         "cell": "Z31",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Alignment, coordinates of sewer line/ Định vị, tọa độ tuyến"
       },
       {
         "cell": "X32",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Elevation, gradient/ Cao độ, độ dốc"
       },
       {
         "cell": "Z32",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Elevation, gradient/ Cao độ, độ dốc"
       },
       {
         "cell": "X33",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Grout injection fo filling cavities around pipes/ Công tác bơm vữa xung quanh cống"
       },
       {
         "cell": "Z33",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Grout injection fo filling cavities around pipes/ Công tác bơm vữa xung quanh cống"
       },
       {
         "cell": "X34",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Filling injection holes/ joints by mortar, finishing work for injection holes/joints\nCông tác trám trét, hoàn thiện các mối nối, lỗ bơm vữa chèn"
       },
       {
         "cell": "Z34",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Filling injection holes/ joints by mortar, finishing work for injection holes/joints\nCông tác trám trét, hoàn thiện các mối nối, lỗ bơm vữa chèn"
       },
       {
         "cell": "X35",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Cleaning inside of pipes/ Vệ sinh lòng ống"
       },
       {
         "cell": "Z35",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Cleaning inside of pipes/ Vệ sinh lòng ống"
       },
       {
         "cell": "X36",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Leakage (Infiltration) test/ Thử nghiệm rò rỉ (thấm)"
       },
       {
         "cell": "Z36",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "Leakage (Infiltration) test/ Thử nghiệm rò rỉ (thấm)"
       },
       {
@@ -8720,336 +8769,336 @@
         "cell": "X49",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Thrust wall Works (Back anchor)/ Công tác tường chắn (Neo sau)"
       },
       {
         "cell": "Z49",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Thrust wall Works (Back anchor)/ Công tác tường chắn (Neo sau)"
       },
       {
         "cell": "X50",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Drive Shaft Works (Entrance packing for Start)/ Công tác giếng kích (Chèn vị trí đầu ống đi)"
       },
       {
         "cell": "Z50",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Drive Shaft Works (Entrance packing for Start)/ Công tác giếng kích (Chèn vị trí đầu ống đi)"
       },
       {
         "cell": "X51",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Arrival Shaft Works (Entrance packing for Arrival)/ Công tác giếng nhận (Chèn vị trí đầu ống đến)"
       },
       {
         "cell": "Z51",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Arrival Shaft Works (Entrance packing for Arrival)/ Công tác giếng nhận (Chèn vị trí đầu ống đến)"
       },
       {
         "cell": "X52",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Crane Equipment Works (Dismantling Works of Crane)/ Công tác thiết bị cẩu (Công tác tháo dỡ cẩu)"
       },
       {
         "cell": "Z52",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Crane Equipment Works (Dismantling Works of Crane)/ Công tác thiết bị cẩu (Công tác tháo dỡ cẩu)"
       },
       {
         "cell": "X53",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Machine Accessory Dimantling/ Công tác tháo dỡ thiết bị máy"
       },
       {
         "cell": "Z53",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Machine Accessory Dimantling/ Công tác tháo dỡ thiết bị máy"
       },
       {
         "cell": "X54",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Jacking frame dimantling of launcher/ Tháo dỡ giá kích"
       },
       {
         "cell": "Z54",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Jacking frame dimantling of launcher/ Tháo dỡ giá kích"
       },
       {
         "cell": "X55",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Machine withdrawal base works (Installation and removal of arrival stage)/ Công tác thu hồi thiết bị máy (Lắp đặt và tháo dỡ trong giai đoạn về giếng nhận)"
       },
       {
         "cell": "Z55",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Machine withdrawal base works (Installation and removal of arrival stage)/ Công tác thu hồi thiết bị máy (Lắp đặt và tháo dỡ trong giai đoạn về giếng nhận)"
       },
       {
         "cell": "X56",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Boring Machine Dimantling Works (Dimantling of Pipe Jacking Machine)/ Công tác tháo dỡ máy khoan (tháo dỡ  máy kích ngầm)"
       },
       {
         "cell": "Z56",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Boring Machine Dimantling Works (Dimantling of Pipe Jacking Machine)/ Công tác tháo dỡ máy khoan (tháo dỡ  máy kích ngầm)"
       },
       {
         "cell": "X57",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Boring Machine Rotation and Installation Works (Reset of Pipe Jacking Machine)/ Công tác quay và lắp đặt máy khoan (Thiết lập lại Máy khoan kích ngầm)"
       },
       {
         "cell": "Z57",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Boring Machine Rotation and Installation Works (Reset of Pipe Jacking Machine)/ Công tác quay và lắp đặt máy khoan (Thiết lập lại Máy khoan kích ngầm)"
       },
       {
         "cell": "X58",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Boring Machine Assembly and Mechanic Works/ Công tác lắp ráp máy khoan và công tác cơ khí"
       },
       {
         "cell": "Z58",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Boring Machine Assembly and Mechanic Works/ Công tác lắp ráp máy khoan và công tác cơ khí"
       },
       {
         "cell": "X59",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Ground breaking Works（Start)/ Công tác đào phá đất (Bắt đầu)"
       },
       {
         "cell": "Z59",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Ground breaking Works（Start)/ Công tác đào phá đất (Bắt đầu)"
       },
       {
         "cell": "X60",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Ground breaking Works（Arrival)/ Công tác đào phá đất (Nhận)"
       },
       {
         "cell": "Z60",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Ground breaking Works（Arrival)/ Công tác đào phá đất (Nhận)"
       },
       {
         "cell": "X61",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Communication Line Equipment Works/ Công tác thiết bị đường dây viễn thông"
       },
       {
         "cell": "Z61",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Communication Line Equipment Works/ Công tác thiết bị đường dây viễn thông"
       },
       {
         "cell": "X62",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Ventilation Equipment Works/ Công tác thiết bị thông gió"
       },
       {
         "cell": "Z62",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Ventilation Equipment Works/ Công tác thiết bị thông gió"
       },
       {
         "cell": "X63",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Injection Equipment Works/ Công tác thiết bị phun"
       },
       {
         "cell": "Z63",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Injection Equipment Works/ Công tác thiết bị phun"
       },
       {
         "cell": "X64",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- High Density Slurry and Lubricant Injection Equipment Works/ Công tác bùn tỷ trọng cao và Thiết bị phun dầu"
       },
       {
         "cell": "Z64",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- High Density Slurry and Lubricant Injection Equipment Works/ Công tác bùn tỷ trọng cao và Thiết bị phun dầu"
       },
       {
         "cell": "X65",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Muck Transportation Equipment Works/ Công tác thiết bị vận chuyển bùn tạp"
       },
       {
         "cell": "Z65",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Muck Transportation Equipment Works/ Công tác thiết bị vận chuyển bùn tạp"
       },
       {
         "cell": "X66",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Muck Storage Works/ Công tác lưu trữ bùn tạp"
       },
       {
         "cell": "Z66",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Muck Storage Works/ Công tác lưu trữ bùn tạp"
       },
       {
         "cell": "X67",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Equipment Removal Works in Pipes/ Tháo dỡ thiết bị trong cống"
       },
       {
         "cell": "Z67",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Equipment Removal Works in Pipes/ Tháo dỡ thiết bị trong cống"
       },
       {
         "cell": "X68",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Dewatering Works (Operation of Submersible Pump (Shaft))/ Công tác tách nước (Vận hành bơm chìm (Giếng))"
       },
       {
         "cell": "Z68",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Dewatering Works (Operation of Submersible Pump (Shaft))/ Công tác tách nước (Vận hành bơm chìm (Giếng))"
       },
       {
         "cell": "X69",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Dimantling of Temporary Step inside Shaft/ Tháo dỡ  thang tạm bên trong Giếng"
       },
       {
         "cell": "Z69",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Dimantling of Temporary Step inside Shaft/ Tháo dỡ  thang tạm bên trong Giếng"
       },
       {
         "cell": "X70",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Dimantling of Temporary Working Stage inside Shaft/ Tháo dỡ các công tác tạm bên trong Giếng"
       },
       {
         "cell": "Z70",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Dimantling of Temporary Working Stage inside Shaft/ Tháo dỡ các công tác tạm bên trong Giếng"
       },
       {
         "cell": "X71",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Cleaning of Pipe/ Làm sạch cống"
       },
       {
         "cell": "Z71",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Cleaning of Pipe/ Làm sạch cống"
       },
       {
         "cell": "X72",
         "template_value": null,
         "sample_value": "R",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Other auxiliary works…/  Các công tác khác có liên quan…"
       },
       {
         "cell": "Z72",
         "template_value": null,
         "sample_value": "£",
-        "type": "text",
+        "type": "accept_reject",
         "context": "- Other auxiliary works…/  Các công tác khác có liên quan…"
       },
       {
