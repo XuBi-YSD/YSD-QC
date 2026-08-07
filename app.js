@@ -252,15 +252,16 @@ function buildXlsxFieldRow(f, sel) {
   const forceText = mustForceText(f.cell, sel, f.sample_value);
 
   let input;
+  let otherInput = null;
   const sample = f.sample_value;
   if (!forceManual && f.type === "accept_reject") {
     input = buildAcceptRejectSelect(sel.sheet);
   } else if (!forceManual && isLocationLike(sample)) {
-    input = buildSelect(locations, "");
+    ({ select: input, otherInput } = buildSelectWithOther(locations));
   } else if (!forceManual && isPipeLike(sample)) {
-    input = buildSelect(pipeNames, "");
+    ({ select: input, otherInput } = buildSelectWithOther(pipeNames));
   } else if (!forceManual && isPersonLike(sample)) {
-    input = buildSelect(allPersonnelNames(), "");
+    ({ select: input, otherInput } = buildSelectWithOther(allPersonnelNames()));
   } else if (!forceManual && f.type === "date") {
     input = document.createElement("input");
     input.type = "date";
@@ -282,6 +283,7 @@ function buildXlsxFieldRow(f, sel) {
     input.placeholder = "Nhập giá trị, sẽ tự nối vào cuối dòng nhãn";
   }
   row.appendChild(input);
+  if (otherInput) row.appendChild(otherInput);
   return row;
 }
 
@@ -307,6 +309,42 @@ function buildSelect(options, def) {
   return sel;
 }
 
+/* Pairs a dropdown with an inline text field for its "Khác (nhập tay)..."
+   option, so a manual value can be typed directly in the app instead of
+   being silently skipped on export (forcing the user to open the exported
+   Excel/Word file and type it in there afterward). The text field is the
+   very next sibling of the select in the DOM - export reads it via
+   select.nextElementSibling rather than a shared data-cell/data-tag, so a
+   single querySelectorAll("[data-cell]"/"[data-tag]") pass never double-
+   counts the pair. */
+function buildSelectWithOther(options) {
+  const select = buildSelect(options, "");
+  const otherInput = document.createElement("input");
+  otherInput.type = "text";
+  otherInput.className = "other-input hidden";
+  otherInput.placeholder = "Nhập giá trị...";
+  select.addEventListener("change", () => {
+    if (select.value === "__other__") {
+      otherInput.classList.remove("hidden");
+      otherInput.focus();
+    } else {
+      otherInput.classList.add("hidden");
+      otherInput.value = "";
+    }
+  });
+  return { select, otherInput };
+}
+
+/* Resolves an input's effective value, substituting the paired manual-entry
+   text field whenever a select is currently set to "Khác (nhập tay)...". */
+function effectiveValue(inp) {
+  if (inp.tagName === "SELECT" && inp.value === "__other__") {
+    const other = inp.nextElementSibling;
+    return (other && other.classList.contains("other-input")) ? other.value.trim() : "";
+  }
+  return inp.value;
+}
+
 function truncate(s, n) { return s.length > n ? s.slice(0, n) + "…" : s; }
 
 /* ---------- docx form rendering ---------- */
@@ -324,15 +362,16 @@ function renderDocxFields(container, fields) {
     row.appendChild(label);
 
     let input;
+    let otherInput = null;
     if (f.type === "dropdown-location") {
-      input = buildSelect(locations, "");
+      ({ select: input, otherInput } = buildSelectWithOther(locations));
     } else if (f.type === "dropdown-personnel") {
       const names = (personnel[f.group] || []).map(p => p.name);
-      input = buildSelect(names, "");
+      ({ select: input, otherInput } = buildSelectWithOther(names));
       input.addEventListener("change", () => autoFillRole(f.tag, input.value));
     } else if (f.type === "dropdown-material") {
       const names = materials.map(m => m.name_en + " / " + m.name_vi);
-      input = buildSelect(names, "");
+      ({ select: input, otherInput } = buildSelectWithOther(names));
       input.addEventListener("change", () => autoFillMaterialSource(f.tag, input.value));
     } else if (f.type === "text-linked" || f.type === "text-linked-material") {
       input = document.createElement("input");
@@ -351,6 +390,7 @@ function renderDocxFields(container, fields) {
     }
     input.dataset.tag = f.tag;
     row.appendChild(input);
+    if (otherInput) row.appendChild(otherInput);
     fs.appendChild(row);
   });
   container.appendChild(fs);
@@ -725,8 +765,8 @@ async function exportXlsx() {
   const inputs = document.querySelectorAll("#dataForm [data-cell]");
   let count = 0;
   inputs.forEach(inp => {
-    const val = inp.value;
-    if (val === "__other__" || val === "") return; // leave template's blank cell untouched
+    const val = effectiveValue(inp);
+    if (val === "") return; // leave template's blank cell untouched
     const cellRef = inp.dataset.cell;
     const isNumber = inp.dataset.type === "number";
 
@@ -756,10 +796,48 @@ async function exportXlsx() {
     stripToSingleSheet(zip, sheetFile);
   }
 
+  // Cells patched above are written as raw <c> values, never through Excel's
+  // own edit path, so Excel has no reason to think any formula's precedent
+  // changed. Without fullCalcOnLoad, cells like PJ-05's Total column
+  // (SUM(X25:AA54)) keep showing the template's stale cached <v> (e.g. "0")
+  // until the user manually forces a recalc. Force one on every open instead.
+  forceFullRecalcOnLoad(zip);
+
   const blob = zip.generate({ type: "blob", mimeType: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" });
-  const outName = `${todayStr()}-${fileKey}-${sheet}.xlsx`.replace(/[^\w\-.]+/g, "_");
+  const outName = sanitizeFilename(`${todayStr()}-${SHEET_LABELS[sheet] || sheet}`) + ".xlsx";
   saveBlob(blob, outName);
   console.log(`Patched ${count} cell(s) in ${sheetPath}`);
+}
+
+/* Forces Excel/LibreOffice to fully recompute every formula the moment the
+   exported file is opened, instead of trusting the template's cached <v>
+   values - necessary because this app never edits cells through a real
+   spreadsheet engine, so no calc chain is ever invalidated on its own. */
+function forceFullRecalcOnLoad(zip) {
+  const wbPath = "xl/workbook.xml";
+  const wbFile = zip.file(wbPath);
+  if (!wbFile) return;
+  let wbXml = wbFile.asText();
+  if (/<calcPr\b[^>]*\/>/.test(wbXml)) {
+    wbXml = wbXml.replace(/<calcPr\b([^>]*)\/>/, (m, attrs) => {
+      const cleaned = attrs.replace(/\s*fullCalcOnLoad="[^"]*"/, "");
+      return `<calcPr${cleaned} fullCalcOnLoad="1"/>`;
+    });
+  } else {
+    wbXml = wbXml.replace("</workbook>", `<calcPr calcId="191029" fullCalcOnLoad="1"/></workbook>`);
+  }
+  zip.file(wbPath, wbXml);
+}
+
+/* Strips characters illegal in Windows/macOS filenames while preserving
+   Vietnamese diacritics and spacing, so exported names stay human-readable
+   (e.g. "20260807-PJ-05 - Grout Injection.xlsx") instead of collapsing into
+   underscore runs. */
+function sanitizeFilename(s) {
+  return String(s)
+    .replace(/[\\/:*?"<>|]/g, "-")
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
 
@@ -778,13 +856,12 @@ async function exportDocx() {
 
   const data = {};
   document.querySelectorAll("#dataForm [data-tag]").forEach(inp => {
-    const val = inp.value === "__other__" ? "" : inp.value;
-    data[inp.dataset.tag] = val || "";
+    data[inp.dataset.tag] = effectiveValue(inp) || "";
   });
   doc.render(data);
 
   const out = doc.getZip().generate({ type: "blob", mimeType: "application/vnd.openxmlformats-officedocument.wordprocessingml.document" });
-  const outName = `${todayStr()}-${formKey}.docx`;
+  const outName = sanitizeFilename(`${todayStr()}-${info.title}`) + ".docx";
   saveBlob(out, outName);
 }
 
