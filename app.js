@@ -101,6 +101,7 @@ function showPicker() {
 function selectForm(sel) {
   currentSelection = sel;
   pj03aExtraPageCount = 0;
+  pj02bExtraRowCount = 0;
   document.getElementById("picker").classList.add("hidden");
   document.getElementById("formArea").classList.remove("hidden");
   const formEl = document.getElementById("dataForm");
@@ -564,16 +565,16 @@ function pj03aExtraPageFields(pageIndex) {
   });
   return fields;
 }
-function pj03aAllFields(baseFields) {
-  let fields = baseFields;
-  for (let p = 1; p <= pj03aExtraPageCount; p++) {
-    fields = fields.concat(pj03aExtraPageFields(p));
-  }
-  return fields;
-}
-
 function extractRowXml(xml, rowNum) {
-  const m = xml.match(new RegExp(`<row r="${rowNum}"[^>]*>[\\s\\S]*?</row>`));
+  // Self-closing rows (<row r="N" .../> - an empty row with only
+  // formatting, no cells) must be checked FIRST: the paired-tag regex's
+  // "[^>]*" would otherwise swallow the trailing "/" and its ">" as the
+  // opening tag, then search forward for the NEXT "</row>" anywhere in
+  // the document - silently matching a completely unrelated, far-away
+  // row (same failure class documented in patchCellInSheetXml above).
+  const selfClosing = new RegExp(`<row r="${rowNum}"[^>]*/>`);
+  const paired = new RegExp(`<row r="${rowNum}"([^>]*?)(?<!/)>[\\s\\S]*?</row>`);
+  const m = xml.match(selfClosing) || xml.match(paired);
   return m ? m[0] : null;
 }
 function extractRowRangeXml(xml, startRow, endRow) {
@@ -593,16 +594,22 @@ function shiftRowXml(rowXml, delta) {
 /* Writes a plain literal <v> into a cell that may currently be
    self-closing or have content (a formula, in the template's own STT
    cells) - preserves the cell's style attribute, drops everything else. */
-function writeLiteralCell(rowXml, cellRef, value) {
+function rewriteCellPreservingStyle(rowXml, cellRef, innerContent) {
   const selfClosing = new RegExp(`<c r="${cellRef}"([^>]*)/>`);
   const withContent = new RegExp(`<c r="${cellRef}"([^>]*?)(?<!/)>((?:(?!</c>)[\\s\\S])*?)</c>`);
   const m = rowXml.match(selfClosing) || rowXml.match(withContent);
   const styleMatch = m && m[1].match(/s="(\d+)"/);
   const styleAttr = styleMatch ? ` s="${styleMatch[1]}"` : "";
-  const newCell = `<c r="${cellRef}"${styleAttr}><v>${value}</v></c>`;
+  const newCell = innerContent ? `<c r="${cellRef}"${styleAttr}>${innerContent}</c>` : `<c r="${cellRef}"${styleAttr}/>`;
   if (rowXml.match(selfClosing)) return rowXml.replace(selfClosing, newCell);
   if (rowXml.match(withContent)) return rowXml.replace(withContent, newCell);
   return rowXml;
+}
+function writeLiteralCell(rowXml, cellRef, value) {
+  return rewriteCellPreservingStyle(rowXml, cellRef, `<v>${value}</v>`);
+}
+function blankCell(rowXml, cellRef) {
+  return rewriteCellPreservingStyle(rowXml, cellRef, "");
 }
 function extractMergesInRange(mergeCellsInner, startRow, endRow) {
   const all = [...mergeCellsInner.matchAll(/<mergeCell ref="[A-Z]+(\d+):[A-Z]+\d+"\/>/g)];
@@ -725,6 +732,119 @@ function computePJ03aTotal(container, extraPages) {
   return any ? roundClean(sum) : "";
 }
 
+/* ---------- PJ-02b Work Item checklist row insertion (beyond STT 24 / row 72) ----------
+   Confirmed with XuBi (Q8): when the fixed 24-item checklist isn't enough,
+   the app adds rows after it with STT continuing (not restarting), and
+   pagination overflows automatically - no manual per-page duplication
+   like PJ-03a needed, since this is a single sequential list rather than
+   a 3-column-per-page layout. Row 72 ("Other auxiliary works…") is the
+   template's last fixed item (STT 24); each extra row clones that row's
+   structure but starts blank/editable (the fixed rows' description is a
+   static label, extra rows' description is the user's own text) with a
+   literal STT instead of the template's shared "+1" formula. */
+const PJ02B_TEMPLATE_ROW = 72;
+const PJ02B_STT_BASE = 24;
+const PJ02B_CLOSING_BLOCK_START = 73;
+const PJ02B_CLOSING_BLOCK_END = 88; // Comments/Conclusion/Signature, 16 rows
+// The template also has purely decorative trailing rows (89, then 105-120)
+// well past the print area ($B$3:$AA$88) - a border divider and a run of
+// otherwise-empty custom-height rows, confirmed to hold zero actual cell
+// data. They must be deleted (not shifted) whenever rows are inserted:
+// left in place, the relocated closing block's row numbers would collide
+// with them for as few as 1 extra row (89) or as many as 17 (105) - two
+// <row> elements sharing the same r="N" is invalid and only "works" by
+// accident of how leniently a given parser happens to pick one.
+const PJ02B_TRAILING_DECORATIVE_START = 89;
+const PJ02B_TRAILING_DECORATIVE_END = 120;
+const PJ02B_MAX_EXTRA_ROWS = 20;
+let pj02bExtraRowCount = 0; // reset whenever a form is (re)selected
+
+function pj02bExtraRowNumber(rowIndex) {
+  // rowIndex: 1 = first EXTRA row (right after the template's own row 72)
+  return PJ02B_TEMPLATE_ROW + rowIndex;
+}
+function pj02bExtraRowStt(rowIndex) {
+  return PJ02B_STT_BASE + rowIndex;
+}
+function pj02bExtraRowFields(rowIndex) {
+  const row = pj02bExtraRowNumber(rowIndex);
+  const stt = pj02bExtraRowStt(rowIndex);
+  const context = `Hạng mục bổ sung #${stt}`;
+  return [
+    { cell: `D${row}`, type: "text", context, sample_value: null },
+    { cell: `X${row}`, type: "accept_reject", context, sample_value: null },
+    { cell: `Z${row}`, type: "accept_reject", context, sample_value: null },
+  ];
+}
+/* Same approach as expandPJ03aSheet, one row at a time instead of a
+   17-row block: clone the template's last checklist row `extraRows`
+   times (literal STT, blanked description), then relocate a clone of the
+   closing block (Comments/Conclusion/Signature) to trail the new rows. */
+function expandPJ02bSheet(xml, extraRows) {
+  if (extraRows <= 0) return xml;
+
+  const templateRow = extractRowXml(xml, PJ02B_TEMPLATE_ROW);
+  const closingRows = extractRowRangeXml(xml, PJ02B_CLOSING_BLOCK_START, PJ02B_CLOSING_BLOCK_END);
+  const trailingDecorativeRows = extractRowRangeXml(xml, PJ02B_TRAILING_DECORATIVE_START, PJ02B_TRAILING_DECORATIVE_END);
+
+  const mergeCellsMatch = xml.match(/<mergeCells count="(\d+)">([\s\S]*?)<\/mergeCells>/);
+  const mergeCount = parseInt(mergeCellsMatch[1], 10);
+  const mergeInner = mergeCellsMatch[2];
+  const templateMerges = extractMergesInRange(mergeInner, PJ02B_TEMPLATE_ROW, PJ02B_TEMPLATE_ROW);
+  const closingMerges = extractMergesInRange(mergeInner, PJ02B_CLOSING_BLOCK_START, PJ02B_CLOSING_BLOCK_END);
+  const trailingDecorativeMerges = extractMergesInRange(mergeInner, PJ02B_TRAILING_DECORATIVE_START, PJ02B_TRAILING_DECORATIVE_END);
+
+  let newXml = xml;
+  closingRows.forEach(r => { newXml = newXml.replace(r, ""); });
+  trailingDecorativeRows.forEach(r => { newXml = newXml.replace(r, ""); });
+
+  let newRowsXml = "";
+  let addedMergesXml = "";
+  for (let i = 1; i <= extraRows; i++) {
+    const targetRow = pj02bExtraRowNumber(i);
+    const delta = targetRow - PJ02B_TEMPLATE_ROW;
+    let cloned = shiftRowXml(templateRow, delta);
+    cloned = writeLiteralCell(cloned, `B${targetRow}`, pj02bExtraRowStt(i));
+    cloned = blankCell(cloned, `D${targetRow}`);
+    newRowsXml += cloned;
+    templateMerges.forEach(m => { addedMergesXml += shiftMergeXml(m, delta); });
+  }
+  const closingDelta = extraRows;
+  closingRows.forEach(r => { newRowsXml += shiftRowXml(r, closingDelta); });
+  closingMerges.forEach(m => { addedMergesXml += shiftMergeXml(m, closingDelta); });
+
+  newXml = newXml.replace("</sheetData>", newRowsXml + "</sheetData>");
+
+  let finalMergeInner = mergeInner;
+  closingMerges.forEach(m => { finalMergeInner = finalMergeInner.replace(m, ""); });
+  trailingDecorativeMerges.forEach(m => { finalMergeInner = finalMergeInner.replace(m, ""); });
+  finalMergeInner += addedMergesXml;
+  const newMergeCount = mergeCount + extraRows * templateMerges.length - trailingDecorativeMerges.length;
+  newXml = newXml.replace(
+    /<mergeCells count="\d+">[\s\S]*?<\/mergeCells>/,
+    `<mergeCells count="${newMergeCount}">${finalMergeInner}</mergeCells>`
+  );
+
+  const maxRow = PJ02B_CLOSING_BLOCK_END + extraRows;
+  newXml = newXml.replace(/<dimension ref="[^"]*"\/>/, `<dimension ref="A1:BB${maxRow}"/>`);
+
+  return newXml;
+}
+
+/* PJ-02b's Print_Area (workbook.xml) hardcodes the template's own last
+   row (88) - must extend or every row added past it won't print.
+   Pagination itself is left to Excel's own automatic page breaks (per
+   XuBi's confirmed answer for this sheet's overflow behavior - unlike
+   PJ-03a, no manual per-page row breaks are added here). */
+function updatePJ02bPrintArea(wbXml, extraRows) {
+  if (extraRows <= 0) return wbXml;
+  const maxRow = PJ02B_CLOSING_BLOCK_END + extraRows;
+  return wbXml.replace(
+    /(<definedName name="_xlnm\.Print_Area" localSheetId="8">'PJ-02b'!\$B\$3:\$AA\$)\d+(<\/definedName>)/,
+    `$1${maxRow}$2`
+  );
+}
+
 function syntheticFieldContext(sel, f) {
   if (sel.fileKey !== "Final5-10_ITP") return null;
   const col = colLetters(f.cell);
@@ -837,6 +957,31 @@ function pj03aAddPageButton(container, sel) {
   wrap.appendChild(btn);
   container.appendChild(wrap);
 }
+
+function pj02bAddRowButton(container, sel) {
+  const wrap = document.createElement("div");
+  wrap.className = "hint";
+  wrap.style.margin = "12px 0";
+  const btn = document.createElement("button");
+  btn.type = "button";
+  btn.className = "secondary";
+  const refreshLabel = () => {
+    if (pj02bExtraRowCount >= PJ02B_MAX_EXTRA_ROWS) {
+      btn.disabled = true;
+      btn.textContent = `Đã đạt tối đa ${PJ02B_STT_BASE + pj02bExtraRowCount} hạng mục`;
+    } else {
+      btn.textContent = `+ Thêm dòng công việc (hạng mục #${PJ02B_STT_BASE + pj02bExtraRowCount + 1})`;
+    }
+  };
+  btn.addEventListener("click", () => {
+    pj02bExtraRowCount++;
+    wrap.before(...appendFieldGroupsFragment(pj02bExtraRowFields(pj02bExtraRowCount), sel));
+    refreshLabel();
+  });
+  refreshLabel();
+  wrap.appendChild(btn);
+  container.appendChild(wrap);
+}
 /* Same grouping as appendFieldGroups, but returns the built fieldset
    nodes instead of appending them directly - needed so the "+ Add page"
    button can insert the new page's fields BEFORE itself rather than
@@ -867,6 +1012,8 @@ function renderXlsxFields(container, allFields, fileKey, sheet) {
   } else if (fileKey === "Final5-10_ITP" && sheet === "PJ-03a") {
     wirePJ03aTotal(container);
     pj03aAddPageButton(container, sel);
+  } else if (fileKey === "Final5-10_ITP" && sheet === "PJ-02b") {
+    pj02bAddRowButton(container, sel);
   }
 }
 
@@ -1483,6 +1630,11 @@ async function exportXlsx() {
     xml = expandPJ03aSheet(xml, pj03aExtraPageCount);
     const wbPath = "xl/workbook.xml";
     zip.file(wbPath, updatePJ03aPrintArea(zip.file(wbPath).asText(), pj03aExtraPageCount));
+  }
+  if (fileKey === "Final5-10_ITP" && sheet === "PJ-02b" && pj02bExtraRowCount > 0) {
+    xml = expandPJ02bSheet(xml, pj02bExtraRowCount);
+    const wbPath = "xl/workbook.xml";
+    zip.file(wbPath, updatePJ02bPrintArea(zip.file(wbPath).asText(), pj02bExtraRowCount));
   }
 
   const sharedStrings = parseSharedStrings(
