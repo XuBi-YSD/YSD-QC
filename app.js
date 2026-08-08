@@ -136,6 +136,24 @@ function sheetIsManualEntryOnly(sel) {
   return !!list && list.includes(sel.sheet);
 }
 
+/* ---------- Stray cells with no real meaning (hidden from the app) ----------
+   PJ-01 (X78/Z78) and PJ-02a (X46/Z46/X66/Z66) each have a handful of
+   accept_reject-shaped cells the field-map generator picked up with NO
+   context and NO sample/template value at all - unlike every other
+   accept_reject cell on both sheets (102 on PJ-01, 42 on PJ-02a), which
+   all have a real equipment/work-item context. Confirmed against the
+   real templates 2026-08-08: these don't correspond to an actual
+   checklist row (likely a stray formatted-but-unused cell left over from
+   a spacer/blank row), so showing them as fillable inputs only
+   confuses the form with entries that mean nothing on the printed page. */
+const HIDDEN_CELLS = {
+  "PJ-01": new Set(["X78", "Z78"]),
+  "PJ-02a": new Set(["X46", "Z46", "X66", "Z66"]),
+};
+function isHiddenCell(sel, cell) {
+  return HIDDEN_CELLS[sel.sheet]?.has(cell) ?? false;
+}
+
 /* Cell types that must be forced to TEXT on export, never auto-numeric/date.
    Applies to any field whose value matches these patterns, regardless of sheet -
    protects values like "42.15 ~ 42.18" or equipment codes that look numeric. */
@@ -494,8 +512,34 @@ function syntheticFieldContext(sel, f) {
   return { group: cfg.groupLabel(pointNumber), column };
 }
 
-function renderXlsxFields(container, fields, fileKey, sheet) {
+/* ---------- PJ-04 Inspection Point (column D) ----------
+   D25/D28/D31... hold a full string like "Point No.1/ Điểm số 1\n(Start
+   point of Jacking Pipe-Seg.103/ Điểm đầu Cống Kích-Đốt 85)" - a fixed
+   "Point No.N/ Điểm số N" counter (N = the same point number computed for
+   this row's group, see REPEATING_ROW_TABLES.PJ-04) followed by an
+   optional free-text description. Requiring the user to type the whole
+   thing by hand risked the counter itself being mistyped or left out of
+   sync with the point's actual position - the counter is now always
+   generated from the row, and the input only captures the (optional)
+   description. */
+function isPJ04InspectionPointCell(sel, cell) {
+  if (!(sel.fileKey === "Final5-10_ITP" && sel.sheet === "PJ-04")) return false;
+  const cfg = REPEATING_ROW_TABLES["PJ-04"];
+  const row = cellRowNumber(cell);
+  return colLetters(cell) === "D" && row >= cfg.startRow && (row - cfg.startRow) % cfg.groupSize === 0;
+}
+function pj04PointNumberForCell(cell) {
+  const cfg = REPEATING_ROW_TABLES["PJ-04"];
+  return Math.floor((cellRowNumber(cell) - cfg.startRow) / cfg.groupSize) + 1;
+}
+function buildInspectionPointText(pointNumber, description) {
+  const base = `Point No.${pointNumber}/ Điểm số ${pointNumber}`;
+  return description ? `${base}\n(${description})` : base;
+}
+
+function renderXlsxFields(container, allFields, fileKey, sheet) {
   const sel = { fileKey, sheet };
+  const fields = allFields.filter(f => !isHiddenCell(sel, f.cell));
   if (sheetIsManualEntryOnly(sel)) {
     const note = document.createElement("p");
     note.className = "hint";
@@ -547,6 +591,7 @@ function buildXlsxFieldRow(f, sel) {
   const isVolumeField = isPJ06VolumeCell(sel, f.cell);
   const isPJ02Discrepancy = isPJ02DiscrepancyCell(sel, f.cell);
   const isPJ02Append = pj02NeedsForcedAppend(sel, f.cell);
+  const isPJ04Point = isPJ04InspectionPointCell(sel, f.cell);
   const isNameField = isNameContextField(f);
   const isPositionField = isPositionContextField(f);
   // Real context missing from field_map (PJ-03a/PJ-04/PJ-05's expanded
@@ -566,6 +611,8 @@ function buildXlsxFieldRow(f, sel) {
     ? `<span class="cellref">${f.cell}</span> <span class="ctx">(tự tính = Thực tế − Thiết kế)</span>`
     : isVolumeField
     ? `<span class="cellref">${f.cell}</span> <span class="ctx">(chỉ nhập số, "liter" tự thêm vào)</span>`
+    : isPJ04Point
+    ? `<span class="cellref">${f.cell}</span> <span class="ctx">"Point No.${pj04PointNumberForCell(f.cell)}/ Điểm số ${pj04PointNumberForCell(f.cell)}" tự thêm - chỉ gõ mô tả (không bắt buộc)</span>`
     : synthetic
     ? `<span class="cellref">${f.cell}</span> <span class="ctx">${synthetic.column}${f.sample_value ? ` (vd: ${truncate(f.sample_value, 20)})` : ""}</span>`
     : f.sample_value
@@ -573,11 +620,15 @@ function buildXlsxFieldRow(f, sel) {
     : `<span class="cellref">${f.cell}</span>`;
   row.appendChild(label);
 
-  // Name/Position signature-block fields are legitimate personnel picks
-  // even on sheets otherwise forced to manual entry (e.g. PJ-01 has its
-  // own Name/Position fields despite MANUAL_ENTRY_SHEETS applying to the
-  // rest of that sheet's equipment-spec cells).
-  const forceManual = sheetIsManualEntryOnly(sel) && !isNameField && !isPositionField;
+  // Name/Position signature-block fields are legitimate personnel picks,
+  // and Accept/Reject checkboxes are a fixed 2-option choice - both are
+  // safe even on sheets otherwise forced to manual entry (e.g. PJ-01 has
+  // its own Name/Position fields, and 102 Accept/Reject equipment-check
+  // cells, despite MANUAL_ENTRY_SHEETS applying to the rest of that
+  // sheet's free-text equipment-spec cells; before this exemption PJ-01's
+  // X/Z columns fell to plain text instead of the same dropdown every
+  // other PJ sheet gets).
+  const forceManual = sheetIsManualEntryOnly(sel) && !isNameField && !isPositionField && f.type !== "accept_reject";
   const forceText = mustForceText(f.cell, sel, f.sample_value);
 
   let input;
@@ -602,6 +653,11 @@ function buildXlsxFieldRow(f, sel) {
     input.step = "any";
     input.placeholder = "vd: 30";
     input.dataset.unitSuffix = (f.template_value || "liter").trim();
+  } else if (isPJ04Point) {
+    input = document.createElement("input");
+    input.type = "text";
+    input.placeholder = "Mô tả điểm (không bắt buộc), vd: Start point of Jacking Pipe-Seg.103";
+    input.dataset.pj04PointNumber = String(pj04PointNumberForCell(f.cell));
   } else if (!forceManual && isNameField) {
     ({ select: input, otherInput } = buildSelectWithOther(allPersonnelNames()));
     input.dataset.uppercase = "true";
@@ -1145,6 +1201,18 @@ async function exportXlsx() {
   const inputs = document.querySelectorAll("#dataForm [data-cell]");
   let count = 0;
   inputs.forEach(inp => {
+    // PJ-04 Inspection Point: the "Point No.N/ Điểm số N" counter is
+    // always written, even when the optional description is left blank -
+    // unlike every other field, this one is never "left untouched" just
+    // because its input is empty.
+    if (inp.dataset.pj04PointNumber) {
+      const description = effectiveValue(inp).trim();
+      const text = buildInspectionPointText(parseInt(inp.dataset.pj04PointNumber, 10), description);
+      xml = patchCellInSheetXml(xml, inp.dataset.cell, text, false);
+      count++;
+      return;
+    }
+
     let val = effectiveValue(inp);
     if (val === "") return; // leave template's blank cell untouched
     const cellRef = inp.dataset.cell;
