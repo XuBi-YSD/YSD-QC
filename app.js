@@ -408,6 +408,92 @@ function wirePJ02Computations(container, fields) {
   recomputeAll();
 }
 
+/* ---------- Repeating-row table headers (PJ-03a, PJ-04, PJ-05) ----------
+   These 3 sheets each hold a per-point/per-joint table that was expanded
+   from a handful of template rows to 20-45 (project history: PJ-04 went
+   5->20 points, PJ-05 went 7->30 injection points). The field-map
+   generator captured a sample value for every expanded row but never a
+   header/context, because the real column headers live in ONE shared
+   header row above the whole block, not per-cell - so 322/333 of PJ-04's
+   fields, 182/193 of PJ-05's, and 93/103 of PJ-03a's fell back to a bare
+   "Ô <cell>" label with no indication of which physical column of the
+   printed table they belong to (confirmed unusable against a real
+   screenshot, 2026-08-08). Column headers and the exact repeat/grouping
+   arithmetic below were extracted directly from each real template's
+   header row and verified formulas (PJ-03a's 3 side-by-side column-groups
+   restart their STT via `=<prevGroupLastCell>+1`, confirmed to start at
+   1/16/31; PJ-04's Coordinates block cycles X/Y/Z every 3 rows starting
+   row 25; PJ-05's Grout Injection block is a flat 1-row-per-point table
+   starting row 25). */
+function colLetters(cellRef) { return cellRef.match(/^[A-Z]+/)[0]; }
+function cellRowNumber(cellRef) { return parseInt(cellRef.match(/\d+/)[0], 10); }
+
+const REPEATING_ROW_TABLES = {
+  "PJ-05": {
+    startRow: 25,
+    groupSize: 1,
+    groupLabel: (n) => `Điểm bơm vữa #${n}`,
+    columns: {
+      D: "Pipe No./ Tên Cống",
+      G: "Chainage of sewer pipe unit/ Lý trình của đốt cống",
+      L: "Start/ Bắt đầu",
+      P: "Finish/ Kết thúc",
+      T: "Pressure/ Áp lực bơm (kg/cm2)",
+      X: "Volume/ Thể tích bơm (m3)",
+    },
+  },
+  "PJ-04": {
+    startRow: 25,
+    groupSize: 3,
+    axisLabels: ["X", "Y", "Z"],
+    groupLabel: (n, axis) => `Điểm đo #${n} — trục ${axis}`,
+    columns: {
+      L: "Design/ Thiết kế",
+      P: "Actual/ Thực tế",
+      T: "Tolerance/ Sai số (mm)",
+      X: "Accept/ Đạt",
+      Z: "Reject/ Loại",
+    },
+  },
+};
+
+const PJ03A_GROUPS = [
+  { joint: "C", width: "F", sttBase: 1 },
+  { joint: "L", width: "O", sttBase: 16 },
+  { joint: "U", width: "X", sttBase: 31 },
+];
+const PJ03A_START_ROW = 29;
+const PJ03A_COLUMNS = { joint: "Joint/ Mối nối", width: "Cushion ring width/ Bề rộng vòng đệm (m)" };
+
+/* Returns {group, column} to synthesize a missing f.context, or null if
+   this cell isn't part of a known repeating table. `group` becomes the
+   fieldset legend (so every column of the same point/joint is grouped
+   together, same as fields that already have a real context); `column`
+   becomes the per-field hint shown next to its cell reference. */
+function syntheticFieldContext(sel, f) {
+  if (sel.fileKey !== "Final5-10_ITP") return null;
+  const col = colLetters(f.cell);
+  const row = cellRowNumber(f.cell);
+
+  if (sel.sheet === "PJ-03a") {
+    const group = PJ03A_GROUPS.find(g => g.joint === col || g.width === col);
+    if (!group || row < PJ03A_START_ROW) return null;
+    const stt = group.sttBase + (row - PJ03A_START_ROW);
+    return { group: `Mối nối #${stt}`, column: col === group.joint ? PJ03A_COLUMNS.joint : PJ03A_COLUMNS.width };
+  }
+
+  const cfg = REPEATING_ROW_TABLES[sel.sheet];
+  if (!cfg || row < cfg.startRow) return null;
+  const column = cfg.columns[col];
+  if (!column) return null;
+  const pointNumber = Math.floor((row - cfg.startRow) / cfg.groupSize) + 1;
+  if (cfg.groupSize > 1) {
+    const axis = cfg.axisLabels[(row - cfg.startRow) % cfg.groupSize];
+    return { group: cfg.groupLabel(pointNumber, axis), column };
+  }
+  return { group: cfg.groupLabel(pointNumber), column };
+}
+
 function renderXlsxFields(container, fields, fileKey, sheet) {
   const sel = { fileKey, sheet };
   if (sheetIsManualEntryOnly(sel)) {
@@ -424,11 +510,13 @@ function renderXlsxFields(container, fields, fileKey, sheet) {
   const groups = [];
   let current = null;
   for (const f of fields) {
-    const key = f.context || `__cell_${f.cell}`;
+    const synthetic = f.context ? null : syntheticFieldContext(sel, f);
+    const label = f.context || synthetic?.group;
+    const key = label || `__cell_${f.cell}`;
     if (current && current.key === key) {
       current.fields.push(f);
     } else {
-      current = { key, label: f.context, fields: [f] };
+      current = { key, label, fields: [f] };
       groups.push(current);
     }
   }
@@ -461,6 +549,10 @@ function buildXlsxFieldRow(f, sel) {
   const isPJ02Append = pj02NeedsForcedAppend(sel, f.cell);
   const isNameField = isNameContextField(f);
   const isPositionField = isPositionContextField(f);
+  // Real context missing from field_map (PJ-03a/PJ-04/PJ-05's expanded
+  // repeating-row tables) falls back to the column header reconstructed
+  // from the real template - see syntheticFieldContext for why.
+  const synthetic = f.context ? null : syntheticFieldContext(sel, f);
   // Group legend already shows the row context, so here just show the
   // cell reference plus a short sample-value hint (still useful to
   // distinguish which of several columns in the same group this is,
@@ -474,6 +566,8 @@ function buildXlsxFieldRow(f, sel) {
     ? `<span class="cellref">${f.cell}</span> <span class="ctx">(tự tính = Thực tế − Thiết kế)</span>`
     : isVolumeField
     ? `<span class="cellref">${f.cell}</span> <span class="ctx">(chỉ nhập số, "liter" tự thêm vào)</span>`
+    : synthetic
+    ? `<span class="cellref">${f.cell}</span> <span class="ctx">${synthetic.column}${f.sample_value ? ` (vd: ${truncate(f.sample_value, 20)})` : ""}</span>`
     : f.sample_value
     ? `<span class="cellref">${f.cell}</span> <span class="ctx">(vd: ${truncate(f.sample_value, 30)})</span>`
     : `<span class="cellref">${f.cell}</span>`;
