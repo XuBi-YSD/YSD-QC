@@ -341,6 +341,73 @@ function wirePJ06Computations(container) {
   recomputeAll();
 }
 
+/* ---------- PJ-02 Design / Actual / Discrepancy triples ----------
+   "II. Inspection of Alignment" (X, Y) and "III. Inspection of Elevation
+   for sewer bottom" (H1, Slope) each have a Discrepancy cell that must
+   always equal Actual - Design (confirmed by XuBi: "Δ = Giá trị thực tế
+   − Giá trị thiết kế") - never something the user computes by hand and
+   types in, same reasoning as PJ-06's PI/TI. X and Y's Design/Actual
+   cells (D54/J54/D55/J55) ALSO each hold a fixed "X = "/"Y = " label
+   baked into the same cell as the value, identical in shape to this same
+   sheet's D45-D49 equipment fields - those already have append:true in
+   field_map.json, but D54/J54/D55/J55 were missed during field-map
+   generation. Compensated for here (forcing dataset.append) rather than
+   hand-editing the generated data file. H1/Slope's cells have no fixed
+   label at all, so their Discrepancy is a bare number. */
+const PJ02_TRIPLES = [
+  { design: "D54", actual: "J54", discrepancy: "P54" },
+  { design: "D55", actual: "J55", discrepancy: "P55" },
+  { design: "D58", actual: "J58", discrepancy: "P58" },
+  { design: "D59", actual: "J59", discrepancy: "P59" },
+];
+const PJ02_APPEND_CELLS = new Set(["D54", "J54", "D55", "J55"]);
+const PJ02_DISCREPANCY_CELLS = new Set(PJ02_TRIPLES.map(t => t.discrepancy));
+
+function isPJ02Sheet(sel) {
+  return sel.fileKey === "Final5-10_ITP" && sel.sheet === "PJ-02";
+}
+function pj02NeedsForcedAppend(sel, cell) {
+  return isPJ02Sheet(sel) && PJ02_APPEND_CELLS.has(cell);
+}
+function isPJ02DiscrepancyCell(sel, cell) {
+  return isPJ02Sheet(sel) && PJ02_DISCREPANCY_CELLS.has(cell);
+}
+
+function roundClean(n, decimals = 3) {
+  const factor = 10 ** decimals;
+  return Math.round(n * factor) / factor;
+}
+
+function buildDiscrepancyValue(templateValue, designRaw, actualRaw) {
+  const prefix = templateValue ? templateValue.trim() : "";
+  const d = parseLeadingNumber(designRaw);
+  const a = parseLeadingNumber(actualRaw);
+  if (!Number.isFinite(d) || !Number.isFinite(a)) {
+    return prefix ? `${prefix} …..` : "";
+  }
+  const delta = roundClean(a - d);
+  return prefix ? `${prefix} ${delta}` : String(delta);
+}
+
+function wirePJ02Computations(container, fields) {
+  const fieldByCell = {};
+  fields.forEach(f => { fieldByCell[f.cell] = f; });
+  const byCell = ref => container.querySelector(`[data-cell="${ref}"]`);
+
+  const recomputeAll = () => {
+    PJ02_TRIPLES.forEach(({ design, actual, discrepancy }) => {
+      const discInput = byCell(discrepancy);
+      if (!discInput) return;
+      const tv = fieldByCell[discrepancy]?.template_value;
+      discInput.value = buildDiscrepancyValue(tv, byCell(design)?.value, byCell(actual)?.value);
+    });
+  };
+
+  container.addEventListener("input", recomputeAll);
+  container.addEventListener("change", recomputeAll);
+  recomputeAll();
+}
+
 function renderXlsxFields(container, fields, fileKey, sheet) {
   const sel = { fileKey, sheet };
   if (sheetIsManualEntryOnly(sel)) {
@@ -379,6 +446,8 @@ function renderXlsxFields(container, fields, fileKey, sheet) {
 
   if (fileKey === "Final5-10_ITP" && sheet === "PJ-06") {
     wirePJ06Computations(container);
+  } else if (fileKey === "Final5-10_ITP" && sheet === "PJ-02") {
+    wirePJ02Computations(container, fields);
   }
 }
 
@@ -388,16 +457,21 @@ function buildXlsxFieldRow(f, sel) {
   const label = document.createElement("label");
   const isComputed = isPJ06ComputedCell(sel, f.cell);
   const isVolumeField = isPJ06VolumeCell(sel, f.cell);
+  const isPJ02Discrepancy = isPJ02DiscrepancyCell(sel, f.cell);
+  const isPJ02Append = pj02NeedsForcedAppend(sel, f.cell);
   const isNameField = isNameContextField(f);
   const isPositionField = isPositionContextField(f);
   // Group legend already shows the row context, so here just show the
   // cell reference plus a short sample-value hint (still useful to
   // distinguish which of several columns in the same group this is,
-  // e.g. Model vs Manufacturer vs Certificate No.). Computed PI/TI cells
-  // get a hint explaining WHY there's no sample value/free typing here,
-  // instead of showing a stale example number as if it were editable.
+  // e.g. Model vs Manufacturer vs Certificate No.). Computed cells (PI/TI,
+  // PJ-02's Discrepancy) get a hint explaining WHY there's no sample
+  // value/free typing here, instead of showing a stale example number as
+  // if it were editable.
   label.innerHTML = isComputed
     ? `<span class="cellref">${f.cell}</span> <span class="ctx">(tự tính, không nhập tay)</span>`
+    : isPJ02Discrepancy
+    ? `<span class="cellref">${f.cell}</span> <span class="ctx">(tự tính = Thực tế − Thiết kế)</span>`
     : isVolumeField
     ? `<span class="cellref">${f.cell}</span> <span class="ctx">(chỉ nhập số, "liter" tự thêm vào)</span>`
     : f.sample_value
@@ -421,6 +495,13 @@ function buildXlsxFieldRow(f, sel) {
     input.readOnly = true;
     input.classList.add("computed-field");
     input.value = f.cell === PJ06_CELLS.pi ? buildPIText("", "") : buildTIText("", null);
+  } else if (isPJ02Discrepancy) {
+    input = document.createElement("input");
+    input.type = "text";
+    input.readOnly = true;
+    input.classList.add("computed-field");
+    input.dataset.deltaPrefix = f.template_value ? f.template_value.trim() : "";
+    input.value = buildDiscrepancyValue(f.template_value, "", "");
   } else if (isVolumeField) {
     input = document.createElement("input");
     input.type = "number";
@@ -457,7 +538,7 @@ function buildXlsxFieldRow(f, sel) {
   }
   input.dataset.cell = f.cell;
   input.dataset.type = forceText ? "text-forced" : f.type;
-  if (f.append) {
+  if (f.append || isPJ02Append) {
     input.dataset.append = "true";
     input.placeholder = "Nhập giá trị, sẽ tự nối vào cuối dòng nhãn";
   }
@@ -953,6 +1034,18 @@ async function exportXlsx() {
     const tiInput = document.querySelector(`#dataForm [data-cell="${PJ06_CELLS.ti}"]`);
     const durationHours = computeDurationHours(cellVal(PJ06_CELLS.timeStart), cellVal(PJ06_CELLS.timeFinish));
     if (tiInput) tiInput.value = buildTIText(cellVal(PJ06_CELLS.volume), durationHours);
+  }
+
+  // Same reasoning as PJ-06 above: recompute PJ-02's Discrepancy cells
+  // (Actual - Design) from the current form state right before export,
+  // rather than trusting the live preview.
+  if (fileKey === "Final5-10_ITP" && sheet === "PJ-02") {
+    const cellVal = ref => document.querySelector(`#dataForm [data-cell="${ref}"]`)?.value || "";
+    PJ02_TRIPLES.forEach(({ design, actual, discrepancy }) => {
+      const discInput = document.querySelector(`#dataForm [data-cell="${discrepancy}"]`);
+      if (!discInput) return;
+      discInput.value = buildDiscrepancyValue(discInput.dataset.deltaPrefix, cellVal(design), cellVal(actual));
+    });
   }
 
   const inputs = document.querySelectorAll("#dataForm [data-cell]");
