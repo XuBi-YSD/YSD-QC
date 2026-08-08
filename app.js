@@ -100,6 +100,7 @@ function showPicker() {
 
 function selectForm(sel) {
   currentSelection = sel;
+  pj03aExtraPageCount = 0;
   document.getElementById("picker").classList.add("hidden");
   document.getElementById("formArea").classList.remove("hidden");
   const formEl = document.getElementById("dataForm");
@@ -476,9 +477,9 @@ const REPEATING_ROW_TABLES = {
 };
 
 const PJ03A_GROUPS = [
-  { joint: "C", width: "F", sttBase: 1 },
-  { joint: "L", width: "O", sttBase: 16 },
-  { joint: "U", width: "X", sttBase: 31 },
+  { joint: "C", width: "F", stt: "B", sttBase: 1 },
+  { joint: "L", width: "O", stt: "K", sttBase: 16 },
+  { joint: "U", width: "X", stt: "T", sttBase: 31 },
 ];
 const PJ03A_START_ROW = 29;
 const PJ03A_COLUMNS = { joint: "Joint/ Mối nối", width: "Cushion ring width/ Bề rộng vòng đệm (m)" };
@@ -494,17 +495,229 @@ const PJ03A_WIDTH_ROWS = { start: 29, end: 43 }; // 15 rows x 3 groups = 45 join
 function isPJ03aTotalCell(sel, cell) {
   return sel.fileKey === "Final5-10_ITP" && sel.sheet === "PJ-03a" && cell === PJ03A_TOTAL_CELL;
 }
-function pj03aWidthCellRefs() {
+
+/* Returns {group, column} to synthesize a missing f.context, or null if
+   this cell isn't part of a known repeating table. `group` becomes the
+   fieldset legend (so every column of the same point/joint is grouped
+   together, same as fields that already have a real context); `column`
+   becomes the per-field hint shown next to its cell reference. */
+/* ---------- PJ-03a dynamic page duplication (beyond 45/90 joints) ----------
+   Confirmed with XuBi (Q8 of Xac_nhan_Q1-Q9_29072026.xlsx): each page holds
+   45 joints across 3 side-by-side column-groups (15 rows each); past 45,
+   the app must duplicate a whole new page with the SAME 3-column
+   structure, STT continuing from the previous page's last number, and the
+   Total row always ending up on the last page. The template only ships
+   ONE page (rows 27-43: header + 15 data rows) followed once by the
+   closing block (rows 44-60: Total/Comments/Conclusion/Signature, 17
+   rows) - extra pages are built by cloning the SAME 17-row page block
+   (raw XML, row-shifted) as many times as needed, then moving a clone of
+   the closing block to trail whichever page is now last. STT cells in
+   cloned pages are written as plain literals (app.js already knows the
+   exact number for every row), not the template's own "=PrevRow+1"
+   formulas - avoids reproducing Excel's relative-formula semantics by
+   hand entirely. */
+const PJ03A_JOINTS_PER_PAGE = 45;
+const PJ03A_ROWS_PER_BLOCK = 17; // header(1) + blank(1) + data(15)
+const PJ03A_TEMPLATE_PAGE_START = 27; // original page: header 27, blank 28, data 29-43
+const PJ03A_TEMPLATE_CLOSING_START = 44; // Total/Comments/Conclusion/Signature: 44-60
+const PJ03A_MAX_EXTRA_PAGES = 2; // supports up to 135 joints (45 x 3) total
+let pj03aExtraPageCount = 0; // reset whenever a form is (re)selected
+
+function pj03aExtraPageHeaderRow(pageIndex) {
+  // pageIndex: 1 = first EXTRA page (page 0 is the template's own 27-43)
+  return PJ03A_TEMPLATE_CLOSING_START + (pageIndex - 1) * PJ03A_ROWS_PER_BLOCK;
+}
+function pj03aClosingBlockStartRow(extraPages) {
+  return PJ03A_TEMPLATE_CLOSING_START + extraPages * PJ03A_ROWS_PER_BLOCK;
+}
+function pj03aTotalCellRef(extraPages) {
+  return "X" + pj03aClosingBlockStartRow(extraPages); // X44's own position within the closing block is offset 0
+}
+/* Maps any data row back to {page, offsetInGroup 0-14}, whether it's the
+   template's own page (0) or a cloned extra page - used both for the
+   live "Mối nối #N" labels and for generating the extra pages' field
+   list. */
+function pj03aPageAndOffsetForRow(row) {
+  if (row >= PJ03A_START_ROW && row < PJ03A_START_ROW + 15) {
+    return { page: 0, offset: row - PJ03A_START_ROW };
+  }
+  for (let p = 1; p <= PJ03A_MAX_EXTRA_PAGES; p++) {
+    const dataStart = pj03aExtraPageHeaderRow(p) + 2;
+    if (row >= dataStart && row < dataStart + 15) {
+      return { page: p, offset: row - dataStart };
+    }
+  }
+  return null;
+}
+/* Synthesizes the field-map entries for one extra page (45 joints: Joint
+   + Cushion ring width per row x 3 groups) - these cells don't exist in
+   field_map.json at all since the template only ships page 0. */
+function pj03aExtraPageFields(pageIndex) {
+  const dataStart = pj03aExtraPageHeaderRow(pageIndex) + 2;
+  const fields = [];
+  PJ03A_GROUPS.forEach(g => {
+    for (let i = 0; i < 15; i++) {
+      const row = dataStart + i;
+      fields.push({ cell: `${g.joint}${row}`, type: "text", context: null, sample_value: null });
+      fields.push({ cell: `${g.width}${row}`, type: "number", context: null, sample_value: null });
+    }
+  });
+  return fields;
+}
+function pj03aAllFields(baseFields) {
+  let fields = baseFields;
+  for (let p = 1; p <= pj03aExtraPageCount; p++) {
+    fields = fields.concat(pj03aExtraPageFields(p));
+  }
+  return fields;
+}
+
+function extractRowXml(xml, rowNum) {
+  const m = xml.match(new RegExp(`<row r="${rowNum}"[^>]*>[\\s\\S]*?</row>`));
+  return m ? m[0] : null;
+}
+function extractRowRangeXml(xml, startRow, endRow) {
+  const rows = [];
+  for (let r = startRow; r <= endRow; r++) {
+    const row = extractRowXml(xml, r);
+    if (row) rows.push(row);
+  }
+  return rows;
+}
+function shiftRowXml(rowXml, delta) {
+  if (delta === 0) return rowXml;
+  let out = rowXml.replace(/^<row r="(\d+)"/, (m, r) => `<row r="${parseInt(r, 10) + delta}"`);
+  out = out.replace(/<c r="([A-Z]+)(\d+)"/g, (m, col, r) => `<c r="${col}${parseInt(r, 10) + delta}"`);
+  return out;
+}
+/* Writes a plain literal <v> into a cell that may currently be
+   self-closing or have content (a formula, in the template's own STT
+   cells) - preserves the cell's style attribute, drops everything else. */
+function writeLiteralCell(rowXml, cellRef, value) {
+  const selfClosing = new RegExp(`<c r="${cellRef}"([^>]*)/>`);
+  const withContent = new RegExp(`<c r="${cellRef}"([^>]*?)(?<!/)>((?:(?!</c>)[\\s\\S])*?)</c>`);
+  const m = rowXml.match(selfClosing) || rowXml.match(withContent);
+  const styleMatch = m && m[1].match(/s="(\d+)"/);
+  const styleAttr = styleMatch ? ` s="${styleMatch[1]}"` : "";
+  const newCell = `<c r="${cellRef}"${styleAttr}><v>${value}</v></c>`;
+  if (rowXml.match(selfClosing)) return rowXml.replace(selfClosing, newCell);
+  if (rowXml.match(withContent)) return rowXml.replace(withContent, newCell);
+  return rowXml;
+}
+function extractMergesInRange(mergeCellsInner, startRow, endRow) {
+  const all = [...mergeCellsInner.matchAll(/<mergeCell ref="[A-Z]+(\d+):[A-Z]+\d+"\/>/g)];
+  return all.filter(m => {
+    const r1 = parseInt(m[1], 10);
+    return r1 >= startRow && r1 <= endRow;
+  }).map(m => m[0]);
+}
+function shiftMergeXml(mergeXml, delta) {
+  if (delta === 0) return mergeXml;
+  return mergeXml.replace(/([A-Z]+)(\d+):([A-Z]+)(\d+)/, (m, c1, r1, c2, r2) =>
+    `${c1}${parseInt(r1, 10) + delta}:${c2}${parseInt(r2, 10) + delta}`);
+}
+
+/* Expands the sheet's raw XML with `extraPages` cloned page-blocks plus a
+   relocated closing block, all built from the pristine rows/merges
+   already present in this same xml (called before any per-field cell
+   patching, so the new rows exist for the normal export loop to find). */
+function expandPJ03aSheet(xml, extraPages) {
+  if (extraPages <= 0) return xml;
+
+  const pageRows = extractRowRangeXml(xml, PJ03A_TEMPLATE_PAGE_START, PJ03A_TEMPLATE_PAGE_START + PJ03A_ROWS_PER_BLOCK - 1);
+  const closingRows = extractRowRangeXml(xml, PJ03A_TEMPLATE_CLOSING_START, PJ03A_TEMPLATE_CLOSING_START + PJ03A_ROWS_PER_BLOCK - 1);
+
+  const mergeCellsMatch = xml.match(/<mergeCells count="(\d+)">([\s\S]*?)<\/mergeCells>/);
+  const mergeCount = parseInt(mergeCellsMatch[1], 10);
+  const mergeInner = mergeCellsMatch[2];
+  const pageMerges = extractMergesInRange(mergeInner, PJ03A_TEMPLATE_PAGE_START, PJ03A_TEMPLATE_PAGE_START + PJ03A_ROWS_PER_BLOCK - 1);
+  const closingMerges = extractMergesInRange(mergeInner, PJ03A_TEMPLATE_CLOSING_START, PJ03A_TEMPLATE_CLOSING_START + PJ03A_ROWS_PER_BLOCK - 1);
+
+  let newXml = xml;
+  closingRows.forEach(r => { newXml = newXml.replace(r, ""); });
+
+  let newRowsXml = "";
+  let addedMergesXml = "";
+  for (let p = 1; p <= extraPages; p++) {
+    const delta = pj03aExtraPageHeaderRow(p) - PJ03A_TEMPLATE_PAGE_START;
+    pageRows.forEach((r, idx) => {
+      const templateRowNum = PJ03A_TEMPLATE_PAGE_START + idx;
+      let cloned = shiftRowXml(r, delta);
+      if (templateRowNum >= PJ03A_START_ROW) {
+        const rowInGroup = templateRowNum - PJ03A_START_ROW;
+        const newRowNum = templateRowNum + delta;
+        PJ03A_GROUPS.forEach(g => {
+          const stt = PJ03A_JOINTS_PER_PAGE * p + g.sttBase + rowInGroup;
+          cloned = writeLiteralCell(cloned, `${g.stt}${newRowNum}`, stt);
+        });
+      }
+      newRowsXml += cloned;
+    });
+    pageMerges.forEach(m => { addedMergesXml += shiftMergeXml(m, delta); });
+  }
+  const closingDelta = pj03aClosingBlockStartRow(extraPages) - PJ03A_TEMPLATE_CLOSING_START;
+  closingRows.forEach(r => { newRowsXml += shiftRowXml(r, closingDelta); });
+  closingMerges.forEach(m => { addedMergesXml += shiftMergeXml(m, closingDelta); });
+
+  newXml = newXml.replace("</sheetData>", newRowsXml + "</sheetData>");
+
+  let finalMergeInner = mergeInner;
+  closingMerges.forEach(m => { finalMergeInner = finalMergeInner.replace(m, ""); });
+  finalMergeInner += addedMergesXml;
+  const newMergeCount = mergeCount + extraPages * pageMerges.length; // closing merges: same count, just moved
+  newXml = newXml.replace(
+    /<mergeCells count="\d+">[\s\S]*?<\/mergeCells>/,
+    `<mergeCells count="${newMergeCount}">${finalMergeInner}</mergeCells>`
+  );
+
+  const maxRow = pj03aClosingBlockStartRow(extraPages) + PJ03A_ROWS_PER_BLOCK - 1;
+  newXml = newXml.replace(/<dimension ref="[^"]*"\/>/, `<dimension ref="A1:BB${maxRow}"/>`);
+
+  // Break after page 0 (row 43), and after every extra page's own data -
+  // the relocated closing block always starts on a fresh page too.
+  const explicitBreaks = [PJ03A_TEMPLATE_PAGE_START + PJ03A_ROWS_PER_BLOCK - 1];
+  for (let p = 1; p <= extraPages; p++) {
+    explicitBreaks.push(pj03aExtraPageHeaderRow(p) + PJ03A_ROWS_PER_BLOCK - 1);
+  }
+  const brks = explicitBreaks.map(r => `<brk id="${r}" max="16383" man="1"/>`).join("");
+  const rowBreaksXml = `<rowBreaks count="${explicitBreaks.length}" manualBreakCount="${explicitBreaks.length}">${brks}</rowBreaks>`;
+  if (newXml.includes("</headerFooter>")) {
+    newXml = newXml.replace("</headerFooter>", "</headerFooter>" + rowBreaksXml);
+  } else if (newXml.includes("<drawing")) {
+    newXml = newXml.replace(/<drawing/, rowBreaksXml + "<drawing");
+  } else {
+    newXml = newXml.replace("</worksheet>", rowBreaksXml + "</worksheet>");
+  }
+
+  return newXml;
+}
+
+/* PJ-03a's Print_Area defined name (workbook.xml) hardcodes the template's
+   own last row (60) - must extend to cover however many pages were added,
+   or everything past row 60 simply won't print. */
+function updatePJ03aPrintArea(wbXml, extraPages) {
+  if (extraPages <= 0) return wbXml;
+  const maxRow = pj03aClosingBlockStartRow(extraPages) + PJ03A_ROWS_PER_BLOCK - 1;
+  return wbXml.replace(
+    /(<definedName name="_xlnm\.Print_Area" localSheetId="3">'PJ-03a'!\$B\$3:\$AA\$)\d+(<\/definedName>)/,
+    `$1${maxRow}$2`
+  );
+}
+
+function computePJ03aTotal(container, extraPages) {
+  let sum = 0;
+  let any = false;
   const refs = [];
   for (let row = PJ03A_WIDTH_ROWS.start; row <= PJ03A_WIDTH_ROWS.end; row++) {
     PJ03A_GROUPS.forEach(g => refs.push(`${g.width}${row}`));
   }
-  return refs;
-}
-function computePJ03aTotal(container) {
-  let sum = 0;
-  let any = false;
-  pj03aWidthCellRefs().forEach(ref => {
+  for (let p = 1; p <= extraPages; p++) {
+    const dataStart = pj03aExtraPageHeaderRow(p) + 2;
+    for (let row = dataStart; row < dataStart + 15; row++) {
+      PJ03A_GROUPS.forEach(g => refs.push(`${g.width}${row}`));
+    }
+  }
+  refs.forEach(ref => {
     const inp = container.querySelector(`[data-cell="${ref}"]`);
     const n = inp ? parseLeadingNumber(inp.value) : NaN;
     if (Number.isFinite(n)) { sum += n; any = true; }
@@ -512,11 +725,6 @@ function computePJ03aTotal(container) {
   return any ? roundClean(sum) : "";
 }
 
-/* Returns {group, column} to synthesize a missing f.context, or null if
-   this cell isn't part of a known repeating table. `group` becomes the
-   fieldset legend (so every column of the same point/joint is grouped
-   together, same as fields that already have a real context); `column`
-   becomes the per-field hint shown next to its cell reference. */
 function syntheticFieldContext(sel, f) {
   if (sel.fileKey !== "Final5-10_ITP") return null;
   const col = colLetters(f.cell);
@@ -524,8 +732,10 @@ function syntheticFieldContext(sel, f) {
 
   if (sel.sheet === "PJ-03a") {
     const group = PJ03A_GROUPS.find(g => g.joint === col || g.width === col);
-    if (!group || row < PJ03A_START_ROW) return null;
-    const stt = group.sttBase + (row - PJ03A_START_ROW);
+    if (!group) return null;
+    const pageInfo = pj03aPageAndOffsetForRow(row);
+    if (!pageInfo) return null;
+    const stt = PJ03A_JOINTS_PER_PAGE * pageInfo.page + group.sttBase + pageInfo.offset;
     return { group: `Mối nối #${stt}`, column: col === group.joint ? PJ03A_COLUMNS.joint : PJ03A_COLUMNS.width };
   }
 
@@ -566,20 +776,13 @@ function buildInspectionPointText(pointNumber, description) {
   return description ? `${base}\n(${description})` : base;
 }
 
-function renderXlsxFields(container, allFields, fileKey, sheet) {
-  const sel = { fileKey, sheet };
-  const fields = allFields.filter(f => !isHiddenCell(sel, f.cell));
-  if (sheetIsManualEntryOnly(sel)) {
-    const note = document.createElement("p");
-    note.className = "hint";
-    note.style.color = "#b36b00";
-    note.textContent = "Lưu ý: toàn bộ ô của form này (thông số/model/số kiểm định thiết bị) luôn là ô nhập tay thủ công, không gợi ý dropdown, chiếu thẳng theo từng ô đã xác định.";
-    container.appendChild(note);
-  }
-
-  // Group consecutive fields that share the same row-context under one
-  // fieldset (e.g. all 4 spec columns of "Jacking Machine" together) -
-  // much easier to scan than fixed chunks of 25 unrelated cells.
+/* Groups consecutive fields sharing the same row-context under one
+   fieldset (e.g. all 4 spec columns of "Jacking Machine" together) - much
+   easier to scan than fixed chunks of unrelated cells. Appends to
+   `container` without touching anything already there, so it doubles as
+   the "add another page" mechanism for PJ-03a (existing input values
+   must survive a page being added). */
+function appendFieldGroups(container, fields, sel) {
   const groups = [];
   let current = null;
   for (const f of fields) {
@@ -604,6 +807,58 @@ function renderXlsxFields(container, allFields, fileKey, sheet) {
     g.fields.forEach(f => fs.appendChild(buildXlsxFieldRow(f, sel)));
     container.appendChild(fs);
   });
+}
+
+function pj03aAddPageButton(container, sel) {
+  const wrap = document.createElement("div");
+  wrap.className = "hint";
+  wrap.style.margin = "12px 0";
+  const btn = document.createElement("button");
+  btn.type = "button";
+  btn.className = "secondary";
+  const refreshLabel = () => {
+    const jointsSoFar = PJ03A_JOINTS_PER_PAGE * (pj03aExtraPageCount + 1);
+    if (pj03aExtraPageCount >= PJ03A_MAX_EXTRA_PAGES) {
+      btn.disabled = true;
+      btn.textContent = `Đã đạt tối đa ${jointsSoFar} mối nối`;
+    } else {
+      btn.textContent = `+ Thêm trang mối nối tiếp theo (${jointsSoFar + 1}-${jointsSoFar + PJ03A_JOINTS_PER_PAGE})`;
+    }
+  };
+  btn.addEventListener("click", () => {
+    pj03aExtraPageCount++;
+    // wirePJ03aTotal's listener is delegated on the whole #dataForm and
+    // reads pj03aExtraPageCount fresh on every event, so newly appended
+    // fields are picked up automatically - no need to re-wire.
+    wrap.before(...appendFieldGroupsFragment(pj03aExtraPageFields(pj03aExtraPageCount), sel));
+    refreshLabel();
+  });
+  refreshLabel();
+  wrap.appendChild(btn);
+  container.appendChild(wrap);
+}
+/* Same grouping as appendFieldGroups, but returns the built fieldset
+   nodes instead of appending them directly - needed so the "+ Add page"
+   button can insert the new page's fields BEFORE itself rather than
+   after (the button must stay the last element in the form). */
+function appendFieldGroupsFragment(fields, sel) {
+  const scratch = document.createElement("div");
+  appendFieldGroups(scratch, fields, sel);
+  return [...scratch.children];
+}
+
+function renderXlsxFields(container, allFields, fileKey, sheet) {
+  const sel = { fileKey, sheet };
+  const fields = allFields.filter(f => !isHiddenCell(sel, f.cell));
+  if (sheetIsManualEntryOnly(sel)) {
+    const note = document.createElement("p");
+    note.className = "hint";
+    note.style.color = "#b36b00";
+    note.textContent = "Lưu ý: toàn bộ ô của form này (thông số/model/số kiểm định thiết bị) luôn là ô nhập tay thủ công, không gợi ý dropdown, chiếu thẳng theo từng ô đã xác định.";
+    container.appendChild(note);
+  }
+
+  appendFieldGroups(container, fields, sel);
 
   if (fileKey === "Final5-10_ITP" && sheet === "PJ-06") {
     wirePJ06Computations(container);
@@ -611,13 +866,14 @@ function renderXlsxFields(container, allFields, fileKey, sheet) {
     wirePJ02Computations(container, fields);
   } else if (fileKey === "Final5-10_ITP" && sheet === "PJ-03a") {
     wirePJ03aTotal(container);
+    pj03aAddPageButton(container, sel);
   }
 }
 
 function wirePJ03aTotal(container) {
   const totalInput = container.querySelector('[data-cell="' + PJ03A_TOTAL_CELL + '"]');
   if (!totalInput) return;
-  const recompute = () => { totalInput.value = computePJ03aTotal(container); };
+  const recompute = () => { totalInput.value = computePJ03aTotal(container, pj03aExtraPageCount); };
   container.addEventListener("input", recompute);
   container.addEventListener("change", recompute);
   recompute();
@@ -1218,6 +1474,17 @@ async function exportXlsx() {
   const sheetPath = `xl/worksheets/${sheetFile}`;
 
   let xml = zip.file(sheetPath).asText();
+
+  // Build the extra page(s) + relocated closing block BEFORE any per-field
+  // patching runs, so the normal cell-patching loop below finds real
+  // <row>/<c> elements already in place for cells like F46/O61 etc. that
+  // don't exist in the template at all.
+  if (fileKey === "Final5-10_ITP" && sheet === "PJ-03a" && pj03aExtraPageCount > 0) {
+    xml = expandPJ03aSheet(xml, pj03aExtraPageCount);
+    const wbPath = "xl/workbook.xml";
+    zip.file(wbPath, updatePJ03aPrintArea(zip.file(wbPath).asText(), pj03aExtraPageCount));
+  }
+
   const sharedStrings = parseSharedStrings(
     zip.file("xl/sharedStrings.xml") ? zip.file("xl/sharedStrings.xml").asText() : null
   );
@@ -1248,16 +1515,35 @@ async function exportXlsx() {
     });
   }
 
-  // Same reasoning again: recompute PJ-03a's Total Bcr (X44) from the
-  // current 45 width-cell inputs right before export.
+  // Same reasoning again: recompute PJ-03a's Total Bcr from the current
+  // width-cell inputs across every page right before export. The DOM
+  // input's data-cell is always the static "X44" from field_map, but once
+  // extra pages exist that row number belongs to a cloned page's header
+  // instead (rows shift down) - redirect the actual write to wherever the
+  // closing block ended up, via dataset.actualExportCell, and let the
+  // generic loop below skip its normal data-cell-based write for this one.
   if (fileKey === "Final5-10_ITP" && sheet === "PJ-03a") {
     const totalInput = document.querySelector(`#dataForm [data-cell="${PJ03A_TOTAL_CELL}"]`);
-    if (totalInput) totalInput.value = computePJ03aTotal(document.getElementById("dataForm"));
+    if (totalInput) {
+      totalInput.value = computePJ03aTotal(document.getElementById("dataForm"), pj03aExtraPageCount);
+      totalInput.dataset.actualExportCell = pj03aTotalCellRef(pj03aExtraPageCount);
+    }
   }
 
   const inputs = document.querySelectorAll("#dataForm [data-cell]");
   let count = 0;
   inputs.forEach(inp => {
+    // PJ-03a Total: redirect to the real (possibly relocated) cell
+    // instead of the static data-cell, per the comment above.
+    if (inp.dataset.actualExportCell) {
+      const val = inp.value;
+      if (val !== "") {
+        xml = patchCellInSheetXml(xml, inp.dataset.actualExportCell, parseFloat(val), true);
+        count++;
+      }
+      return;
+    }
+
     // PJ-04 Inspection Point: the "Point No.N/ Điểm số N" counter is
     // always written, even when the optional description is left blank -
     // unlike every other field, this one is never "left untouched" just
