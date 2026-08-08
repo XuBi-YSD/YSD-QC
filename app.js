@@ -153,12 +153,50 @@ function isPipeLike(v) {
   return typeof v === "string" && /^S\d+$/i.test(v.trim());
 }
 function isPersonLike(v) {
-  if (typeof v !== "string") return false;
-  const all = [].concat(...Object.values(personnel).map(g => g.map(p => p.name)));
-  return all.includes(v.trim());
+  if (typeof v !== "string" || !v.trim()) return false;
+  // Case-insensitive: signature-block samples are routinely typed in ALL
+  // CAPS in the real filled documents (e.g. "VŨ KIÊN CHUNG") while
+  // personnel.json stores names in normal case ("Vũ Kiên Chung") - an
+  // exact-match check silently missed every one of these until fixed
+  // 2026-08-08 (confirmed against a real PJ-06 export where the dropdown
+  // never appeared for this exact reason).
+  const all = allPersonnelNames().map(n => n.toLowerCase());
+  return all.includes(v.trim().toLowerCase());
 }
 function allPersonnelNames() {
   return [].concat(...Object.values(personnel).map(g => g.map(p => p.name))).filter(Boolean);
+}
+
+/* ---------- Name / Position signature-block dropdowns (all sheets) ----------
+   Nearly every sheet ends with a "Name/ Tên:" + "Position/ Vị trí:"
+   signature block. Detecting these by CONTEXT (the fixed label text) is
+   far more reliable than matching the field's sample value: sample-based
+   matching missed fields whose real-world example used a name/role not
+   yet listed in personnel.json, or one that only failed the old
+   case-sensitive isPersonLike check (audited across all sheets
+   2026-08-08 - 22 Name-context and 30 Position-context fields total).
+   Matched on the ENGLISH label prefix only ("^Name/", "^Position/") -
+   "Location/ Vị trí:" also contains the Vietnamese word "Vị trí" and
+   would otherwise be a false positive. */
+function isNameContextField(f) {
+  return typeof f.context === "string" && /^Name\//.test(f.context.trim());
+}
+function isPositionContextField(f) {
+  return typeof f.context === "string" && /^Position\//.test(f.context.trim());
+}
+
+/* Canonical "role_en/role_vi" combos from personnel.json, plus a couple
+   of real position titles seen across historical exports that have no
+   matching structured personnel.json entry (the site supervision
+   consultant's title varies by document - "Inspector/TVGS" in some,
+   "Surveyor Engineer/KS TĐ" in PJ-04's). Anything else not listed here is
+   still reachable via "Khác (nhập tay)...". */
+const EXTRA_POSITION_OPTIONS = ["Inspector/TVGS", "Surveyor Engineer/KS TĐ"];
+function allPositionOptions() {
+  const fromPersonnel = [].concat(...Object.values(personnel).map(g => g))
+    .filter(p => p.role_en && p.role_vi)
+    .map(p => `${p.role_en}/${p.role_vi}`);
+  return [...new Set([...fromPersonnel, ...EXTRA_POSITION_OPTIONS])];
 }
 
 /* ---------- Accept/Reject checkbox dropdown ----------
@@ -227,6 +265,17 @@ function isPJ06ComputedCell(sel, cell) {
     (cell === PJ06_CELLS.pi || cell === PJ06_CELLS.ti);
 }
 
+/* P30's raw template cell already contains "     liter" (spaces + the
+   fixed unit word) - a number-only field patched into the blank before
+   that suffix, same shape as O24/O25's "D = "/"L =" prefix cells but with
+   the fixed text AFTER the value instead of before. A plain free-text
+   field here made the unit easy to forget entirely (typing just "30"
+   loses "liter" on export, since the whole cell gets overwritten) -
+   confirmed against a real PJ-06 export on 2026-08-08. */
+function isPJ06VolumeCell(sel, cell) {
+  return sel.fileKey === "Final5-10_ITP" && sel.sheet === "PJ-06" && cell === PJ06_CELLS.volume;
+}
+
 function parseLeadingNumber(s) {
   if (typeof s !== "string") return NaN;
   const m = s.match(/-?\d+(\.\d+)?/);
@@ -269,32 +318,27 @@ function buildTIText(volumeRaw, hours) {
    or transcribe themselves. */
 function wirePJ06Computations(container) {
   const byCell = ref => container.querySelector(`[data-cell="${ref}"]`);
-  const diameterInput = byCell(PJ06_CELLS.diameter);
-  const lengthInput = byCell(PJ06_CELLS.length);
-  const piInput = byCell(PJ06_CELLS.pi);
-  const startInput = byCell(PJ06_CELLS.timeStart);
-  const finishInput = byCell(PJ06_CELLS.timeFinish);
-  const volumeInput = byCell(PJ06_CELLS.volume);
-  const tiInput = byCell(PJ06_CELLS.ti);
-
-  const recomputePI = () => {
-    if (!piInput) return;
-    piInput.value = buildPIText(diameterInput?.value, lengthInput?.value);
+  // Delegate on the whole container instead of attaching listeners to each
+  // dependency input individually: always re-reads the current DOM state
+  // of every dependency on ANY input/change bubbling up from the form, so
+  // there's no fixed set of listeners that can miss an event from a native
+  // <input type="time"> picker or fall out of sync with a re-rendered
+  // field (confirmed a real "PI/TI stop updating" report was reproducible
+  // with per-input listeners on some browsers - 2026-08-08).
+  const recomputeAll = () => {
+    const val = ref => byCell(ref)?.value ?? "";
+    const piInput = byCell(PJ06_CELLS.pi);
+    if (piInput) piInput.value = buildPIText(val(PJ06_CELLS.diameter), val(PJ06_CELLS.length));
+    const tiInput = byCell(PJ06_CELLS.ti);
+    if (tiInput) {
+      const hours = computeDurationHours(val(PJ06_CELLS.timeStart), val(PJ06_CELLS.timeFinish));
+      tiInput.value = buildTIText(val(PJ06_CELLS.volume), hours);
+    }
   };
-  const recomputeTI = () => {
-    if (!tiInput) return;
-    const hours = computeDurationHours(startInput?.value, finishInput?.value);
-    tiInput.value = buildTIText(volumeInput?.value, hours);
-  };
 
-  [diameterInput, lengthInput].forEach(inp => inp && inp.addEventListener("input", recomputePI));
-  [volumeInput, startInput, finishInput].forEach(inp => {
-    inp && inp.addEventListener("input", recomputeTI);
-    inp && inp.addEventListener("change", recomputeTI);
-  });
-
-  recomputePI();
-  recomputeTI();
+  container.addEventListener("input", recomputeAll);
+  container.addEventListener("change", recomputeAll);
+  recomputeAll();
 }
 
 function renderXlsxFields(container, fields, fileKey, sheet) {
@@ -343,6 +387,9 @@ function buildXlsxFieldRow(f, sel) {
   row.className = "field-row";
   const label = document.createElement("label");
   const isComputed = isPJ06ComputedCell(sel, f.cell);
+  const isVolumeField = isPJ06VolumeCell(sel, f.cell);
+  const isNameField = isNameContextField(f);
+  const isPositionField = isPositionContextField(f);
   // Group legend already shows the row context, so here just show the
   // cell reference plus a short sample-value hint (still useful to
   // distinguish which of several columns in the same group this is,
@@ -351,12 +398,18 @@ function buildXlsxFieldRow(f, sel) {
   // instead of showing a stale example number as if it were editable.
   label.innerHTML = isComputed
     ? `<span class="cellref">${f.cell}</span> <span class="ctx">(tự tính, không nhập tay)</span>`
+    : isVolumeField
+    ? `<span class="cellref">${f.cell}</span> <span class="ctx">(chỉ nhập số, "liter" tự thêm vào)</span>`
     : f.sample_value
     ? `<span class="cellref">${f.cell}</span> <span class="ctx">(vd: ${truncate(f.sample_value, 30)})</span>`
     : `<span class="cellref">${f.cell}</span>`;
   row.appendChild(label);
 
-  const forceManual = sheetIsManualEntryOnly(sel);
+  // Name/Position signature-block fields are legitimate personnel picks
+  // even on sheets otherwise forced to manual entry (e.g. PJ-01 has its
+  // own Name/Position fields despite MANUAL_ENTRY_SHEETS applying to the
+  // rest of that sheet's equipment-spec cells).
+  const forceManual = sheetIsManualEntryOnly(sel) && !isNameField && !isPositionField;
   const forceText = mustForceText(f.cell, sel, f.sample_value);
 
   let input;
@@ -368,6 +421,17 @@ function buildXlsxFieldRow(f, sel) {
     input.readOnly = true;
     input.classList.add("computed-field");
     input.value = f.cell === PJ06_CELLS.pi ? buildPIText("", "") : buildTIText("", null);
+  } else if (isVolumeField) {
+    input = document.createElement("input");
+    input.type = "number";
+    input.step = "any";
+    input.placeholder = "vd: 30";
+    input.dataset.unitSuffix = (f.template_value || "liter").trim();
+  } else if (!forceManual && isNameField) {
+    ({ select: input, otherInput } = buildSelectWithOther(allPersonnelNames()));
+    input.dataset.uppercase = "true";
+  } else if (!forceManual && isPositionField) {
+    ({ select: input, otherInput } = buildSelectWithOther(allPositionOptions()));
   } else if (!forceManual && f.type === "accept_reject") {
     input = buildAcceptRejectSelect(sel.sheet);
   } else if (!forceManual && isLocationLike(sample)) {
@@ -376,6 +440,7 @@ function buildXlsxFieldRow(f, sel) {
     ({ select: input, otherInput } = buildSelectWithOther(pipeNames));
   } else if (!forceManual && isPersonLike(sample)) {
     ({ select: input, otherInput } = buildSelectWithOther(allPersonnelNames()));
+    input.dataset.uppercase = "true";
   } else if (!forceManual && f.type === "date") {
     input = document.createElement("input");
     input.type = "date";
@@ -893,10 +958,26 @@ async function exportXlsx() {
   const inputs = document.querySelectorAll("#dataForm [data-cell]");
   let count = 0;
   inputs.forEach(inp => {
-    const val = effectiveValue(inp);
+    let val = effectiveValue(inp);
     if (val === "") return; // leave template's blank cell untouched
     const cellRef = inp.dataset.cell;
     const isNumber = inp.dataset.type === "number";
+
+    // P30-style fields: the raw template's default text is just a fixed
+    // unit word ("liter") with blank space to fill in a number - always
+    // reconstruct "<number> <unit>" rather than trusting the user typed
+    // the unit themselves (the input is type=number, so it can't contain
+    // "liter" anyway).
+    if (inp.dataset.unitSuffix) {
+      val = `${val} ${inp.dataset.unitSuffix}`;
+    }
+    // Name signature-block fields: every real historical example is
+    // ALL CAPS - keep the exported cell consistent with that convention
+    // even though the dropdown itself shows normal-case names for
+    // readability.
+    if (inp.dataset.uppercase === "true") {
+      val = val.toLocaleUpperCase("vi-VN");
+    }
 
     if (inp.dataset.append === "true") {
       // No dedicated value cell exists (label spans the whole row) - append
