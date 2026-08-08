@@ -482,6 +482,35 @@ const PJ03A_GROUPS = [
 ];
 const PJ03A_START_ROW = 29;
 const PJ03A_COLUMNS = { joint: "Joint/ Mối nối", width: "Cushion ring width/ Bề rộng vòng đệm (m)" };
+const PJ03A_TOTAL_CELL = "X44";
+const PJ03A_WIDTH_ROWS = { start: 29, end: 43 }; // 15 rows x 3 groups = 45 joints/page
+
+/* ---------- PJ-03a Total Bcr (X44) ----------
+   X44 was a plain manual number field (sample hint "12.5") requiring the
+   user to add up all 45 width entries themselves and type the total in -
+   exactly the "open Excel and type it in by hand" workflow this project
+   has been removing field by field. Auto-sums the same F/O/X width
+   columns (rows 29-43) used for the per-joint fields above. */
+function isPJ03aTotalCell(sel, cell) {
+  return sel.fileKey === "Final5-10_ITP" && sel.sheet === "PJ-03a" && cell === PJ03A_TOTAL_CELL;
+}
+function pj03aWidthCellRefs() {
+  const refs = [];
+  for (let row = PJ03A_WIDTH_ROWS.start; row <= PJ03A_WIDTH_ROWS.end; row++) {
+    PJ03A_GROUPS.forEach(g => refs.push(`${g.width}${row}`));
+  }
+  return refs;
+}
+function computePJ03aTotal(container) {
+  let sum = 0;
+  let any = false;
+  pj03aWidthCellRefs().forEach(ref => {
+    const inp = container.querySelector(`[data-cell="${ref}"]`);
+    const n = inp ? parseLeadingNumber(inp.value) : NaN;
+    if (Number.isFinite(n)) { sum += n; any = true; }
+  });
+  return any ? roundClean(sum) : "";
+}
 
 /* Returns {group, column} to synthesize a missing f.context, or null if
    this cell isn't part of a known repeating table. `group` becomes the
@@ -580,7 +609,18 @@ function renderXlsxFields(container, allFields, fileKey, sheet) {
     wirePJ06Computations(container);
   } else if (fileKey === "Final5-10_ITP" && sheet === "PJ-02") {
     wirePJ02Computations(container, fields);
+  } else if (fileKey === "Final5-10_ITP" && sheet === "PJ-03a") {
+    wirePJ03aTotal(container);
   }
+}
+
+function wirePJ03aTotal(container) {
+  const totalInput = container.querySelector('[data-cell="' + PJ03A_TOTAL_CELL + '"]');
+  if (!totalInput) return;
+  const recompute = () => { totalInput.value = computePJ03aTotal(container); };
+  container.addEventListener("input", recompute);
+  container.addEventListener("change", recompute);
+  recompute();
 }
 
 function buildXlsxFieldRow(f, sel) {
@@ -592,6 +632,7 @@ function buildXlsxFieldRow(f, sel) {
   const isPJ02Discrepancy = isPJ02DiscrepancyCell(sel, f.cell);
   const isPJ02Append = pj02NeedsForcedAppend(sel, f.cell);
   const isPJ04Point = isPJ04InspectionPointCell(sel, f.cell);
+  const isPJ03aTotal = isPJ03aTotalCell(sel, f.cell);
   const isNameField = isNameContextField(f);
   const isPositionField = isPositionContextField(f);
   // Real context missing from field_map (PJ-03a/PJ-04/PJ-05's expanded
@@ -613,6 +654,8 @@ function buildXlsxFieldRow(f, sel) {
     ? `<span class="cellref">${f.cell}</span> <span class="ctx">(chỉ nhập số, "liter" tự thêm vào)</span>`
     : isPJ04Point
     ? `<span class="cellref">${f.cell}</span> <span class="ctx">"Point No.${pj04PointNumberForCell(f.cell)}/ Điểm số ${pj04PointNumberForCell(f.cell)}" tự thêm - chỉ gõ mô tả (không bắt buộc)</span>`
+    : isPJ03aTotal
+    ? `<span class="cellref">${f.cell}</span> <span class="ctx">(tự tính = tổng tất cả ô Bề rộng vòng đệm đã nhập)</span>`
     : synthetic
     ? `<span class="cellref">${f.cell}</span> <span class="ctx">${synthetic.column}${f.sample_value ? ` (vd: ${truncate(f.sample_value, 20)})` : ""}</span>`
     : f.sample_value
@@ -658,6 +701,13 @@ function buildXlsxFieldRow(f, sel) {
     input.type = "text";
     input.placeholder = "Mô tả điểm (không bắt buộc), vd: Start point of Jacking Pipe-Seg.103";
     input.dataset.pj04PointNumber = String(pj04PointNumberForCell(f.cell));
+  } else if (isPJ03aTotal) {
+    input = document.createElement("input");
+    input.type = "text";
+    input.readOnly = true;
+    input.classList.add("computed-field");
+    input.dataset.pj03aTotal = "true";
+    input.value = "";
   } else if (!forceManual && isNameField) {
     ({ select: input, otherInput } = buildSelectWithOther(allPersonnelNames()));
     input.dataset.uppercase = "true";
@@ -1196,6 +1246,13 @@ async function exportXlsx() {
       if (!discInput) return;
       discInput.value = buildDiscrepancyValue(discInput.dataset.deltaPrefix, cellVal(design), cellVal(actual));
     });
+  }
+
+  // Same reasoning again: recompute PJ-03a's Total Bcr (X44) from the
+  // current 45 width-cell inputs right before export.
+  if (fileKey === "Final5-10_ITP" && sheet === "PJ-03a") {
+    const totalInput = document.querySelector(`#dataForm [data-cell="${PJ03A_TOTAL_CELL}"]`);
+    if (totalInput) totalInput.value = computePJ03aTotal(document.getElementById("dataForm"));
   }
 
   const inputs = document.querySelectorAll("#dataForm [data-cell]");
